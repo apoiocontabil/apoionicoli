@@ -13,6 +13,7 @@ export function Hoje({ usuario, carregando }: { usuario: Usuario | null; carrega
   const [hoje, setHoje] = useState<{ dia: string; aula: AulaResumo | null; motivo: string; regraVersao: string } | null>(null);
   const [historico, setHistorico] = useState<any[] | null>(null);
   const [erro, setErro] = useState<string | null>(null);
+  const [semPerfil, setSemPerfil] = useState(false);
 
   useEffect(() => {
     if (carregando) return;
@@ -20,6 +21,9 @@ export function Hoje({ usuario, carregando }: { usuario: Usuario | null; carrega
 
     api('/v1/hoje').then(setHoje).catch(e => setErro(e.message));
     api<{ sessoes: any[] }>('/v1/historico').then(r => setHistorico(r.sessoes)).catch(() => setHistorico([]));
+    // Quem nunca respondeu as perguntas recebe o convite — sem bloquear o
+    // acesso ao treino, que continua a um clique.
+    api<{ perfil: any }>('/v1/acesso/eu').then(r => setSemPerfil(!r.perfil?.minutosPorSessao)).catch(() => {});
   }, [usuario, carregando]);
 
   if (carregando) return <section className="secao"><p className="apoio">Carregando…</p></section>;
@@ -33,6 +37,18 @@ export function Hoje({ usuario, carregando }: { usuario: Usuario | null; carrega
       <h1 className="titulo-m" id="titulo-hoje">Olá, {usuario.nome.split(' ')[0]}</h1>
 
       {erro && <p className="erro" role="alert">{erro}</p>}
+
+      {semPerfil && (
+        <div className="aviso">
+          <div>
+            <p style={{ margin: '0 0 var(--e-3)' }}>
+              <strong>Responde oito perguntas rápidas?</strong> Assim a gente mostra
+              só o que cabe no seu tempo, no seu espaço e no seu impacto.
+            </p>
+            <Link className="botao botao-secundario" para="/comecar">Montar minha rotina</Link>
+          </div>
+        </div>
+      )}
 
       {/* Retomar vem antes de começar algo novo: voltar sem burocracia. */}
       {emAberto && (

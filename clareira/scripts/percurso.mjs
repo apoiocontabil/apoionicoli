@@ -231,6 +231,43 @@ async function percorrer(nome, viewport, sufixo) {
   // 3. Acesso
   await page.goto(`${BASE}/entrar`, { waitUntil: 'networkidle' });
   await foto('03-entrar', 1400);
+
+  // 3b. Conta nova → onboarding. Uma conta por execução, para o percurso poder
+  // rodar de novo sem colidir com o cadastro anterior.
+  const emailNovo = `percurso-${Date.now().toString(36)}@exemplo.local`;
+  await page.goto(`${BASE}/criar-conta`, { waitUntil: 'networkidle' });
+  await page.fill('#nome', 'Percurso');
+  await page.fill('#email', emailNovo);
+  await page.fill('#senha', 'percurso-de-teste-2026');
+  await page.getByRole('button', { name: 'Criar conta' }).click();
+  await page.waitForURL('**/comecar', { timeout: 15_000 });
+  await foto('03b-onboarding', 1200);
+
+  // Responde as perguntas de escolha única; a de múltipla e a de texto são
+  // puladas de propósito, para provar que nada é obrigatório.
+  const respostas = ['Retomar uma rotina', 'Estou começando', '3 dias', '20 minutos', 'Uma sala pequena', 'Prefiro sem saltos'];
+  for (const r of respostas) {
+    await page.getByRole('button', { name: r, exact: false }).first().click();
+    await page.waitForTimeout(320);
+  }
+  await page.getByRole('button', { name: /Pular esta|Continuar/ }).click();  // equipamentos
+  await page.waitForTimeout(300);
+  await page.getByRole('button', { name: 'Terminar' }).click();
+  await page.waitForURL('**/hoje', { timeout: 15_000 });
+  await foto('03c-onboarding-fim', 1600);
+
+  // O que foi respondido precisa ter MUDADO a recomendação de verdade.
+  const perfil = await page.evaluate(async () => {
+    const r = await fetch('/v1/acesso/eu', { headers: { authorization: `Bearer ${localStorage.getItem('clareira.token')}` } });
+    return (await r.json()).perfil;
+  });
+  if (perfil?.minutosPorSessao !== 20 || perfil?.espaco !== 'pequeno' || perfil?.impactoMaximo !== 'sem_saltos') {
+    problemas.push(`O onboarding não gravou o perfil como respondido: ${JSON.stringify(perfil)}`);
+  }
+
+  // 3c. Volta para a conta de demonstração, que já tem histórico.
+  await page.evaluate(() => localStorage.removeItem('clareira.token'));
+  await page.goto(`${BASE}/entrar`, { waitUntil: 'networkidle' });
   await page.fill('#email', 'aluna@exemplo.local');
   await page.fill('#senha', 'clareira-demo-2026');
   await page.getByRole('button', { name: 'Entrar' }).click();

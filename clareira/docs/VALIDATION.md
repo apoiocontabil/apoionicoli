@@ -47,6 +47,7 @@ larguras, e captura 24 evidências por execução.
 | Estúdio | Reproduzir → pausar muda o estado **no servidor**; o rótulo confirma |
 | Retomada | "Continuar" não liga a mídia sozinha |
 | Conclusão | Resumo derivado do histórico; o claro se fecha |
+| Onboarding | Conta nova cai no onboarding; respostas gravadas no perfil são conferidas pela API (20 min, sala pequena, sem saltos) |
 | Studio | Voltar retorna à lista sem quebrar |
 | Teclado | Primeiro Tab é "Pular para o conteúdo" |
 
@@ -57,7 +58,7 @@ Em **cada** captura, duas verificações automáticas rodam:
    com cabeçalho fixo tratado como oclusão esperada.
 
 Execuções: normal e `--reduced` (movimento reduzido), desktop e celular.
-**48 capturas, nenhum problema.** Evidências em `docs/evidencias/`.
+**56 capturas, nenhum problema.** Evidências em `docs/evidencias/`.
 
 ## 3. Defeitos reais encontrados e corrigidos nesta sessão
 
@@ -76,6 +77,8 @@ Registrados porque mostram o que a verificação pegou:
 | Botão "Continuar" devolvendo 409 | Erro HTTP no percurso | Decidia pelo estado da **mídia**; o motor exige `retomar` pelo estado de **domínio** |
 | "Faltam 1 semana" | Teste próprio de microcopy | Concordância de verbo e substantivo |
 | "Em andamento" com 2,51:1 | Verificação de contraste | Passou para `--tinta-70` (6,06:1) |
+| Botão de criar conta abaixo da dobra no celular | Percurso travou esperando o elemento ficar acionável | Um vídeo decorativo de 4:3 empurrava o formulário para fora da tela. No formato estreito o claro virou faixa de 16:6 |
+| Rolagem programática parando o alvo sob o cabeçalho grudado | Mesma investigação | `scroll-padding-top` no `html`, acompanhando o ponto de corte do cabeçalho. Vale para âncora, foco por teclado e `scrollIntoView` |
 
 E **dois erros do próprio verificador**, corrigidos para não gerar acusação
 falsa: `color-mix()` computa canais de 0 a 1 (lidos como 0–255); e clampar o

@@ -404,6 +404,68 @@
   border-color: var(--tinta);
 }
 
+/* --- Acesso -------------------------------------------------------------- */
+
+.acesso {
+  display: grid;
+  gap: var(--e-7);
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.acesso-claro {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+}
+
+@media (max-width: 640px) {
+  .acesso { gap: var(--e-5); }
+  /* Faixa curta: mesma identidade, sem empurrar o formulário para fora da
+     tela. Cabeça e tronco continuam no recorte (object-position do claro). */
+  .acesso-claro {
+    aspect-ratio: 16 / 6;
+    min-height: 0;
+    max-height: 150px;
+  }
+}
+
+/* --- Onboarding ---------------------------------------------------------- */
+
+.opcoes-empilhadas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--e-2);
+  margin: var(--e-5) 0;
+}
+.opcao-larga {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 100%;
+  min-height: 56px;
+  padding: var(--e-3) var(--e-5);
+  border: 1px solid var(--linha);
+  border-radius: var(--raio-m);
+  background: transparent;
+  color: var(--tinta);
+  text-align: left;
+  cursor: pointer;
+  font-size: var(--t-corpo);
+  transition: border-color var(--d-controle) var(--ease-saida),
+              background-color var(--d-controle) var(--ease-saida);
+}
+.opcao-larga small { color: var(--tinta-70); font-size: 12px; }
+.opcao-larga:hover { border-color: var(--tinta-40); }
+.opcao-larga[aria-pressed='true'] {
+  background: var(--tinta);
+  color: var(--papel);
+  border-color: var(--tinta);
+}
+.opcao-larga[aria-pressed='true'] small { color: var(--papel-70); }
+
 /* --- Estúdio de treino --------------------------------------------------- */
 
 /* Dentro do estúdio, [data-ambiente="estudio"] INVERTE os tokens: --papel vira

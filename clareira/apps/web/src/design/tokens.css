@@ -99,7 +99,18 @@
    --------------------------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  /* O cabeçalho é grudado. Sem esta folga, qualquer rolagem programática —
+     âncora, foco por teclado, scrollIntoView — para o alvo DEBAIXO dele, e
+     quem navega por teclado deixa de ver o que está focado. A altura do
+     cabeçalho muda com a quebra de linha da navegação, então a folga
+     acompanha o mesmo ponto de corte. */
+  scroll-padding-top: 88px;
+}
+@media (max-width: 640px) {
+  html { scroll-padding-top: 128px; }
+}
 
 body {
   margin: 0;

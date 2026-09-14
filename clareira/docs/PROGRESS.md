@@ -9,7 +9,7 @@ implementadas. Etapa 7 tem contratos prontos e clientes nativos pendentes de
 ambiente. Etapa 8 automatizada no que o container permite.
 
 **A jornada principal funciona de ponta a ponta**: chegada → descoberta →
-acesso → hoje → preparação → aula com pausa e retomada → conclusão →
+acesso → onboarding → hoje → preparação → aula com pausa e retomada → conclusão →
 conquistas, mais uma operação real de autoria do professor com publicação
 versionada.
 
@@ -30,15 +30,12 @@ versionada.
 
 Em ordem, pelo que destrava mais:
 
-1. **Onboarding** (`J2`): a tela que coleta objetivo, disponibilidade,
-   equipamento, espaço e impacto. O `PATCH /v1/perfil` já existe e a recomendação
-   já lê o perfil — falta só a interface. É o maior ganho por menor esforço.
-2. **Calendário** (`J6`): tabela `agendamentos` criada; faltam rota e tela.
-3. **Edição do registro de série** (`J7`): o motor já grava com `origem`; falta a
+1. **Calendário** (`J6`): tabela `agendamentos` criada; faltam rota e tela.
+2. **Edição do registro de série** (`J7`): o motor já grava com `origem`; falta a
    interface de correção preservando rastreabilidade.
-4. **Verificar em Safari** — expõe o caminho H.264, `svh`, `safe-area` e autoplay,
+3. **Verificar em Safari** — expõe o caminho H.264, `svh`, `safe-area` e autoplay,
    que hoje são a maior incerteza real.
-5. **Área de evolução** (`J9`) e **avaliação corporal** (`R8`): o schema com
+4. **Área de evolução** (`J9`) e **avaliação corporal** (`R8`): o schema com
    procedência completa já existe.
 
 ## O que está bloqueado, e por quê

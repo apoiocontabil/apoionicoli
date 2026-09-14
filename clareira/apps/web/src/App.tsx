@@ -11,6 +11,7 @@ import { Programas } from './routes/Programas';
 import { Planos } from './routes/Planos';
 import { Conquistas } from './routes/Conquistas';
 import { Studio } from './routes/Studio';
+import { Onboarding } from './routes/Onboarding';
 
 export interface Usuario {
   id: string;
@@ -58,7 +59,18 @@ export function App() {
 
   if (c === '/' ) tela = <Chegada usuario={usuario} />;
   else if (c === '/entrar' || c === '/criar-conta')
-    tela = <Entrar modo={c === '/entrar' ? 'entrar' : 'criar'} aoEntrar={u => { setUsuario(u); navegar('/hoje'); }} />;
+    tela = (
+      <Entrar
+        modo={c === '/entrar' ? 'entrar' : 'criar'}
+        aoEntrar={(u, novo) => {
+          setUsuario(u);
+          // Quem acabou de criar a conta vai montar a rotina; quem volta vai
+          // direto para o treino — a introdução não se repete a cada login.
+          navegar(novo ? '/comecar' : '/hoje');
+        }}
+      />
+    );
+  else if (c === '/comecar') tela = <Onboarding usuario={usuario} />;
   else if (c === '/hoje') tela = <Hoje usuario={usuario} carregando={carregandoSessao} />;
   else if (c === '/programas') tela = <Programas />;
   else if (c === '/planos') tela = <Planos />;

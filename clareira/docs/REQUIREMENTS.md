@@ -52,7 +52,7 @@ os que ainda não foram feitos.
 | ID | Requisito | § | Estado | Evidência / próximo passo |
 | --- | --- | --- | --- | --- |
 | J1 | Cadastro, autenticação, papéis, isolamento | 26 | Funcional | `apps/api/test/api.test.ts` |
-| J2 | Onboarding com preferências | 13 | **Parcial** | `PATCH /v1/perfil` existe e o seed usa; **falta a tela de onboarding** |
+| J2 | Onboarding com preferências | 13 | Funcional | 8 perguntas, todas puláveis; sem pedir peso, altura, câmera ou microfone. Percurso confirma que o perfil é gravado e muda a seleção |
 | J3 | Recomendação estável por dia e fuso | 13 | Funcional | `recomendacoes_do_dia` persistida; teste no percurso e na API |
 | J4 | Motor determinístico com os 10 invariantes | 15 | Funcional | 29 testes discriminantes |
 | J5 | Histórico real, incluindo conclusão parcial | 13 | Funcional | `/v1/historico`; tela Hoje |

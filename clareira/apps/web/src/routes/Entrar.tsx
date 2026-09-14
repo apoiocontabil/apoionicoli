@@ -11,7 +11,7 @@ import type { Usuario } from '../App';
  * elemento da chegada, não outro. A relação entre mídia, mensagem e formulário
  * é preservada sem impor duas colunas fixas (seções 12 e 22.5).
  */
-export function Entrar({ modo, aoEntrar }: { modo: 'entrar' | 'criar'; aoEntrar: (u: Usuario) => void }) {
+export function Entrar({ modo, aoEntrar }: { modo: 'entrar' | 'criar'; aoEntrar: (u: Usuario, contaNova: boolean) => void }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [nome, setNome] = useState('');
@@ -38,7 +38,7 @@ export function Entrar({ modo, aoEntrar }: { modo: 'entrar' | 'criar'; aoEntrar:
         },
       );
       guardarToken(r.token);
-      aoEntrar(r.usuario);
+      aoEntrar(r.usuario, criando);
     } catch (e: any) {
       setErro(e.message ?? 'Não conseguimos entrar agora.');
     } finally {
@@ -48,17 +48,11 @@ export function Entrar({ modo, aoEntrar }: { modo: 'entrar' | 'criar'; aoEntrar:
 
   return (
     <section className="secao" aria-labelledby="titulo-acesso">
-      <div
-        style={{
-          display: 'grid',
-          gap: 'var(--e-7)',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
-          alignItems: 'center',
-          maxWidth: 1100,
-          margin: '0 auto',
-        }}
-      >
-        <div style={{ position: 'relative', aspectRatio: '4 / 3', minHeight: 260 }}>
+      <div className="acesso">
+        {/* Em tela estreita o claro vira uma faixa curta: a relação entre
+            mídia, mensagem e formulário é preservada, mas o botão de enviar
+            não pode ficar abaixo da dobra empurrado por vídeo decorativo. */}
+        <div className="acesso-claro">
           <Claro
             webmUrl="/media/sala-16x9.webm"
             mp4Url="/media/sala-16x9.mp4"
@@ -72,7 +66,7 @@ export function Entrar({ modo, aoEntrar }: { modo: 'entrar' | 'criar'; aoEntrar:
           />
         </div>
 
-        <div>
+        <div className="acesso-forma">
           <h1 className="titulo-m" id="titulo-acesso">
             {criando ? 'Criar sua conta' : 'Entrar'}
           </h1>
