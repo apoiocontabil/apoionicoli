@@ -98,7 +98,30 @@ rolados para fora.
 | Cobrança, webhooks, reembolso | Nenhum provedor configurado — por decisão |
 | Precisão de estimativa por câmera | Recurso não implementado |
 
-## 5. Como reproduzir
+## 5. Roteiro de validação para o dono do produto
+
+`docs/roteiro-de-validacao.html` é a página que reúne, para quem vai decidir:
+as escolhas que dependem de uma pessoa (preço, nome, acervo, oferta física),
+a comparação das três direções com o critério de cada uma, a jornada capturada
+tela a tela, os doze critérios eliminatórios da seção 30 com o estado de cada
+um, um checklist de 16 verificações e a lista do que **não** foi verificado.
+
+Publicada em <https://claude.ai/artifact/HiKiKSTE3WrZRqrnpE1j4s>. O checklist é
+guardado pela própria página; se o armazenamento não estiver disponível, ela cai
+para o navegador local e diz isso na tela.
+
+As imagens são publicadas junto, com este mapa (origem em `docs/evidencias/`):
+
+| Caminho na página | Arquivo de origem |
+| --- | --- |
+| `ev/dir-a.jpg`, `ev/gesto-aberto.jpg` | `direcoes/dir-a-claro-t3_4.jpg` |
+| `ev/gesto-abre.jpg` | `direcoes/dir-a-claro-t0_8.jpg` |
+| `ev/dir-b.jpg` | `direcoes/dir-b-cadencia-t3_4.jpg` |
+| `ev/dir-c.jpg` | `direcoes/dir-c-passagem-t3_4.jpg` |
+| `ev/<tela>.jpg` | `app/<tela>-desktop.jpg` |
+| `ev/<tela>-celular.jpg` | `app/<tela>-celular.jpg` |
+
+## 6. Como reproduzir
 
 ```bash
 npm install

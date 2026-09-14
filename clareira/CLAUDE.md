@@ -67,6 +67,7 @@ compartilhada com implementação anterior.
 | `docs/REWARDS-PRODUCT.md` | Programa de reconhecimento |
 | `docs/DEVICE-MATRIX.md` | O que foi testado, onde, e o que falta |
 | `docs/VALIDATION.md` | O que foi verificado e como |
+| `docs/roteiro-de-validacao.html` | Roteiro de validação para o dono do produto |
 | `docs/SKILLS-APPLIED.md` | Skills lidas → decisão → artefato |
 | `docs/PROGRESS.md` | Estado atual e próximo passo preciso |
 
