@@ -1,0 +1,33 @@
+{
+  "name": "clareira",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Plataforma de treino em casa — projeto novo, construido do zero a partir do prompt mestre de 11/09/2026.",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run dev --workspace @clareira/api",
+    "dev:web": "npm run dev --workspace @clareira/web",
+    "build": "npm run build --workspace @clareira/domain && npm run build --workspace @clareira/api && npm run build --workspace @clareira/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:reset": "npm run db:reset --workspace @clareira/api",
+    "db:seed": "npm run db:seed --workspace @clareira/api",
+    "validar": "npm run typecheck && npm test && npm run build",
+    "percurso": "node scripts/percurso.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "playwright": "^1.63.0",
+    "three": "^0.173.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

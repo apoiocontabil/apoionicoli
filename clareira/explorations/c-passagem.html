@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Direção C — PASSAGEM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,600&display=swap" rel="stylesheet" />
+<style>
+  /* ------------------------------------------------------------------
+     DIREÇÃO C — "PASSAGEM"
+     Ideia central: existe uma passagem entre o dia comum e o treino. A
+     transformação é ATRAVESSAR: a câmera percorre um corredor arquitetônico
+     de planos de luz e cruza uma abertura onde está o vídeo real.
+     Família de materiais: concreto claro, vidro, verdete, névoa.
+     Câmera: dolly contínuo em Z, sem roll.
+     Gesto de interação: o ponteiro desloca a luz e inclina de leve o corredor.
+     Custo: cena WebGL real (Three.js) — é a direção mais cara das três.
+     ------------------------------------------------------------------ */
+  :root {
+    --fundo: #0e1112;
+    --claro: #dde3e2;
+    --verdete: #7fb3a8;
+    --texto: "Inter", system-ui, sans-serif;
+    --display: "Fraunces", Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--fundo); color: var(--claro); font-family: var(--texto); overflow: hidden; }
+  .palco { position: relative; width: 100%; height: 100vh; height: 100dvh; overflow: hidden; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .semwebgl {
+    position: absolute; inset: 0; display: none; place-items: center; text-align: center;
+    padding: 24px; background: var(--fundo);
+  }
+  .semwebgl video { max-width: min(90vw, 720px); width: 100%; }
+
+  .tipo { position: absolute; inset: 0; z-index: 3; pointer-events: none;
+    display: grid; grid-template-rows: auto 1fr auto; padding: clamp(18px, 3.4vw, 48px); }
+  .marca { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: .32em; text-transform: uppercase; opacity: 0; }
+  .centro { display: grid; place-items: center; }
+  h1 { font-family: var(--display); font-weight: 300; font-size: clamp(32px, 6vw, 88px); line-height: .98;
+       letter-spacing: -.02em; margin: 0; text-align: center; max-width: 14ch; }
+  h1 .linha { display: block; overflow: hidden; }
+  h1 .linha > span { display: block; transform: translateY(110%); will-change: transform; }
+  h1 em { font-style: normal; color: var(--verdete); }
+  .base { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; pointer-events: auto; }
+  .apoio { max-width: 32ch; font-size: clamp(13px, 1.1vw, 15px); line-height: 1.55; color: rgba(221,227,226,.72); opacity: 0; }
+  .acoes { display: flex; gap: 10px; margin-top: 16px; }
+  .btn { font: 500 14px/1 var(--texto); padding: 15px 22px; border-radius: 999px; border: 1px solid transparent; cursor: pointer; min-height: 44px; }
+  .btn-1 { background: var(--verdete); color: #0b1211; }
+  .btn-2 { background: transparent; color: var(--claro); border-color: rgba(221,227,226,.28); }
+  .btn:focus-visible { outline: 2px solid var(--verdete); outline-offset: 3px; }
+  .ficha { font: 500 10px/1 var(--texto); letter-spacing: .18em; text-transform: uppercase; color: rgba(221,227,226,.6); display: flex; gap: 12px; opacity: 0; }
+  .nota { position: absolute; left: 50%; bottom: 10px; translate: -50% 0; z-index: 5; font: 500 10px/1 var(--texto); letter-spacing: .18em; text-transform: uppercase; color: rgba(221,227,226,.35); }
+</style>
+</head>
+<body>
+  <main class="palco" id="palco">
+    <canvas id="cv"></canvas>
+    <div class="semwebgl" id="semwebgl">
+      <div>
+        <p style="font-size:13px;letter-spacing:.16em;text-transform:uppercase;opacity:.6">Sem WebGL — composição estável</p>
+        <video poster="../apps/web/public/media/sala-16x9.jpg" muted playsinline loop autoplay><source src="../apps/web/public/media/sala-16x9.webm" type="video/webm" /><source src="../apps/web/public/media/sala-16x9.mp4" type="video/mp4" /></video>
+      </div>
+    </div>
+    <video id="src" muted playsinline loop preload="auto" crossorigin="anonymous" style="position:absolute;left:-9999px;top:0;width:320px;height:180px;pointer-events:none"><source src="../apps/web/public/media/sala-16x9.webm" type="video/webm" /><source src="../apps/web/public/media/sala-16x9.mp4" type="video/mp4" /></video>
+
+    <div class="tipo">
+      <div class="marca" id="marca">Clareira</div>
+      <div class="centro">
+        <h1 id="h1">
+          <span class="linha"><span>Abra <em>espaço</em></span></span>
+          <span class="linha"><span>para o seu treino.</span></span>
+        </h1>
+      </div>
+      <div class="base">
+        <div>
+          <p class="apoio" id="apoio">Aulas conduzidas por professores reais, no tempo que você tiver. Comece com 12 minutos na sua sala.</p>
+          <div class="acoes">
+            <button class="btn btn-1">Ver uma aula</button>
+            <button class="btn btn-2">Entrar</button>
+          </div>
+        </div>
+        <div class="ficha" id="ficha"><span>12 min</span><span>sem equipamento</span><span>sala pequena</span></div>
+      </div>
+    </div>
+    <div class="nota">Direção C — Passagem</div>
+  </main>
+
+<script type="importmap">
+{ "imports": { "three": "../node_modules/three/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+
+const palco = document.getElementById('palco');
+const cv = document.getElementById('cv');
+const srcVideo = document.getElementById('src');
+const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const clamp01 = t => t < 0 ? 0 : t > 1 ? 1 : t;
+const span = (t,a,b) => clamp01((t-a)/(b-a));
+const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10*t);
+const easeInOutCub = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+const DUR = 4.2;
+
+let renderer;
+try {
+  renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: false });
+} catch (e) {
+  cv.style.display = 'none';
+  document.getElementById('semwebgl').style.display = 'grid';
+  throw e;
+}
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color('#0e1112');
+scene.fog = new THREE.Fog('#0e1112', 6, 26);
+
+const camera = new THREE.PerspectiveCamera(52, 1, .1, 80);
+
+/* Corredor: pares de lâminas verticais com material físico. A geometria e o
+   material são compartilhados e as lâminas são instanciadas — nenhuma
+   alocação por quadro. */
+const lamina = new THREE.BoxGeometry(.28, 7.2, 3.2);
+const concreto = new THREE.MeshStandardMaterial({ color: '#cdd5d3', roughness: .82, metalness: .02 });
+const N = 18;
+const inst = new THREE.InstancedMesh(lamina, concreto, N * 2);
+const m = new THREE.Matrix4();
+for (let i = 0; i < N; i++) {
+  const z = -i * 3.6;
+  const largura = 2.5 + Math.sin(i * .55) * .45;
+  m.makeTranslation(-largura, 0, z); inst.setMatrixAt(i * 2, m);
+  m.makeTranslation( largura, 0, z); inst.setMatrixAt(i * 2 + 1, m);
+}
+inst.instanceMatrix.needsUpdate = true;
+scene.add(inst);
+
+// Piso e teto
+const piso = new THREE.Mesh(
+  new THREE.PlaneGeometry(30, 90),
+  new THREE.MeshStandardMaterial({ color: '#9fa9a7', roughness: .95 })
+);
+piso.rotation.x = -Math.PI / 2; piso.position.set(0, -3.6, -30); scene.add(piso);
+
+// A abertura: o plano onde vive o vídeo real. É o destino da passagem.
+const tex = new THREE.VideoTexture(srcVideo);
+tex.colorSpace = THREE.SRGBColorSpace;
+// A abertura só recebe a textura quando houver quadro decodificado; até lá
+// mostra a moldura de luz, nunca um retângulo preto sem explicação.
+srcVideo.addEventListener('loadeddata', () => { tex.needsUpdate = true; });
+const abertura = new THREE.Mesh(
+  new THREE.PlaneGeometry(6.4, 3.6),
+  new THREE.MeshBasicMaterial({ map: tex, toneMapped: false })
+);
+abertura.position.set(0, .2, -N * 3.6 + 2);
+scene.add(abertura);
+// Moldura de luz ao redor da abertura
+const moldura = new THREE.Mesh(
+  new THREE.PlaneGeometry(7.0, 4.2),
+  new THREE.MeshBasicMaterial({ color: '#7fb3a8' })
+);
+moldura.position.copy(abertura.position); moldura.position.z -= .05; scene.add(moldura);
+
+// Luzes reaproveitadas — conjunto estável, sem criar/destruir por cena.
+scene.add(new THREE.HemisphereLight('#dfe9e7', '#16201f', 1.1));
+const chave = new THREE.DirectionalLight('#fff4e2', 2.0); chave.position.set(4, 6, 2); scene.add(chave);
+const preenche = new THREE.PointLight('#7fb3a8', 30, 26); preenche.position.set(0, 1, -14); scene.add(preenche);
+
+function resize() {
+  const w = palco.clientWidth, h = palco.clientHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  // Enquadramento preservado em qualquer proporção: em telas estreitas,
+  // abre o campo para não cortar a abertura.
+  camera.fov = w / h < 1 ? 68 : 52;
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize); resize();
+
+let t0 = performance.now();
+let mx = 0, my = 0, tmx = 0, tmy = 0;
+palco.addEventListener('pointermove', e => {
+  const r = palco.getBoundingClientRect();
+  tmx = ((e.clientX - r.left) / r.width - .5) * 2;
+  tmy = ((e.clientY - r.top) / r.height - .5) * 2;
+});
+palco.addEventListener('pointerleave', () => { tmx = 0; tmy = 0; });
+
+function pose(t) {
+  // Dolly contínuo: de fora do corredor até cruzar a abertura.
+  const avanca = easeInOutCub(span(t, .2, 3.4));
+  camera.position.set(0, .3, 6 - avanca * (N * 3.6 - 4));
+  camera.lookAt(0, .2, camera.position.z - 10);
+
+  moldura.material.color.setStyle('#7fb3a8');
+  moldura.material.opacity = 1;
+  preenche.intensity = 18 + 26 * Math.sin(Math.PI * span(t, .4, 3.2));
+
+  document.getElementById('marca').style.opacity = String(easeOutExpo(span(t, .2, 1.0)));
+  document.querySelectorAll('#h1 .linha > span').forEach((el, i) => {
+    const p = easeOutExpo(span(t, 2.2 + i * .14, 3.2 + i * .14));
+    el.style.transform = `translateY(${(1 - p) * 110}%)`;
+  });
+  document.getElementById('apoio').style.opacity = String(easeOutExpo(span(t, 2.9, 3.8)));
+  document.getElementById('ficha').style.opacity = String(easeOutExpo(span(t, 3.1, 4.0)));
+}
+
+let raf = 0;
+function frame(now) {
+  raf = requestAnimationFrame(frame);
+  const t = reduz ? DUR : Math.min((now - t0) / 1000, DUR);
+  pose(t);                                  // pose base restaurada
+  mx += (tmx - mx) * .06; my += (tmy - my) * .06;
+  camera.position.x += mx * .55;            // offset da interação, aplicado depois
+  camera.position.y += -my * .3;
+  chave.position.x = 4 + mx * 5;
+  renderer.render(scene, camera);
+}
+raf = requestAnimationFrame(frame);
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) { cancelAnimationFrame(raf); srcVideo.pause(); }
+  else { t0 = performance.now() - DUR * 1000; raf = requestAnimationFrame(frame); srcVideo.play().catch(()=>{}); }
+});
+
+renderer.getContext().canvas.addEventListener('webglcontextlost', e => {
+  e.preventDefault();
+  document.getElementById('semwebgl').style.display = 'grid';
+});
+
+srcVideo.play().catch(() => {});
+window.__seek = s => { t0 = performance.now() - s * 1000; pose(s); renderer.render(scene, camera); };
+window.__dur = DUR;
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Clareira — seu treino, no seu tempo</title>
+    <meta
+      name="description"
+      content="Aulas conduzidas por professores reais, no tempo que você tiver. Uma experiência de treino em casa."
+    />
+    <!-- A mídia da abertura começa a carregar junto com o HTML: o vídeo
+         principal não espera nenhum outro recurso (seção 27). -->
+    <link rel="preload" as="image" href="/media/sala-16x9.jpg" />
+    <style>
+      /* Fundo idêntico ao token --papel, para não haver um lampejo branco frio
+         antes do CSS principal. */
+      html { background: #f6f2ea; }
+      @media (prefers-color-scheme: dark) { html { background: #14120f; } }
+    </style>
+  </head>
+  <body>
+    <div id="raiz"></div>
+    <noscript>
+      <div style="padding: 32px; font: 16px/1.6 system-ui; max-width: 60ch; margin: 0 auto">
+        <h1 style="font-weight: 400">Clareira</h1>
+        <p>
+          Esta experiência precisa de JavaScript para reproduzir as aulas e
+          guardar o seu progresso com segurança.
+        </p>
+        <p>
+          Se você não puder ativá-lo, escreva para o suporte e organizamos outra
+          forma de acesso.
+        </p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

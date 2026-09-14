@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Direção B — CADÊNCIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<style>
+  /* ------------------------------------------------------------------
+     DIREÇÃO B — "CADÊNCIA"
+     Ideia central: treinar em casa é entrar num ritmo compartilhado. A
+     transformação é uma MONTAGEM: fragmentos de pessoas reais pulsam numa
+     partitura e colapsam num único quadro inteiro — de muitos, um.
+     Família de materiais: tela escura, contraste alto, marca-texto ácido.
+     Câmera: cortes no tempo, não movimento contínuo.
+     Gesto de interação: o ponteiro reacende o fragmento apontado.
+     ------------------------------------------------------------------ */
+  :root {
+    --preto: #0b0b0c;
+    --carvao: #16171a;
+    --claro: #f2f2f0;
+    --acido: #ccf14e;
+    --texto: "Inter", system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--preto); color: var(--claro);
+    font-family: var(--texto); overflow: hidden;
+  }
+  .palco { position: relative; width: 100%; height: 100vh; height: 100dvh; overflow: hidden; }
+
+  /* A partitura: seis células numa grade assimétrica. Cada célula mostra
+     um recorte diferente da mesma mídia real — como um contact sheet vivo. */
+  .partitura {
+    position: absolute; inset: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 6px; padding: 6px;
+  }
+  .cel {
+    position: relative; overflow: hidden; background: var(--carvao);
+    will-change: opacity, transform, filter;
+  }
+  .cel video, .cel img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; filter: grayscale(1) contrast(1.15) brightness(.82);
+    transition: filter .45s ease;
+  }
+  .cel[data-on="1"] video, .cel[data-on="1"] img { filter: none; }
+  .cel::after {
+    content: ""; position: absolute; inset: 0;
+    box-shadow: inset 0 0 0 1px rgba(242,242,240,.09);
+    pointer-events: none;
+  }
+  .cel .tag {
+    position: absolute; left: 8px; bottom: 8px; z-index: 2;
+    font: 700 9px/1 var(--texto); letter-spacing: .18em; text-transform: uppercase;
+    color: var(--acido); opacity: 0; transition: opacity .3s ease;
+  }
+  .cel[data-on="1"] .tag { opacity: 1; }
+
+  .c1 { grid-area: 1 / 1 / 6 / 5; }
+  .c2 { grid-area: 1 / 5 / 4 / 9; }
+  .c3 { grid-area: 1 / 9 / 5 / 13; }
+  .c4 { grid-area: 6 / 1 / 9 / 5; }
+  .c5 { grid-area: 4 / 5 / 9 / 9; }
+  .c6 { grid-area: 5 / 9 / 9 / 13; }
+
+  /* O quadro único que a montagem colapsa — de muitos, um. */
+  .unico {
+    position: absolute; left: 50%; top: 50%; translate: -50% -50%;
+    width: min(72vw, 1080px); aspect-ratio: 16 / 9;
+    overflow: hidden; background: #000;
+    opacity: 0; will-change: opacity, transform, clip-path;
+  }
+  .unico video { width: 100%; height: 100%; object-fit: cover; }
+
+  .tipo {
+    position: absolute; inset: 0; z-index: 4; pointer-events: none;
+    display: grid; grid-template-rows: auto 1fr auto;
+    padding: clamp(18px, 3.4vw, 44px);
+  }
+  .marca {
+    font: 900 13px/1 var(--texto); letter-spacing: .3em; text-transform: uppercase;
+  }
+  .centro { display: grid; place-items: center; }
+  h1 {
+    font-weight: 900; font-size: clamp(36px, 8.2vw, 132px); line-height: .86;
+    letter-spacing: -.045em; margin: 0; text-align: center; text-transform: uppercase;
+    mix-blend-mode: difference;
+  }
+  h1 .w { display: inline-block; will-change: transform, opacity; }
+  h1 .acido { color: var(--acido); mix-blend-mode: normal; }
+  .base { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; pointer-events: auto; }
+  .apoio { max-width: 32ch; font-size: clamp(13px, 1.1vw, 15px); line-height: 1.5; color: rgba(242,242,240,.72); }
+  .acoes { display: flex; gap: 10px; }
+  .btn { font: 700 13px/1 var(--texto); letter-spacing: .04em; padding: 15px 22px; border-radius: 4px; border: 1px solid transparent; cursor: pointer; min-height: 44px; }
+  .btn-1 { background: var(--acido); color: var(--preto); }
+  .btn-2 { background: transparent; color: var(--claro); border-color: rgba(242,242,240,.3); }
+  .btn:focus-visible { outline: 2px solid var(--acido); outline-offset: 3px; }
+  .ficha { font: 700 10px/1 var(--texto); letter-spacing: .18em; text-transform: uppercase; color: var(--acido); display: flex; gap: 12px; }
+  .nota { position: absolute; left: 50%; bottom: 10px; translate: -50% 0; z-index: 5; font: 700 10px/1 var(--texto); letter-spacing: .18em; text-transform: uppercase; color: rgba(242,242,240,.35); }
+  @media (max-width: 820px) {
+    .partitura { grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(10, 1fr); }
+    .c1 { grid-area: 1/1/5/4 } .c2 { grid-area: 1/4/4/7 } .c3 { grid-area: 5/1/8/4 }
+    .c4 { grid-area: 4/4/8/7 } .c5 { grid-area: 8/1/11/4 } .c6 { grid-area: 8/4/11/7 }
+    .unico { width: 92vw; }
+  }
+</style>
+</head>
+<body>
+  <main class="palco" id="palco">
+    <div class="partitura" id="partitura">
+      <div class="cel c1" data-t="0.00"><video muted playsinline loop autoplay preload="metadata"><source src="../apps/web/public/media/sala-16x9.webm" type="video/webm" /><source src="../apps/web/public/media/sala-16x9.mp4" type="video/mp4" /></video><span class="tag">Força · 12 min</span></div>
+      <div class="cel c2" data-t="0.12"><img src="../apps/web/public/media/aula-16x9.jpg" alt="" /><span class="tag">Aula guiada</span></div>
+      <div class="cel c3" data-t="0.24"><video muted playsinline loop autoplay preload="metadata"><source src="../apps/web/public/media/mobilidade-9x16.webm" type="video/webm" /><source src="../apps/web/public/media/mobilidade-9x16.mp4" type="video/mp4" /></video><span class="tag">Mobilidade</span></div>
+      <div class="cel c4" data-t="0.36"><img src="../apps/web/public/media/sala-9x16.jpg" alt="" /><span class="tag">Sala pequena</span></div>
+      <div class="cel c5" data-t="0.48"><video muted playsinline loop autoplay preload="metadata"><source src="../apps/web/public/media/aula-16x9.webm" type="video/webm" /><source src="../apps/web/public/media/aula-16x9.mp4" type="video/mp4" /></video><span class="tag">Sem equipamento</span></div>
+      <div class="cel c6" data-t="0.60"><img src="../apps/web/public/media/mobilidade-9x16.jpg" alt="" /><span class="tag">Recuperação</span></div>
+    </div>
+
+    <div class="unico" id="unico">
+      <video poster="../apps/web/public/media/sala-16x9.jpg" muted playsinline loop autoplay preload="metadata"><source src="../apps/web/public/media/sala-16x9.webm" type="video/webm" /><source src="../apps/web/public/media/sala-16x9.mp4" type="video/mp4" /></video>
+    </div>
+
+    <div class="tipo">
+      <div class="marca">Clareira</div>
+      <div class="centro">
+        <h1 id="h1">
+          <span class="w">Abra</span> <span class="w acido">espaço</span><br />
+          <span class="w">para o seu</span> <span class="w">treino.</span>
+        </h1>
+      </div>
+      <div class="base">
+        <div>
+          <p class="apoio">Aulas conduzidas por professores reais, no tempo que você tiver. Comece com 12 minutos na sua sala.</p>
+          <div class="acoes" style="margin-top:16px">
+            <button class="btn btn-1">Ver uma aula</button>
+            <button class="btn btn-2">Entrar</button>
+          </div>
+        </div>
+        <div class="ficha"><span>12 min</span><span>sem equipamento</span><span>sala pequena</span></div>
+      </div>
+    </div>
+    <div class="nota">Direção B — Cadência</div>
+  </main>
+
+<script type="module">
+const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cels  = [...document.querySelectorAll('.cel')];
+const unico = document.getElementById('unico');
+const palco = document.getElementById('palco');
+
+const clamp01 = t => t < 0 ? 0 : t > 1 ? 1 : t;
+const span = (t,a,b) => clamp01((t-a)/(b-a));
+const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10*t);
+const easeInOutCub = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+
+const DUR = 3.6;
+let t0 = performance.now();
+
+function pose(t) {
+  // 0 → 1.5s: as células entram em defasagem, na cadência da partitura.
+  cels.forEach((c, i) => {
+    const d = parseFloat(c.dataset.t);
+    const p = easeOutExpo(span(t, d, d + .7));
+    c.style.opacity = String(p);
+    c.style.transform = `scale(${.94 + .06 * p})`;
+  });
+
+  // 1.9 → 3.0s: a montagem colapsa num quadro único.
+  const col = easeInOutCub(span(t, 1.9, 3.0));
+  cels.forEach(c => {
+    c.style.opacity = String((1 - col) * Number(c.style.opacity || 1) || (1 - col));
+    c.style.filter = `blur(${col * 5}px)`;
+  });
+  document.getElementById('partitura').style.opacity = String(1 - col);
+  unico.style.opacity = String(col);
+  unico.style.clipPath = `inset(${(1 - col) * 12}% ${(1 - col) * 20}% ${(1 - col) * 12}% ${(1 - col) * 20}%)`;
+  unico.style.transform = `scale(${.96 + .04 * col})`;
+
+  // Tipografia entra por palavra, na mesma cadência.
+  document.querySelectorAll('#h1 .w').forEach((w, i) => {
+    const p = easeOutExpo(span(t, 1.2 + i * .1, 2.0 + i * .1));
+    w.style.opacity = String(p);
+    w.style.transform = `translateY(${(1 - p) * 26}px)`;
+  });
+}
+
+/* Interação: a célula sob o ponteiro reacende (cor, nitidez, rótulo).
+   Só a apontada recebe o destaque; as outras continuam legíveis. */
+palco.addEventListener('pointermove', e => {
+  const alvo = e.target.closest?.('.cel');
+  cels.forEach(c => c.dataset.on = (c === alvo) ? '1' : '0');
+});
+palco.addEventListener('pointerleave', () => cels.forEach(c => c.dataset.on = '0'));
+
+function frame(now) {
+  pose(reduz ? DUR : Math.min((now - t0) / 1000, DUR));
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+window.__seek = s => { t0 = performance.now() - s * 1000; pose(s); };
+window.__dur = DUR;
+</script>
+</body>
+</html>
