@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Direção A — CLARO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* ------------------------------------------------------------------
+     DIREÇÃO A — "CLARO"
+     Ideia central: a casa abre um claro de luz e vira o seu estúdio pelo
+     tempo que você tiver. A transformação é a LUZ ABRINDO ESPAÇO: uma
+     fresta se alarga até virar um retângulo de luz, e dentro dele está a
+     pessoa real treinando na própria sala.
+     Família de materiais: papel, gesso, argila, linho, luz de janela.
+     Câmera: aproximação lenta e lateral, sem giro.
+     Gesto de interação: o ponteiro move a fonte de luz da cena.
+     ------------------------------------------------------------------ */
+  :root {
+    --papel: #f6f2ea;
+    --areia: #e9e1d3;
+    --tinta: #17140f;
+    --tinta-70: rgba(23, 20, 15, .68);
+    --argila: #a85a36;
+    --luz: #e7b064;
+    --oliva: #5d6b46;
+    --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+    --texto: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--papel);
+    color: var(--tinta);
+    font-family: var(--texto);
+    overflow: hidden;
+  }
+
+  /* A composição é uma GRADE, não empilhamento absoluto: o claro e o bloco de
+     texto ocupam áreas que não se cruzam em nenhuma largura. A sobreposição
+     acidental de tipografia sobre o vídeo foi um defeito observado na versão
+     anterior deste projeto e é evitada por construção, não por ajuste fino. */
+  .palco {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    padding: clamp(20px, 3.2vw, 54px);
+    column-gap: clamp(12px, 2vw, 32px);
+  }
+
+  /* Camada 1 — o ambiente de gesso. Um grão sutil e um vinhado quente
+     dão materialidade ao branco: branco liso e chapado não tem matéria. */
+  .gesso {
+    position: absolute; inset: -4%; z-index: 0;
+    background:
+      radial-gradient(120% 90% at var(--lx, 62%) var(--ly, 18%),
+        #fffdf8 0%, var(--papel) 42%, var(--areia) 78%, #d9cfbd 100%);
+    transition: background-position .4s linear;
+  }
+  .gesso::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'>\
+<filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/>\
+<feColorMatrix type='saturate' values='0'/></filter>\
+<rect width='140' height='140' filter='url(%23n)' opacity='.5'/></svg>");
+    opacity: .09; mix-blend-mode: multiply;
+  }
+
+  /* Camada 2 — a luz de janela que atravessa o ambiente. Segue o ponteiro. */
+  .feixe {
+    position: absolute; inset: -20%; z-index: 3;
+    background: linear-gradient(104deg,
+      transparent 28%,
+      rgba(255, 246, 226, .85) 44%,
+      rgba(255, 236, 200, .5) 52%,
+      transparent 66%);
+    mix-blend-mode: screen;
+    opacity: .0;
+    will-change: transform, opacity;
+  }
+
+  /* Camada 3 — O CLARO. Fresta que se alarga até o retângulo de luz. */
+  .claro {
+    grid-column: 5 / 13;
+    grid-row: 1 / 8;
+    justify-self: end;
+    align-self: center;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    z-index: 2;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    will-change: clip-path, transform;
+    box-shadow:
+      0 0 0 1px rgba(23, 20, 15, .06),
+      0 40px 90px -40px rgba(23, 20, 15, .45),
+      0 2px 10px -4px rgba(23, 20, 15, .2);
+  }
+  .claro video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    will-change: transform;
+  }
+  /* Borda quente: a luz "vaza" pelas bordas do claro, como uma fresta real. */
+  .claro::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    box-shadow: inset 0 0 60px -12px rgba(255, 228, 178, .55);
+  }
+
+  /* O halo que o claro projeta no gesso ao redor. Ocupa a mesma área do claro
+     e transborda por escala — sem sair da grade. */
+  .halo {
+    grid-column: 5 / 13;
+    grid-row: 1 / 8;
+    justify-self: end; align-self: center;
+    width: 100%; height: 100%;
+    transform: scale(1.35);
+    background: radial-gradient(closest-side, rgba(255, 226, 176, .6), transparent 72%);
+    filter: blur(30px);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    will-change: opacity, transform;
+  }
+
+  /* Camada 4 — tipografia editorial. Ocupa a coluna esquerda inferior:
+     área própria, sem cruzar o claro em nenhuma largura. */
+  .marca {
+    grid-column: 1 / 6;
+    grid-row: 1 / 2;
+    align-self: start;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .34em;
+    text-transform: uppercase;
+    opacity: 0;
+    z-index: 4;
+  }
+  .bloco {
+    grid-column: 1 / 8;
+    grid-row: 8 / 13;
+    align-self: end;
+    z-index: 4;
+  }
+  .ficha-area {
+    grid-column: 9 / 13;
+    grid-row: 12 / 13;
+    align-self: end;
+    justify-self: end;
+    z-index: 4;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(32px, 4.6vw, 76px);
+    line-height: .98;
+    letter-spacing: -.025em;
+    margin: 0;
+    max-width: 11ch;
+  }
+  h1 .linha { display: block; overflow: hidden; }
+  h1 .linha > span {
+    display: block;
+    transform: translateY(105%);
+    will-change: transform;
+  }
+  h1 em {
+    font-style: normal;
+    font-weight: 600;
+    /* A palavra "espaço" recebe a mesma luz do claro. */
+    background: linear-gradient(96deg, var(--argila), var(--luz) 60%, var(--argila));
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+  .apoio {
+    max-width: 34ch;
+    font-size: clamp(13px, 1.15vw, 16px);
+    line-height: 1.55;
+    color: var(--tinta-70);
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+  .acoes { display: flex; gap: 12px; margin-top: 22px; }
+  .btn {
+    font: 500 14px/1 var(--texto);
+    padding: 15px 22px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    min-height: 44px;
+  }
+  .btn-1 { background: var(--tinta); color: var(--papel); }
+  .btn-2 { background: transparent; color: var(--tinta); border-color: rgba(23,20,15,.25); }
+  .btn:focus-visible { outline: 2px solid var(--argila); outline-offset: 3px; }
+
+  .ficha {
+    font: 500 11px/1 var(--texto);
+    letter-spacing: .16em; text-transform: uppercase;
+    color: var(--tinta-70);
+    display: flex; gap: 14px; align-items: center;
+    opacity: 0;
+  }
+  .ficha span::before { content: "— "; opacity: .45; }
+  .ficha span:first-child::before { content: none; }
+
+  .nota {
+    position: absolute; left: 50%; bottom: 14px; translate: -50% 0; z-index: 5;
+    font: 500 10px/1 var(--texto); letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(23,20,15,.4);
+  }
+  /* Formato estreito: a mesma sequência, a mesma hierarquia, o mesmo gesto de
+     abertura — reorganizados em uma coluna. O claro continua sendo o
+     protagonista e o texto continua em espaço livre (seção 22.5). */
+  @media (max-width: 900px) {
+    .palco { column-gap: 0; }
+    .claro, .halo { grid-column: 1 / 13; grid-row: 2 / 7; justify-self: stretch; height: auto; width: 100%; }
+    .marca { grid-column: 1 / 9; }
+    .bloco { grid-column: 1 / 13; grid-row: 7 / 13; }
+    .ficha-area { grid-column: 1 / 13; grid-row: 12 / 13; justify-self: start; }
+    h1 { font-size: clamp(30px, 8vw, 52px); max-width: 12ch; }
+  }
+  /* Retrato muito estreito (celular em pé): o claro usa a mídia vertical. */
+  @media (max-aspect-ratio: 3/4) and (max-width: 560px) {
+    .claro { aspect-ratio: 4 / 5; grid-row: 2 / 8; }
+    .bloco { grid-row: 8 / 13; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .claro, .feixe, .halo, h1 .linha > span, .apoio, .marca, .ficha {
+      transition: none !important; animation: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="palco" id="palco">
+    <div class="gesso" id="gesso"></div>
+    <div class="halo" id="halo"></div>
+    <div class="claro" id="claro">
+      <video id="v" poster="../apps/web/public/media/sala-16x9.jpg"
+             muted playsinline loop autoplay preload="metadata">
+        <source src="../apps/web/public/media/sala-16x9.webm" type="video/webm" />
+        <source src="../apps/web/public/media/sala-16x9.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="feixe" id="feixe"></div>
+
+    <div class="marca" id="marca">Clareira</div>
+
+    <div class="bloco">
+      <h1>
+        <span class="linha"><span>Abra <em>espaço</em></span></span>
+        <span class="linha"><span>para o seu treino.</span></span>
+      </h1>
+      <p class="apoio" id="apoio">
+        Aulas conduzidas por professores reais, no tempo que você tiver.
+        Comece com 12 minutos na sua sala.
+      </p>
+      <div class="acoes">
+        <button class="btn btn-1">Ver uma aula</button>
+        <button class="btn btn-2">Entrar</button>
+      </div>
+    </div>
+
+    <div class="ficha-area">
+      <div class="ficha" id="ficha">
+        <span>12 min</span><span>sem equipamento</span><span>sala pequena</span>
+      </div>
+    </div>
+    <div class="nota">Direção A — Claro</div>
+  </main>
+
+<script type="module">
+/* Relógio da narrativa, separado do relógio da interação (seção 10 do briefing).
+   A pose é função do tempo absoluto: avançar, voltar ou reiniciar produz
+   exatamente a mesma composição. */
+const palco = document.getElementById('palco');
+const claro = document.getElementById('claro');
+const halo  = document.getElementById('halo');
+const feixe = document.getElementById('feixe');
+const v     = document.getElementById('v');
+const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const easeOutExpo  = t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+const easeInOutCub = t => t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+const clamp01 = t => t < 0 ? 0 : t > 1 ? 1 : t;
+const span = (t, a, b) => clamp01((t - a) / (b - a));
+
+const DUR = 3.4;             // segundos da entrada
+let t0 = performance.now();
+
+/* Pose determinística no instante t (em segundos). */
+function pose(t) {
+  // 0.0 → 0.35  fresta horizontal
+  // 0.35 → 1.8  o claro se abre (altura, depois largura)
+  // 1.2 → 2.4   a luz atravessa
+  // 1.6 → 3.4   tipografia entra por linha
+  const abreY = easeOutExpo(span(t, .35, 1.5));
+  const abreX = easeOutExpo(span(t, .55, 1.9));
+  const insetY = (1 - abreY) * 49.6;
+  const insetX = (1 - abreX) * 46;
+  claro.style.clipPath = `inset(${insetY}% ${insetX}% ${insetY}% ${insetX}% round 2px)`;
+
+  // A câmera do vídeo recua de leve: aproximação que assenta.
+  const assenta = easeInOutCub(span(t, .35, 3.0));
+  v.style.transform = `scale(${1.14 - .14 * assenta})`;
+
+  halo.style.opacity = String(.9 * easeOutExpo(span(t, .5, 2.2)));
+
+  const passa = easeInOutCub(span(t, 1.1, 2.5));
+  feixe.style.opacity = String(Math.sin(Math.PI * span(t, 1.1, 2.5)) * .55);
+  feixe.style.transform = `translate3d(${-40 + 80 * passa}%,0,0)`;
+
+  document.getElementById('marca').style.opacity = String(easeOutExpo(span(t, .1, .9)));
+  const linhas = document.querySelectorAll('h1 .linha > span');
+  linhas.forEach((el, i) => {
+    const p = easeOutExpo(span(t, 1.55 + i * .13, 2.35 + i * .13));
+    el.style.transform = `translateY(${(1 - p) * 105}%)`;
+  });
+  const ap = easeOutExpo(span(t, 2.0, 2.9));
+  const apoio = document.getElementById('apoio');
+  apoio.style.opacity = String(ap);
+  apoio.style.transform = `translateY(${(1 - ap) * 14}px)`;
+  document.getElementById('ficha').style.opacity = String(easeOutExpo(span(t, 2.3, 3.2)));
+}
+
+/* Interação: relógio próprio, amortecimento próprio. Aplicada SOBRE a pose
+   base — nunca acumulada. O ponteiro move a fonte de luz do ambiente. */
+let px = .62, py = .18, tx = .62, ty = .18;
+palco.addEventListener('pointermove', e => {
+  const r = palco.getBoundingClientRect();
+  tx = (e.clientX - r.left) / r.width;
+  ty = (e.clientY - r.top) / r.height;
+});
+palco.addEventListener('pointerleave', () => { tx = .62; ty = .18; });
+
+function frame(now) {
+  const t = reduz ? DUR : Math.min((now - t0) / 1000, DUR);
+  pose(t);
+
+  px += (tx - px) * .07; py += (ty - py) * .07;
+  const gesso = document.getElementById('gesso');
+  gesso.style.setProperty('--lx', (px * 100).toFixed(2) + '%');
+  gesso.style.setProperty('--ly', (py * 100).toFixed(2) + '%');
+  // Paralaxe leve, somada à pose base já escrita no mesmo quadro. O offset é
+  // sempre calculado a partir da pose base — nunca acumulado sobre si mesmo.
+  claro.style.translate = `${((px - .5) * -14).toFixed(2)}px ${((py - .5) * -10).toFixed(2)}px`;
+  halo.style.translate  = `${((px - .5) * -26).toFixed(2)}px ${((py - .5) * -18).toFixed(2)}px`;
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+// Hook de inspeção: window.__seek(2.1) posiciona a cena em qualquer instante.
+window.__seek = s => { t0 = performance.now() - s * 1000; pose(s); };
+window.__dur = DUR;
+v.play?.().catch(() => {});
+</script>
+</body>
+</html>

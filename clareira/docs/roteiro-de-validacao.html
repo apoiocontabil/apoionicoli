@@ -1,0 +1,988 @@
+<title>Validar a Clareira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,500;1,6..72,300&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ===========================================================================
+   Dossiê de validação — registro cooler e mais instrumental que o produto,
+   para ler como documento SOBRE a plataforma, não como a plataforma.
+   =========================================================================== */
+:root {
+  --papel: #f2f2ef;
+  --superficie: #fafaf9;
+  --superficie-2: #eaeae6;
+  --tinta: #17191a;
+  --tinta-media: #5a6063;
+  --regua: #d9dad5;
+
+  /* Semânticas, separadas do acento. */
+  --ok: #46603d;
+  --pendente: #8a5a2b;
+  --seu: #2c5468;          /* decisões que dependem do proprietário */
+  --seu-suave: #e4edf1;
+
+  --display: "Newsreader", Georgia, serif;
+  --corpo: "Public Sans", system-ui, -apple-system, sans-serif;
+  --dados: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #14161a;
+    --superficie: #1b1e22;
+    --superficie-2: #23272c;
+    --tinta: #e9eae6;
+    --tinta-media: #99a0a4;
+    --regua: #2d3237;
+    --ok: #93b386;
+    --pendente: #d79e63;
+    --seu: #86b7d0;
+    --seu-suave: #1d2c34;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #14161a;
+  --superficie: #1b1e22;
+  --superficie-2: #23272c;
+  --tinta: #e9eae6;
+  --tinta-media: #99a0a4;
+  --regua: #2d3237;
+  --ok: #93b386;
+  --pendente: #d79e63;
+  --seu: #86b7d0;
+  --seu-suave: #1d2c34;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--corpo);
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.envoltorio {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-inline: 20px;
+  padding-block: 0;
+}
+
+/* --- Cabeçalho ----------------------------------------------------------- */
+
+.capa {
+  border-bottom: 1px solid var(--regua);
+  padding-block: clamp(40px, 7vw, 76px) clamp(28px, 4vw, 44px);
+}
+.sobrescrito {
+  font-family: var(--dados);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-media);
+  margin: 0 0 18px;
+}
+h1 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(38px, 6.4vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -0.018em;
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+h1 em { font-style: italic; font-weight: 300; }
+.resumo {
+  max-width: 62ch;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: var(--tinta-media);
+  margin: 0;
+}
+
+.medidores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 44px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px solid var(--regua);
+}
+.medidor dt {
+  font-family: var(--dados);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-media);
+  margin: 0 0 4px;
+}
+.medidor dd {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.medidor dd small {
+  font-family: var(--corpo);
+  font-size: 12px;
+  color: var(--tinta-media);
+  margin-left: 6px;
+}
+
+/* --- Seções -------------------------------------------------------------- */
+
+section { padding-block: clamp(40px, 6vw, 68px); border-bottom: 1px solid var(--regua); }
+section:last-of-type { border-bottom: 0; }
+
+h2 {
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(26px, 3.4vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.012em;
+  margin: 0 0 10px;
+  text-wrap: balance;
+}
+h3 {
+  font-family: var(--corpo);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+.intro { max-width: 66ch; color: var(--tinta-media); margin: 0 0 30px; }
+p { max-width: 66ch; }
+
+.ref {
+  display: inline-block;
+  font-family: var(--dados);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--tinta-media);
+  white-space: nowrap;
+}
+
+/* --- Decisões do proprietário -------------------------------------------- */
+
+.decisoes { display: grid; gap: 1px; background: var(--regua); border: 1px solid var(--regua); }
+.decisao {
+  background: var(--superficie);
+  padding: 20px clamp(16px, 2.4vw, 26px);
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: 0 18px;
+  align-items: start;
+}
+.decisao::before { content: ""; background: var(--seu); border-radius: 2px; align-self: stretch; }
+.decisao p { margin: 4px 0 0; color: var(--tinta-media); font-size: 15px; }
+.decisao .porque { display: block; margin-top: 8px; font-size: 13.5px; }
+
+/* --- Comparação das direções --------------------------------------------- */
+
+.direcoes { display: grid; gap: 26px; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); }
+.direcao { display: flex; flex-direction: column; gap: 14px; }
+.direcao figure { margin: 0; }
+.direcao img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border: 1px solid var(--regua);
+  background: var(--superficie-2);
+}
+.veredito {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--dados);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  align-self: flex-start;
+}
+.veredito.escolhida { color: var(--ok); }
+.veredito.recusada { color: var(--pendente); }
+.direcao ul { margin: 0; padding-left: 18px; font-size: 14.5px; color: var(--tinta-media); }
+.direcao li { margin-bottom: 5px; }
+.direcao li strong { color: var(--tinta); font-weight: 600; }
+
+.gesto { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); margin-top: 34px; }
+.gesto img { width: 100%; display: block; border: 1px solid var(--regua); }
+.gesto figcaption { font-family: var(--dados); font-size: 11px; letter-spacing: 0.08em; color: var(--tinta-media); margin-top: 8px; }
+.gesto figure { margin: 0; }
+
+/* --- Jornada ------------------------------------------------------------- */
+
+.jornada { display: grid; gap: 30px; }
+.passo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 36px);
+  align-items: start;
+}
+.passo img { width: 100%; display: block; border: 1px solid var(--regua); background: var(--superficie-2); }
+.passo .numero {
+  font-family: var(--dados);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--tinta-media);
+  margin: 0 0 6px;
+}
+.passo p { margin: 0; font-size: 15px; color: var(--tinta-media); }
+.passo .olhar {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--regua);
+  font-size: 14px;
+}
+.passo .olhar b { font-weight: 600; color: var(--tinta); }
+@media (max-width: 720px) { .passo { grid-template-columns: 1fr; } }
+
+/* --- Paridade celular ---------------------------------------------------- */
+
+.paridade { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); }
+.paridade figure { margin: 0; }
+.paridade img { width: 100%; display: block; border: 1px solid var(--regua); }
+.paridade figcaption { font-size: 13.5px; color: var(--tinta-media); margin-top: 8px; }
+
+/* --- Critérios eliminatórios --------------------------------------------- */
+
+.criterios { border-top: 1px solid var(--regua); }
+.criterio {
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  gap: 4px 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--regua);
+  align-items: baseline;
+}
+.criterio .n { font-family: var(--dados); font-size: 12px; color: var(--tinta-media); font-variant-numeric: tabular-nums; }
+.criterio .texto { margin: 0; font-size: 15px; }
+.criterio .prova { grid-column: 2; margin: 6px 0 0; font-size: 13.5px; color: var(--tinta-media); }
+.selo {
+  font-family: var(--dados);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.selo.ok { color: var(--ok); }
+.selo.na { color: var(--tinta-media); }
+@media (max-width: 640px) {
+  .criterio { grid-template-columns: 28px 1fr; }
+  .criterio .selo { grid-column: 2; justify-self: start; margin-top: 8px; }
+  .criterio .prova { grid-column: 2; }
+}
+
+/* --- Lista de verificação ------------------------------------------------ */
+
+.barra-progresso {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+  font-family: var(--dados);
+  font-size: 12px;
+  color: var(--tinta-media);
+}
+.trilho { flex: 1; height: 3px; background: var(--regua); border-radius: 3px; overflow: hidden; max-width: 340px; }
+.trilho i { display: block; height: 100%; background: var(--ok); transition: width 260ms ease; }
+
+.grupo { margin-bottom: 30px; }
+.grupo > h3 {
+  font-family: var(--dados);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta-media);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--regua);
+}
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  align-items: start;
+  cursor: pointer;
+}
+.item input {
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  margin: 3px 0 0;
+  border: 1.5px solid var(--tinta-media);
+  border-radius: 3px;
+  background: var(--superficie);
+  cursor: pointer;
+  position: relative;
+  flex: none;
+}
+.item input:checked { background: var(--ok); border-color: var(--ok); }
+.item input:checked::after {
+  content: "";
+  position: absolute;
+  left: 5.5px; top: 1.5px;
+  width: 5px; height: 10px;
+  border: solid var(--papel);
+  border-width: 0 2px 2px 0;
+  transform: rotate(42deg);
+}
+.item input:focus-visible { outline: 2px solid var(--seu); outline-offset: 2px; }
+.item .rotulo { font-size: 15px; }
+.item input:checked ~ .rotulo { color: var(--tinta-media); }
+.item .como {
+  display: block;
+  margin-top: 3px;
+  font-size: 13.5px;
+  color: var(--tinta-media);
+}
+.item code, code.linha {
+  font-family: var(--dados);
+  font-size: 12.5px;
+  background: var(--superficie-2);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.sincronia {
+  font-family: var(--dados);
+  font-size: 11px;
+  color: var(--tinta-media);
+  margin-top: 18px;
+  min-height: 1.4em;
+}
+
+/* --- Blocos de comando --------------------------------------------------- */
+
+pre {
+  font-family: var(--dados);
+  font-size: 13px;
+  line-height: 1.75;
+  background: var(--superficie);
+  border: 1px solid var(--regua);
+  border-left: 3px solid var(--seu);
+  padding: 16px 18px;
+  overflow-x: auto;
+  margin: 0 0 18px;
+}
+pre .c { color: var(--tinta-media); }
+
+/* --- Limites ------------------------------------------------------------- */
+
+.limites { display: grid; gap: 1px; background: var(--regua); border: 1px solid var(--regua); }
+.limite {
+  background: var(--superficie);
+  padding: 16px clamp(16px, 2.2vw, 22px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 4px 22px;
+}
+.limite dt { font-weight: 600; font-size: 15px; margin: 0; }
+.limite dd { margin: 0; font-size: 14.5px; color: var(--tinta-media); }
+@media (max-width: 640px) { .limite { grid-template-columns: 1fr; } }
+
+/* --- Rodapé -------------------------------------------------------------- */
+
+footer {
+  padding-block: 40px 56px;
+  font-size: 14px;
+  color: var(--tinta-media);
+}
+footer a { color: var(--seu); }
+a { color: var(--seu); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+</style>
+
+<div class="envoltorio">
+
+  <header class="capa">
+    <p class="sobrescrito">Dossiê de validação · 14 de setembro de 2026</p>
+    <h1>Validar a <em>Clareira</em></h1>
+    <p class="resumo">
+      O que foi construído, o que eu verifiquei, o que eu <strong>não</strong> verifiquei
+      e o que depende de uma decisão sua. Cada afirmação aqui tem prova ao lado —
+      captura, teste ou arquivo.
+    </p>
+
+    <dl class="medidores">
+      <div class="medidor"><dt>Testes</dt><dd>112 <small>passando</small></dd></div>
+      <div class="medidor"><dt>Capturas de navegador</dt><dd>56 <small>desktop e celular</small></dd></div>
+      <div class="medidor"><dt>Problemas no percurso</dt><dd>0</dd></div>
+      <div class="medidor"><dt>Defeitos corrigidos</dt><dd>13</dd></div>
+      <div class="medidor"><dt>Direções comparadas</dt><dd>3 <small>implementadas</small></dd></div>
+    </dl>
+  </header>
+
+  <section>
+    <h2>Primeiro: o que depende de você</h2>
+    <p class="intro">
+      Estas coisas eu não podia decidir sozinho, e nenhuma delas está fingida no
+      produto. Enquanto não houver decisão, a plataforma diz na tela que não há.
+    </p>
+
+    <div class="decisoes">
+      <div class="decisao">
+        <div>
+          <h3>O nome comercial <span class="ref">§2</span></h3>
+          <p>
+            Usei <strong>Clareira</strong> como nome de trabalho: a abertura de luz que
+            se faz num lugar fechado — a mesma ideia do gesto visual.
+            <span class="porque">Trocar custa um arquivo: <code>packages/domain/src/plans/catalogo.ts</code>. Nenhum outro código depende dele.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="decisao">
+        <div>
+          <h3>Os preços <span class="ref">§24</span></h3>
+          <p>
+            R$29,90 e R$49,90 estão implementados como <strong>hipótese de estudo</strong>,
+            e a tela diz isso antes do número. A rota de contratação recusa.
+            <span class="porque">O simulador mostra que o Essencial não financia um objeto de R$55 em 12 ciclos, e que no uso intensivo vender mais Completo <em>piora</em> a margem. Vale ler antes de aprovar qualquer preço.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="decisao">
+        <div>
+          <h3>O acervo de aulas <span class="ref">§9</span></h3>
+          <p>
+            Os vídeos são imagens ilustrativas licenciadas, rotuladas como tal na
+            interface. Os professores são perfis de demonstração.
+            <span class="porque">É a única pendência que nenhum código resolve: uma aula de verdade precisa das suas gravações e das suas instruções revisadas.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="decisao">
+        <div>
+          <h3>O programa de recompensas <span class="ref">§34</span></h3>
+          <p>
+            A infraestrutura existe e é testável, mas <code>OFERTA_FISICA_ATIVA</code>
+            está em <strong>falso</strong>: nada é prometido a ninguém.
+            <span class="porque">Para ligar, faltam fornecedor cotado, regulamento revisado e orçamento que suporte 100% dos elegíveis resgatando — não a taxa esperada.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="decisao">
+        <div>
+          <h3>A licença integral da mídia <span class="ref">§9</span></h3>
+          <p>
+            O rótulo "Free License" está registrado por item, mas o texto completo
+            da licença Mixkit carrega por JavaScript e não pôde ser arquivado aqui.
+            <span class="porque">Precisa ser lido e guardado antes de qualquer publicação comercial.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>A decisão criativa</h2>
+    <p class="intro">
+      Implementei três direções de verdade, com a <strong>mesma mensagem de produto</strong>
+      nas três, para a comparação ser sobre a composição e não sobre paleta. Cada uma
+      está executável em <code>explorations/</code>. Os quadros abaixo são do mesmo
+      instante da cena (3,4 s).
+    </p>
+
+    <div class="direcoes">
+      <div class="direcao">
+        <figure><img src="ev/dir-a.jpg" alt="Direção Claro: sala doméstica real dentro de um retângulo de luz, com a headline em espaço livre à esquerda." loading="lazy" /></figure>
+        <span class="veredito escolhida">Escolhida · Claro</span>
+        <ul>
+          <li><strong>A pessoa domina o quadro</strong> — a sala real ocupa o centro e nada a cobre.</li>
+          <li>A tipografia tem área própria; não cruza o corpo em nenhuma largura.</li>
+          <li>Sem WebGL: roda em aparelho fraco e reflui para uma coluna preservando a sequência.</li>
+        </ul>
+      </div>
+
+      <div class="direcao">
+        <figure><img src="ev/dir-b.jpg" alt="Direção Cadência: fundo preto, seis células que colapsam num quadro único, headline em caixa alta condensada sobre a pessoa." loading="lazy" /></figure>
+        <span class="veredito recusada">Recusada · Cadência</span>
+        <ul>
+          <li><strong>A headline cobre a cabeça e o tronco</strong> da pessoa.</li>
+          <li>Preto + verde ácido + caixa alta condensada é o registro padrão de app de fitness — perto do que você já tinha rejeitado.</li>
+          <li>Seis células ficam ilegíveis em tela pequena.</li>
+        </ul>
+      </div>
+
+      <div class="direcao">
+        <figure><img src="ev/dir-c.jpg" alt="Direção Passagem: corredor 3D de lâminas de concreto ocupando a maior parte do quadro, com o vídeo numa abertura ao fundo." loading="lazy" /></figure>
+        <span class="veredito recusada">Recusada · Passagem</span>
+        <ul>
+          <li><strong>O concreto ocupa cerca de 70% do quadro</strong>; a pessoa vira uma janela ao fundo.</li>
+          <li>Lê como galeria, não como casa — é o universo da referência, não o nosso.</li>
+          <li>Cena WebGL completa: a mais cara das três, para o resultado mais fraco no critério principal.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top:32px">
+      <strong>B e C não foram descartadas.</strong> A passagem espacial foi para a
+      transição de entrada no treino, onde ela significa mudança de contexto; a
+      montagem com colapso foi para a biblioteca, onde comparar muitas opções é a
+      tarefa. Acumular os três mecanismos na mesma página era justamente o defeito
+      anterior. <span class="ref">§7, item 10</span>
+    </p>
+
+    <div class="gesto">
+      <figure>
+        <img src="ev/gesto-abre.jpg" alt="A fresta de luz começando a se alargar, com o vídeo parcialmente revelado." loading="lazy" />
+        <figcaption>0,8 s — a fresta se alarga</figcaption>
+      </figure>
+      <figure>
+        <img src="ev/gesto-aberto.jpg" alt="O retângulo de luz totalmente aberto com a sala real dentro." loading="lazy" />
+        <figcaption>3,4 s — o claro aberto</figcaption>
+      </figure>
+      <figure>
+        <img src="ev/08-fim.jpg" alt="A tela de conclusão, com o claro se fechando e o resumo da sessão." loading="lazy" />
+        <figcaption>Ao concluir — o mesmo claro se fecha</figcaption>
+      </figure>
+    </div>
+    <p style="margin-top:14px; font-size:14.5px; color:var(--tinta-media)">
+      O gesto abre na chegada e fecha na conclusão. É o mesmo elemento atravessando
+      a jornada inteira, não um efeito de abertura que depois some.
+    </p>
+  </section>
+
+  <section>
+    <h2>A jornada, como ela está hoje</h2>
+    <p class="intro">
+      Capturas de navegador real, geradas pelo script de percurso. Ao lado de cada
+      uma, o que eu sugiro que você olhe com atenção.
+    </p>
+
+    <div class="jornada">
+      <div class="passo">
+        <img src="ev/01-chegada.jpg" alt="Chegada: retângulo de luz com a mulher treinando na sala, headline à esquerda em espaço livre." loading="lazy" />
+        <div>
+          <p class="numero">01 · Chegada</p>
+          <h3>Pessoa real treinando em casa, nos primeiros três segundos</h3>
+          <p>Sala com sofá, cortina, plantas e luz de janela. O rótulo no canto diz que a imagem é ilustrativa.</p>
+          <p class="olhar"><b>Olhe:</b> as duas ações já estão clicáveis antes da animação terminar — o percurso verifica isso em 300 ms.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/02-descoberta.jpg" alt="Seção de descoberta com botões de tempo, espaço e impacto, e os cartões de aula resultantes." loading="lazy" />
+        <div>
+          <p class="numero">02 · Descoberta</p>
+          <h3>Mudar um controle muda a aula de verdade</h3>
+          <p>Tempo, espaço e impacto consultam o catálogo. O estado vai para a URL, então o resultado é compartilhável e o botão voltar funciona.</p>
+          <p class="olhar"><b>Teste:</b> aperte o espaço para "só um tapete" e veja a aula de 20 minutos sair da lista. A frase acima dos cartões diz quantas cabem.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/03b-onboarding.jpg" alt="Onboarding: uma pergunta por vez, com barra de progresso e quatro opções largas." loading="lazy" />
+        <div>
+          <p class="numero">03 · Onboarding</p>
+          <h3>Oito perguntas, todas puláveis</h3>
+          <p>Objetivo, experiência, dias, tempo, espaço, impacto, equipamento e limitações. <strong>Não pede peso, altura, câmera nem microfone.</strong></p>
+          <p class="olhar"><b>Olhe:</b> o rodapé diz isso explicitamente. Recomendar pelo peso seria errado, e câmera no cadastro contraria a seção 13.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/04-hoje.jpg" alt="Tela Hoje com a sessão do dia, o motivo da recomendação e o histórico abaixo." loading="lazy" />
+        <div>
+          <p class="numero">04 · Hoje</p>
+          <h3>Uma ação principal, e a recomendação se explica</h3>
+          <p>"Cabe nos seus 20 minutos, respeita o impacto que você prefere e usa só o peso do corpo."</p>
+          <p class="olhar"><b>Teste:</b> recarregue a página. A aula do dia <b>não muda</b> — ela é persistida por dia e fuso. Trocar só acontece se você pedir.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/05-preparar.jpg" alt="Tela de preparação com a ficha do que esperar: tempo, equipamento, espaço, intensidade, estrutura e professor." loading="lazy" />
+        <div>
+          <p class="numero">05 · Preparação</p>
+          <h3>Pronto para começar, sem painel técnico</h3>
+          <p>Tempo, equipamento, espaço, intensidade, estrutura em séries e quem conduz.</p>
+          <p class="olhar"><b>Olhe:</b> o aviso de que o som só começa quando você quiser e de que câmera e microfone não são necessários.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/07-pausado.jpg" alt="Estúdio de treino em fundo escuro, vídeo centralizado, estado PAUSADO e os controles na base." loading="lazy" />
+        <div>
+          <p class="numero">06 · Estúdio de treino</p>
+          <h3>Durante o esforço, nada disputa a tela</h3>
+          <p>Sem promoção, sem upsell, sem alerta empilhado. O corpo e a instrução ficam estáveis; a expressão fica na entrada e na conclusão.</p>
+          <p class="olhar"><b>Teste:</b> aperte a barra de espaço. O estado muda no servidor, não só na tela. Ao continuar, o vídeo <b>não</b> volta a tocar sozinho.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/09-conquistas.jpg" alt="Tela de conquistas com contadores de dias e semanas e os marcos com explicação do que falta." loading="lazy" />
+        <div>
+          <p class="numero">07 · Conquistas</p>
+          <h3>Diz o que falta, e diz a verdade sobre o prêmio</h3>
+          <p>"Faltam 4 semanas de compromisso." Nada de calorias, peso perdido ou dias sem descanso — não existe nem tipo de evento para isso.</p>
+          <p class="olhar"><b>Olhe:</b> o aviso de que nenhuma campanha foi aberta. O marco físico aparece, mas não é prometido.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/10-planos.jpg" alt="Tela de planos com o aviso de estudo antes dos preços e os dois planos lado a lado." loading="lazy" />
+        <div>
+          <p class="numero">08 · Planos</p>
+          <h3>O aviso vem antes do número</h3>
+          <p>Sem preço riscado, sem cronômetro, sem "mais escolhido" — não há dado que sustente. "Recomendado para…" com a adequação explicada.</p>
+          <p class="olhar"><b>Teste:</b> clique em "Por que não dá para assinar ainda?". A API recusa e lista as pendências reais.</p>
+        </div>
+      </div>
+
+      <div class="passo">
+        <img src="ev/12-studio-editor.jpg" alt="Studio do professor com preview do vídeo, linha do tempo de etapas e painel de propriedades." loading="lazy" />
+        <div>
+          <p class="numero">09 · Studio do professor</p>
+          <h3>Autoria de verdade, não uma tabela de vídeos</h3>
+          <p>Preview central, linha do tempo editorial, propriedades por etapa, autosave com estado dito na tela.</p>
+          <p class="olhar"><b>Teste:</b> tente publicar a aula em rascunho. O bloqueio é <b>específico</b>: diz que a mídia está transcodificando, que faltam etapas e que falta revisão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>A mesma experiência no celular</h2>
+    <p class="intro">
+      Mesma identidade, mesma sequência, mesmos elementos — proporções ajustadas,
+      mídia reenquadrada por recorte e nunca deformada. <span class="ref">§22.5</span>
+    </p>
+    <div class="paridade">
+      <figure>
+        <img src="ev/01-chegada-celular.jpg" alt="Chegada no celular: vídeo vertical no topo, headline, apoio, ações e ficha, tudo acima da dobra." loading="lazy" />
+        <figcaption>Chegada — o vídeo usa a versão vertical, e as ações cabem acima da dobra.</figcaption>
+      </figure>
+      <figure>
+        <img src="ev/03b-onboarding-celular.jpg" alt="Onboarding no celular: uma pergunta por vez com as opções empilhadas." loading="lazy" />
+        <figcaption>Onboarding — uma pergunta por vez, alvos confortáveis com o polegar.</figcaption>
+      </figure>
+      <figure>
+        <img src="ev/07-pausado-celular.jpg" alt="Estúdio de treino no celular, com o vídeo e os controles empilhados." loading="lazy" />
+        <figcaption>Estúdio — o professor continua legível e os controles ficam ao alcance.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Os doze critérios eliminatórios</h2>
+    <p class="intro">
+      A lista é sua, da seção 30 do briefing. O veredito é meu, com a prova ao lado —
+      confira você mesmo pelos testes indicados.
+    </p>
+
+    <div class="criterios">
+      <div class="criterio">
+        <span class="n">01</span>
+        <p class="texto">Hero genérico com título, parágrafo, CTA e caixa de vídeo, seguido de cartões iguais.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Composição em grade assimétrica com o claro se abrindo; cartões só onde comparar é a tarefa.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">02</span>
+        <p class="texto">Abertura dominada por formas abstratas, sala vazia ou tipografia, sem pessoa real treinando em casa.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Foi exatamente por isso que a direção C foi recusada. A abertura escolhida é a sala real ocupando o centro.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">03</span>
+        <p class="texto">Redesign restrito a cores, fontes, sombras, gradientes e fades.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">O gesto é transformação de <code>clip-path</code> com câmera que assenta, e fecha na conclusão.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">04</span>
+        <p class="texto">Imersão escondida num tour enquanto a experiência principal continua indiferenciada.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Não existe tour. O gesto está na rota principal e nas telas de acesso e conclusão.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">05</span>
+        <p class="texto">Introdução obrigatória longa, rolagem sequestrada ou login dependente de assistir ao espetáculo.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Nenhuma rolagem é interceptada; as ações estão clicáveis em 300 ms. Toda rota abre direto por URL.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">06</span>
+        <p class="texto">Corpo deformado ou cortado ao acaso, mídia em baixa qualidade evitável, tela preta ou ângulo falso.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">O recorte vertical é dedicado, com <code>object-position</code> preservando cabeça e tronco. A entrada do clipe da aula começa em 3,6 s justamente para não cortar a cabeça.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">07</span>
+        <p class="texto">Animação que cobre informação, perde foco ou dificulta pausar durante o exercício.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Verificação automática de sobreposição em cada uma das 56 capturas. Pausar responde por botão e por barra de espaço.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">08</span>
+        <p class="texto">Professor com apenas tabela e métricas, sem autoria e preview úteis.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Studio com preview central, linha do tempo, propriedades e publicação versionada.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">09</span>
+        <p class="texto">Contas, pagamentos, câmera, scanner, IA, música, idiomas ou compatibilidade com estados fictícios.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Cada integração se declara ausente em <code>/v1/saude</code> e nas telas. A contratação recusa. Nenhum botão morto.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">10</span>
+        <p class="texto">Código novo que herda telas rejeitadas, sobrescreve o projeto anterior ou usa dados produtivos.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">O repositório estava vazio. Porta, banco e configuração são próprios. Nenhuma credencial foi lida ou reutilizada.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">11</span>
+        <p class="texto">Documentação se autodeclarando "premium" ou "pronta para milhões" sem evidência.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Nenhuma meta de desempenho é afirmada: o container não tem GPU e medir ali não representaria aparelho nenhum.</p>
+      </div>
+      <div class="criterio">
+        <span class="n">12</span>
+        <p class="texto">Entrega apenas de landing ou protótipo com o restante do escopo omitido.</p>
+        <span class="selo ok">Não ocorre</span>
+        <p class="prova">Motor de sessão, backend com banco, autoria, comercial e conquistas estão implementados. O que falta está listado por requisito, com a dependência nomeada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sua lista de verificação</h2>
+    <p class="intro">
+      O que eu sugiro que você faça com as próprias mãos. O que você marcar fica
+      guardado nesta página.
+    </p>
+
+    <div class="barra-progresso">
+      <span id="contagem">0 de 16</span>
+      <span class="trilho"><i id="trilho" style="width:0%"></i></span>
+    </div>
+
+    <h3 style="font-family:var(--corpo);font-weight:600;font-size:16px;margin:0 0 10px">Rodar localmente</h3>
+    <pre><span class="c"># 1. instalar e preparar o banco de demonstração</span>
+npm install
+npm run db:reset &amp;&amp; npm run db:seed
+
+<span class="c"># 2. subir (web em :5273, api em :5274)</span>
+npm run dev
+
+<span class="c"># 3. conferir tudo de uma vez</span>
+npm run validar     <span class="c"># typecheck + 112 testes + build</span>
+npm run percurso    <span class="c"># jornada em navegador, com as 28 capturas</span></pre>
+    <p style="font-size:14px;color:var(--tinta-media);margin-bottom:30px">
+      Contas de demonstração, senha <code>clareira-demo-2026</code>:
+      <code>aluna@exemplo.local</code> ·
+      <code>editor@exemplo.local</code> (publica aulas) ·
+      <code>admin@exemplo.local</code> (simulador econômico).
+    </p>
+
+    <div id="lista"></div>
+
+    <p class="sincronia" id="sincronia"></p>
+  </section>
+
+  <section>
+    <h2>O que eu não verifiquei</h2>
+    <p class="intro">
+      Isto é tão importante quanto o resto. Nada abaixo está afirmado como testado.
+    </p>
+
+    <dl class="limites">
+      <div class="limite">
+        <dt>Safari, iOS e Android reais</dt>
+        <dd>Indisponíveis no ambiente. É a maior incerteza que sobra — e expõe o caminho H.264, as áreas seguras e o autoplay.</dd>
+      </div>
+      <div class="limite">
+        <dt>O caminho MP4 / H.264</dt>
+        <dd>O Chromium da validação não traz o codec. Descobri isso porque o que aparecia era o pôster, não o vídeo — e por isso passei a gerar WebM ao lado do MP4.</dd>
+      </div>
+      <div class="limite">
+        <dt>Desempenho real</dt>
+        <dd>Sem GPU no container. Nenhum número de fps, LCP ou INP é afirmado, porque medir ali não representaria aparelho nenhum.</dd>
+      </div>
+      <div class="limite">
+        <dt>TVs, Apple Watch e Wear OS</dt>
+        <dd>Exigem SDK, macOS, Xcode e aparelho. O contrato de sessão e o de controlador já existem para o app nativo consumir.</dd>
+      </div>
+      <div class="limite">
+        <dt>Leitor de tela real</dt>
+        <dd>Semântica, regiões vivas e rótulos implementados; sem NVDA ou VoiceOver disponível para conferir de fato.</dd>
+      </div>
+      <div class="limite">
+        <dt>Cobrança e webhooks</dt>
+        <dd>Nenhum provedor configurado, por decisão. O adaptador e a tabela de eventos com ordem e duplicata estão prontos.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <p>
+      Código, documentação e evidências na branch
+      <code>claude/home-training-platform-082427</code> —
+      <a href="https://github.com/apoiocontabil/apoionicoli/pull/1">pull request #1</a>.
+      Os documentos de origem ficam em <code>docs/</code>: requisitos por estado,
+      arquitetura, storyboard, fontes de mídia, modelo de preço e validação.
+    </p>
+  </footer>
+</div>
+
+<script type="application/json" id="estado">{}</script>
+
+<script>
+(() => {
+  "use strict";
+
+  const ITENS = [
+    { g: "No navegador", id: "abertura", t: "A abertura te dá vontade de treinar?",
+      c: "É a pergunta que importa. Três segundos, sem ler nada." },
+    { g: "No navegador", id: "descoberta", t: "Mudar tempo e espaço muda a aula de verdade",
+      c: "Na página inicial, aperte 30 min + sala pequena + impacto baixo, depois volte para \"só um tapete\" e veja a aula de 20 minutos sair." },
+    { g: "No navegador", id: "voltar", t: "O botão voltar do navegador funciona em toda a jornada",
+      c: "Inclusive depois de mudar os filtros de descoberta." },
+    { g: "No navegador", id: "pausa", t: "Pausar e retomar não perde o contexto",
+      c: "Na aula, aperte a barra de espaço. Ao continuar, o vídeo não volta sozinho." },
+    { g: "No navegador", id: "encerrar", t: "Encerrar no meio salva o que aconteceu, sem fingir conclusão",
+      c: "O resumo diz quantas séries foram registradas, não um número inventado." },
+    { g: "No navegador", id: "teclado", t: "Dá para percorrer tudo só com o teclado",
+      c: "Tab a partir do topo: o primeiro alvo é \"Pular para o conteúdo\"." },
+    { g: "No navegador", id: "celular", t: "No celular é a mesma experiência, não uma versão pobre",
+      c: "Reduza a janela a 390px ou abra no telefone da mesma rede." },
+    { g: "No navegador", id: "publicar", t: "O bloqueio de publicação diz exatamente o que falta",
+      c: "Entre como <code>editor@exemplo.local</code>, abra a aula em rascunho no Studio." },
+
+    { g: "Nos números", id: "testes", t: "Os 112 testes passam na sua máquina",
+      c: "<code>npm run validar</code>" },
+    { g: "Nos números", id: "invariantes", t: "Os dez invariantes da seção 15 têm teste próprio",
+      c: "<code>packages/domain/test/sessao.test.ts</code> — cada um marcado com [INV n]." },
+    { g: "Nos números", id: "simulador", t: "O simulador econômico bate com a tabela da seção 34.7",
+      c: "<code>packages/domain/test/economia.test.ts</code> — e marca as lacunas de custo." },
+    { g: "Nos números", id: "percurso", t: "O percurso roda limpo e gera as capturas",
+      c: "<code>npm run percurso</code> — contraste e sobreposição verificados em cada quadro." },
+
+    { g: "Decisões suas", id: "nome", t: "O nome de trabalho serve, ou trocamos",
+      c: "Clareira, ou outro. Custa um arquivo." },
+    { g: "Decisões suas", id: "precos", t: "Li o modelo de preço antes de aprovar qualquer número",
+      c: "<code>docs/PRICING-MODEL.md</code> — as três conclusões desconfortáveis estão lá." },
+    { g: "Decisões suas", id: "acervo", t: "Decidi como entra o acervo de aulas de verdade",
+      c: "É a pendência que nenhum código resolve." },
+    { g: "Decisões suas", id: "proximo", t: "Escolhi o próximo passo",
+      c: "Minha sugestão: calendário, depois edição do registro de série. <code>docs/PROGRESS.md</code>" }
+  ];
+
+  const bruto = document.getElementById("estado").textContent.trim();
+  let estado = {};
+  try { estado = bruto ? JSON.parse(bruto) : {}; } catch (_) { estado = {}; }
+
+  // Preferência local do aparelho, para o caso de a página não poder publicar.
+  const CHAVE = "clareira.validacao";
+  try {
+    const local = JSON.parse(localStorage.getItem(CHAVE) || "{}");
+    for (const k of Object.keys(local)) if (!(k in estado)) estado[k] = local[k];
+  } catch (_) {}
+
+  const lista = document.getElementById("lista");
+  const contagem = document.getElementById("contagem");
+  const trilho = document.getElementById("trilho");
+  const sincronia = document.getElementById("sincronia");
+
+  const grupos = [];
+  for (const it of ITENS) {
+    let g = grupos.find(x => x.nome === it.g);
+    if (!g) { g = { nome: it.g, itens: [] }; grupos.push(g); }
+    g.itens.push(it);
+  }
+
+  for (const g of grupos) {
+    const bloco = document.createElement("div");
+    bloco.className = "grupo";
+    const h = document.createElement("h3");
+    h.textContent = g.nome;
+    bloco.appendChild(h);
+
+    for (const it of g.itens) {
+      const label = document.createElement("label");
+      label.className = "item";
+
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.id = "chk-" + it.id;
+      input.checked = Boolean(estado[it.id]);
+      input.addEventListener("change", () => {
+        if (input.checked) estado[it.id] = true; else delete estado[it.id];
+        guardar();
+      });
+
+      const rotulo = document.createElement("span");
+      rotulo.className = "rotulo";
+      rotulo.innerHTML = it.t + '<span class="como">' + it.c + "</span>";
+
+      label.appendChild(input);
+      label.appendChild(rotulo);
+      bloco.appendChild(label);
+    }
+    lista.appendChild(bloco);
+  }
+
+  function atualizarMedidor() {
+    const feitos = ITENS.filter(i => estado[i.id]).length;
+    contagem.textContent = feitos + " de " + ITENS.length;
+    trilho.style.width = (feitos / ITENS.length) * 100 + "%";
+  }
+  atualizarMedidor();
+
+  let pendente = null;
+  function guardar() {
+    atualizarMedidor();
+    try { localStorage.setItem(CHAVE, JSON.stringify(estado)); } catch (_) {}
+    sincronia.textContent = "Guardando…";
+    clearTimeout(pendente);
+    pendente = setTimeout(publicar, 900);
+  }
+
+  async function publicar() {
+    let artifact = null;
+    try { artifact = await window.claude?.use?.("artifact"); } catch (_) {}
+    if (!artifact) {
+      sincronia.textContent = "Guardado neste aparelho.";
+      return;
+    }
+    try {
+      const fonte = await (await fetch(location.href, { cache: "no-store" })).text();
+      const marca = /(<script type="application\/json" id="estado">)[\s\S]*?(<\/script>)/;
+      if (!marca.test(fonte)) {
+        sincronia.textContent = "Guardado neste aparelho.";
+        return;
+      }
+      const novo = fonte.replace(marca, (_m, a, b) => a + JSON.stringify(estado) + b);
+      await artifact.publish(novo);
+      sincronia.textContent = "Guardado para todos que abrirem esta página.";
+    } catch (e) {
+      // Conflito é rotina: a outra versão vence e esta view recarrega nela.
+      sincronia.textContent = "Guardado neste aparelho.";
+    }
+  }
+})();
+</script>

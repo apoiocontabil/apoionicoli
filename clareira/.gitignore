@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.dados/
+.media-src/
+*.log
+.DS_Store
+
+# Artefatos de build do TypeScript. O typecheck roda com --noEmit; se algum
+# comando emitir por engano, o resultado não entra no repositório.
+*.tsbuildinfo
+apps/web/src/**/*.js
+apps/web/vite.config.js
