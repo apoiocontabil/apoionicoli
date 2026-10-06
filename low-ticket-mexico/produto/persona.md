@@ -89,5 +89,5 @@ Expressões tiradas dos anúncios que duram e da pesquisa. Usar exatamente assim
 | Meta Ads (Facebook e Instagram, posicionamento WhatsApp) | México; mulheres de 25 a 50; começar com público amplo (Advantage+) e testar interesses: repostería, postres, pastelería, recetas de cocina, emprendimiento, pequeñas empresas |
 | Estados | CDMX, Estado de México, Jalisco, Nuevo León, Puebla, Guanajuato, Veracruz, Querétaro |
 | Horário | Fim do dia e noite (21h a 23h) como hipótese; confirmar no teste |
-| Datas de reforço | Quincenas (dias 14 a 16 e 29 a 1º); 6 semanas antes de cada data do calendário; Buen Fin (13 a 17 de novembro de 2026) |
+| Datas de reforço | Quincenas (dias 14 a 16 e 29 a 1º); 8 a 9 semanas antes de cada data do calendário; Buen Fin (13 a 17 de novembro de 2026) |
 | Orgânico de apoio | Grupos de vendas por colônia, grupos de "mamás emprendedoras", estados do WhatsApp das compradoras |

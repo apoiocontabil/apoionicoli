@@ -1,0 +1,583 @@
+<title>Dossiê Vasitos que Venden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;600;700&family=Young+Serif&display=swap">
+<style>
+/* Layout: ficha de produto em coluna única; gráficos e tabelas largos rolam dentro da própria caixa. */
+:root {
+  --bg: #fbf8f6;
+  --surface: #ffffff;
+  --ink: #2a1d1a;
+  --muted: #6b5c57;
+  --rule: #eadfda;
+  --accent: #c4136a;
+  --accent-soft: #fbe4ef;
+  --neutral-mark: #8f8a8c;
+  --good: #1d7346;
+  --good-soft: #e1f2e8;
+  --bad: #a3261c;
+  --bad-soft: #f8e0dc;
+  --font-display: "Young Serif", Georgia, "Times New Roman", serif;
+  --font-body: "Public Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --t-xs: .78rem; --t-sm: .9rem; --t-md: 1.02rem; --t-lg: 1.28rem; --t-xl: 1.75rem; --t-2xl: clamp(2.3rem, 6vw, 3.6rem);
+  --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 36px; --s7: 56px;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1618; --surface: #251d20; --ink: #f1e9e6; --muted: #b3a39e; --rule: #3a2e31;
+    --accent: #d63c85; --accent-soft: #4a1730; --neutral-mark: #6b6467;
+    --good: #5cc48c; --good-soft: #143424; --bad: #f08c80; --bad-soft: #3e1b17;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1618; --surface: #251d20; --ink: #f1e9e6; --muted: #b3a39e; --rule: #3a2e31;
+  --accent: #d63c85; --accent-soft: #4a1730; --neutral-mark: #6b6467;
+  --good: #5cc48c; --good-soft: #143424; --bad: #f08c80; --bad-soft: #3e1b17;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--t-md); line-height: 1.55; padding-inline: var(--s4); padding-block: var(--s6) var(--s7); }
+.wrap { max-width: 1040px; margin-inline: auto; display: grid; gap: var(--s7); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; margin: 0; line-height: 1.15; text-wrap: balance; }
+h1 { font-size: var(--t-2xl); }
+h2 { font-size: var(--t-xl); }
+h3 { font-size: var(--t-lg); }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.prose { max-width: 68ch; }
+.small { font-size: var(--t-sm); }
+.muted { color: var(--muted); }
+.eyebrow { font-family: var(--font-data); font-size: var(--t-xs); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.es { font-style: italic; }
+section { display: grid; gap: var(--s5); scroll-margin-top: var(--s5); }
+.stack { display: grid; gap: var(--s3); }
+.num { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+
+header { display: grid; gap: var(--s4); }
+.tagline { font-family: var(--font-display); font-size: var(--t-lg); color: var(--accent); }
+.lede { font-size: var(--t-lg); max-width: 60ch; }
+.facts { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); font-family: var(--font-data); font-size: var(--t-sm); color: var(--muted); }
+.facts b { color: var(--ink); font-weight: 500; }
+nav.toc { display: flex; flex-wrap: wrap; gap: var(--s2); }
+nav.toc a { font-size: var(--t-sm); text-decoration: none; color: var(--ink); border: 1px solid var(--rule); background: var(--surface); padding: 4px 10px; border-radius: 999px; }
+nav.toc a:hover { border-color: var(--accent); color: var(--accent); }
+
+.points { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); }
+.point { display: grid; gap: var(--s2); padding-top: var(--s3); border-top: 2px solid var(--ink); min-width: 0; align-content: start; }
+.point h3 { font-family: var(--font-body); font-weight: 700; font-size: var(--t-md); }
+blockquote.pos { margin: 0; padding: var(--s5); background: var(--accent-soft); border-radius: var(--r); font-family: var(--font-display); font-size: var(--t-lg); line-height: 1.35; }
+blockquote.pos small { display: block; margin-top: var(--s2); font-family: var(--font-body); font-size: var(--t-sm); color: var(--muted); font-style: normal; }
+
+.panel { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: var(--s5); display: grid; gap: var(--s4); min-width: 0; }
+.chart { width: 100%; overflow-x: auto; }
+.chart svg { display: block; width: 100%; height: auto; min-width: 560px; }
+.chart.narrow svg { min-width: 0; }
+.chart text { fill: var(--muted); font-family: var(--font-data); font-size: 11px; }
+.chart text.lab { fill: var(--ink); font-family: var(--font-body); font-size: 12.5px; }
+.chart text.val { fill: var(--ink); font-size: 11.5px; }
+.chart text.phase { fill: var(--ink); font-family: var(--font-body); font-size: 12px; font-weight: 600; }
+.chart .grid { stroke: var(--rule); stroke-width: 1; }
+.chart .axis { stroke: var(--muted); stroke-width: 1; }
+.chart .m-accent { fill: var(--accent); }
+.chart .m-neutral { fill: var(--neutral-mark); }
+.chart .m-line { fill: none; stroke: var(--accent); stroke-width: 2; }
+.chart .m-area { fill: var(--accent); opacity: .18; }
+.chart .band { fill: var(--accent-soft); }
+.chart .hit { fill: transparent; }
+.chart .hit:hover + .hl, .chart .hl { pointer-events: none; }
+.tip { position: fixed; z-index: 10; pointer-events: none; background: var(--ink); color: var(--bg); font-size: var(--t-xs); font-family: var(--font-data); padding: 6px 8px; border-radius: 4px; max-width: 260px; line-height: 1.4; }
+.legend { display: flex; flex-wrap: wrap; gap: var(--s4); font-size: var(--t-sm); color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--neutral-mark); }
+.legend span.acc::before { background: var(--accent); }
+details summary { cursor: pointer; font-size: var(--t-sm); color: var(--accent); }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: var(--r); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: var(--t-sm); }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+thead th { font-family: var(--font-data); font-size: var(--t-xs); font-weight: 500; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); background: var(--bg); white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+td.n, th.n { text-align: right; font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.comp { display: grid; gap: var(--s5); grid-template-columns: minmax(0, 1fr) 220px; align-items: start; }
+.comp figure { margin: 0; display: grid; gap: 6px; }
+.comp figure img { border-radius: var(--r); border: 1px solid var(--rule); width: 100%; height: auto; }
+.comp figcaption { font-size: var(--t-xs); color: var(--muted); }
+.role { display: inline-block; justify-self: start; font-family: var(--font-data); font-size: var(--t-xs); letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px var(--s4); font-size: var(--t-sm); margin: 0; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+ol.timeline { margin: 0; padding: 0; list-style: none; display: grid; gap: 0; border-left: 2px solid var(--rule); margin-left: 5px; }
+ol.timeline li { position: relative; padding: 0 0 var(--s3) var(--s4); font-size: var(--t-sm); }
+ol.timeline li::before { content: ""; position: absolute; left: -7px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+ol.timeline .d { font-family: var(--font-data); font-size: var(--t-xs); color: var(--accent); display: block; }
+.copy { display: grid; gap: var(--s3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
+.copy div { padding: var(--s3) var(--s4); border-radius: var(--r); font-size: var(--t-sm); }
+.copy .yes { background: var(--good-soft); }
+.copy .no { background: var(--bad-soft); }
+.copy b { display: block; font-size: var(--t-xs); font-family: var(--font-data); letter-spacing: .05em; text-transform: uppercase; margin-bottom: 2px; }
+.copy .yes b { color: var(--good); }
+.copy .no b { color: var(--bad); }
+
+.chips { display: flex; flex-wrap: wrap; gap: var(--s2); }
+.chips span { font-size: var(--t-sm); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--rule); background: var(--surface); }
+
+/* Oferta em forma de nota de venda */
+.ticket { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: var(--s5); display: grid; gap: 0; max-width: 760px; }
+.ticket .line { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr) auto; gap: var(--s3) var(--s4); padding: var(--s3) 0; border-bottom: 1px dashed var(--rule); align-items: baseline; }
+.ticket .line:last-child { border-bottom: 0; }
+.ticket .k { font-family: var(--font-data); font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.ticket .what b { display: block; font-weight: 700; }
+.ticket .what span { font-size: var(--t-sm); color: var(--muted); }
+.ticket .p { font-family: var(--font-data); font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 500; }
+.ticket .line.main .what b { font-family: var(--font-display); font-weight: 400; font-size: var(--t-lg); }
+.ticket .line.main .p { color: var(--accent); font-size: var(--t-lg); }
+.menu3 { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.menu3 div { min-width: 0; }
+.menu3 h3 { font-family: var(--font-body); font-weight: 700; font-size: var(--t-sm); margin-bottom: 4px; }
+.menu3 p { font-size: var(--t-sm); font-style: italic; }
+.ficha { display: grid; gap: 0; border: 2px solid var(--ink); border-radius: var(--r); max-width: 440px; background: var(--surface); }
+.ficha .h { padding: var(--s3) var(--s4); background: var(--ink); color: var(--bg); font-family: var(--font-display); font-size: var(--t-lg); }
+.ficha .r { display: grid; grid-template-columns: 1fr auto; gap: var(--s3); padding: 8px var(--s4); border-bottom: 1px solid var(--rule); font-size: var(--t-sm); }
+.ficha .r:last-child { border-bottom: 0; }
+.ficha .r span:last-child { font-family: var(--font-data); color: var(--muted); text-align: right; }
+
+.cal { display: grid; gap: var(--s3); grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
+.cal div { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: var(--s3) var(--s4); display: grid; gap: 4px; min-width: 0; }
+.cal div.now { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.cal .w { font-family: var(--font-data); font-size: var(--t-xs); color: var(--accent); text-transform: uppercase; letter-spacing: .04em; }
+.cal b { font-size: var(--t-md); }
+.cal span { font-size: var(--t-sm); color: var(--muted); }
+
+.asks { display: grid; gap: var(--s3); counter-reset: ask; }
+.ask { display: grid; grid-template-columns: 2rem 1fr; gap: var(--s3); background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r); padding: var(--s4); }
+.ask::before { counter-increment: ask; content: counter(ask); font-family: var(--font-display); font-size: var(--t-lg); color: var(--accent); }
+.ask > div { min-width: 0; display: grid; gap: 2px; }
+footer { border-top: 1px solid var(--rule); padding-top: var(--s5); font-size: var(--t-sm); color: var(--muted); display: grid; gap: var(--s2); }
+code { font-family: var(--font-data); font-size: .9em; word-break: break-word; }
+
+@media (max-width: 720px) {
+  .comp { grid-template-columns: 1fr; }
+  .comp figure { max-width: 260px; }
+  .ticket .line { grid-template-columns: 1fr auto; }
+  .ticket .k { grid-column: 1 / -1; }
+  .kv { grid-template-columns: 1fr; }
+  .kv dt { margin-top: 4px; }
+}
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Dossiê do produto · México · coleta de 6 de outubro de 2026</span>
+  <h1>Vasitos que Venden</h1>
+  <p class="tagline es">El menú de postres en vaso con el costo y la ganancia de cada receta.</p>
+  <p class="lede">Receituário digital de sobremesas no copo para a mexicana que quer um ingresso extra vendendo de casa. Vendido no x1 pelo WhatsApp, com checkout da Hotmart em pesos.</p>
+  <div class="facts">
+    <span><b>99 MXN</b> produto principal</span>
+    <span><b>3</b> order bumps</span>
+    <span><b>149 MXN</b> upsell</span>
+    <span><b>79 MXN/mês</b> Club Vasitos</span>
+    <span>meta: no ar até <b>24 de outubro</b></span>
+  </div>
+  <nav class="toc" aria-label="Seções">
+    <a href="#decisao">Decisão</a><a href="#nicho">Nicho</a><a href="#concorrentes">Concorrentes</a><a href="#publico">Público</a><a href="#produto">Produto</a><a href="#conta">A conta</a><a href="#calendario">Calendário</a><a href="#observacao">Observação</a><a href="#proximo">Próximo passo</a>
+  </nav>
+</header>
+
+<section id="decisao">
+  <span class="eyebrow">Decisão</span>
+  <h2>Sobremesas no copo para vender, no México, pelo WhatsApp</h2>
+  <div class="points">
+    <div class="point"><h3>O anúncio se paga</h3><p class="small">É o grupo de nichos que mais segura anúncio no ar a um preço que fecha a conta: mediana de 75 a 99 dias, e 17 a 26 de cada 30 anúncios passam de 60 dias. O preço que mais se repete é 99 MXN.</p></div>
+    <div class="point"><h3>O mercado não tem dono</h3><p class="small">A cada 30 anúncios aparecem 18 a 20 páginas diferentes. Ninguém concentra, e quem chega com produto melhor tem espaço.</p></div>
+    <div class="point"><h3>Há um espaço livre</h3><p class="small">Ninguém mostra quanto custa cada copo e quanto sobra, ninguém explica o que a lei pede para vender comida feita em casa e ninguém ensina a fazer as primeiras vendas.</p></div>
+  </div>
+  <blockquote class="pos"><span class="es">No necesitas 400 recetas. Necesitas las que se venden, con lo que cuesta cada vasito y lo que te queda de ganancia.</span><small>Frase de posicionamento. Responde ao "más de 400 recetas" que o concorrente direto repete.</small></blockquote>
+</section>
+
+<section id="nicho">
+  <span class="eyebrow">Nicho</span>
+  <h2>Quanto tempo o anúncio fica no ar, por nicho</h2>
+  <p class="prose small muted">Mediana de dias no ar dos 28 a 30 primeiros anúncios de cada busca na Biblioteca de Anúncios do Meta, México, incluindo os já desligados. Anunciante não mantém por meses um anúncio que dá prejuízo.</p>
+  <div class="panel">
+    <div class="legend"><span class="acc">Nichos escolhidos (receitas para vender)</span><span>Outros nichos</span></div>
+    <div class="chart" id="ch-nichos"></div>
+    <details><summary>Ver a tabela</summary><div class="table-wrap" id="tb-nichos"></div></details>
+  </div>
+  <p class="prose small">O megapack infantil segura anúncio ainda mais tempo, mas tem um líder que concentra (Edukidz), preço de 49 a 70 MXN e recompra só entre professores. Fica como segundo produto. "Pan de muerto" e "bebidas para vender" têm volume alto, mas a amostra é de padarias, supermercados e apps.</p>
+</section>
+
+<section id="concorrentes">
+  <span class="eyebrow">Concorrentes</span>
+  <h2>Três operações para observar, do teste à escala</h2>
+  <p class="prose small muted">A Biblioteca mostra a data de início e de fim de cada anúncio e quantas cópias do mesmo criativo rodam. Contando os anúncios no ar semana a semana, aparece quando cada um testou, quando escalou e quando parou.</p>
+
+  <div class="panel">
+    <h3>FestyCake: teste, escala e pausa</h3>
+    <p class="small muted">Anúncios no ar por semana, contando as cópias, pela contagem da própria Biblioteca.</p>
+    <div class="chart" id="ch-festy"></div>
+  </div>
+
+  <div class="panel">
+    <h3>Os outros três, na mesma escala</h3>
+    <p class="small muted">Anúncios no ar por semana, contando as cópias. De novembro de 2024 a outubro de 2026.</p>
+    <div class="chart" id="ch-multi"></div>
+  </div>
+
+  <article class="panel comp">
+    <div class="stack">
+      <span class="role">Oferta direta</span>
+      <h3>Mente Campeona</h3>
+      <dl class="kv">
+        <dt>Produto</dt><dd><span class="es">Recetario / Mega Pack de Postres en Vaso</span>, "más de 400 recetas"</dd>
+        <dt>Preço</dt><dd class="num">99 MXN "antes 399"</dd>
+        <dt>Canal</dt><dd>Anúncio de imagem → WhatsApp, palavra-chave "POSTRES"; pagamento por transferência ou depósito</dd>
+        <dt>Hoje</dt><dd>11 anúncios ativos, 18 contando cópias</dd>
+      </dl>
+      <ol class="timeline">
+        <li><span class="d">6 dez 2025</span>Um anúncio de curtir a página, desligado em 4 dias.</li>
+        <li><span class="d">23 jul 2026</span>Sobe o mesmo criativo em 8 cópias de uma vez: teste de públicos com o criativo fixo.</li>
+        <li><span class="d">set 2026</span>As 8 seguem no ar. Entram 3 ângulos novos: "¿y si un postre pudiera convertirse en tu próximo ingreso extra?", "400 recetas" e um "grupo de apoyo de por vida".</li>
+      </ol>
+      <div class="copy">
+        <div class="yes"><b>Copiar</b>Preço de 99, lista das receitas no anúncio, palavra-chave para o WhatsApp, duplicar o criativo que vence.</div>
+        <div class="no"><b>Não copiar</b>"Antes 399" sem prova de preço anterior; pagamento para conta pessoal.</div>
+      </div>
+    </div>
+    <figure><img src="__IMG_MENTE__" alt="Criativo da Mente Campeona: colagem de copos com o título Mega Pack Postres en Vaso, más de 400 recetas, e o botão Escribe POSTRES"><figcaption>Criativo no ar há 75 dias, duplicado 8 vezes.</figcaption></figure>
+  </article>
+
+  <article class="panel comp">
+    <div class="stack">
+      <span class="role">Escada e calendário</span>
+      <h3>Sweets by Alondra</h3>
+      <dl class="kv">
+        <dt>Produto</dt><dd>Um ebook por tema: <span class="es">Cookies New York Style Pro, Galletas en Tendencia, Pan de Muerto Gourmet, Panqués &amp; Muffins</span></dd>
+        <dt>Preço</dt><dd class="num">129 a 139 MXN</dd>
+        <dt>Canal</dt><dd>Imagem, vídeo e carrossel → WhatsApp</dd>
+        <dt>Hoje</dt><dd>17 anúncios ativos; nunca desligou nenhum</dd>
+      </dl>
+      <ol class="timeline">
+        <li><span class="d">1 jun 2026</span>Lança o primeiro ebook com 3 anúncios.</li>
+        <li><span class="d">26 jun 2026</span>Segundo ebook para a mesma audiência.</li>
+        <li><span class="d">27 ago 2026</span>Pan de Muerto Gourmet, 9 semanas antes do Día de Muertos: "este es justo el mejor momento para comenzar a practicar".</li>
+        <li><span class="d">15 set e 1 out 2026</span>Reforça a temporada com 6 criativos novos e lança Panqués &amp; Muffins.</li>
+      </ol>
+      <div class="copy">
+        <div class="yes"><b>Copiar</b>Um produto novo a cada 3 a 4 semanas para quem já comprou; temporada com 9 semanas de antecedência; "costos sugeridos" e "guía de errores" no produto.</div>
+        <div class="no"><b>Não copiar</b>Parar na receita: não há método de preço nem plano de venda.</div>
+      </div>
+    </div>
+    <figure><img src="__IMG_SWEETS__" alt="Criativo da Sweets by Alondra: ebook Pan de Muerto Gourmet com papel picado e fotos de pães recheados"><figcaption>Lançamento de temporada no ar desde 15 de setembro.</figcaption></figure>
+  </article>
+
+  <article class="panel comp">
+    <div class="stack">
+      <span class="role">Escala pesada</span>
+      <h3>FestyCake (Éxito Life Academy)</h3>
+      <dl class="kv">
+        <dt>Produto</dt><dd><span class="es">Kit Bocaditos Premium</span>: 30+ receitas, guia de custos, scripts de WhatsApp, 6 bônus</dd>
+        <dt>Preço</dt><dd class="num">US$ 14 "antes 34,99"; 4 bumps de US$ 6,99 e um Kit PRO</dd>
+        <dt>Canal</dt><dd>Vídeo vertical de mãos com legenda → página → checkout Hotmart; rastreio com Utmify, ferramenta brasileira</dd>
+        <dt>Hoje</dt><dd>Fora do ar desde abril, com retestes curtos</dd>
+      </dl>
+      <ol class="timeline">
+        <li><span class="d">set a dez 2025</span>Teste com 1 a 4 criativos de vídeo, sempre o mesmo gancho: "mientras todos siguen vendiendo lo mismo".</li>
+        <li><span class="d">29 dez 2025 a mar 2026</span>Escala: o criativo vencedor chega a 114 cópias; outros dois a 63 e 50.</li>
+        <li><span class="d">abr 2026</span>Desliga tudo depois da temporada de festas.</li>
+        <li><span class="d">jul a out 2026</span>Retestes: 41 cópias por 19 dias em julho; 36 e 38 cópias cortadas em 1 dia em 1º de outubro.</li>
+      </ol>
+      <div class="copy">
+        <div class="yes"><b>Copiar</b>Checkout com produto, bumps e kit completo; ângulo "deixe de competir por preço"; vídeo vertical de mãos com legenda; escalar duplicando o vencedor.</div>
+        <div class="no"><b>Não copiar</b>Preço em dólar e depoimentos de Bogotá para público mexicano.</div>
+      </div>
+    </div>
+    <figure><img src="__IMG_FESTY__" alt="Quadro do vídeo da FestyCake: mãos montando um canapé com legenda na tela"><figcaption>Vídeo vencedor, duplicado 114 vezes na escala.</figcaption></figure>
+  </article>
+
+  <article class="panel comp">
+    <div class="stack">
+      <span class="role">Referências</span>
+      <h3>Aprendizaje Virtual e Recetas Deliciosas</h3>
+      <p class="small"><b>Aprendizaje Virtual</b> roda 13 vídeos para o WhatsApp e não desligou nenhum em 687 dias. Vende megapacks de 40 a 90 MXN. O vídeo mostra dezenas de copos prontos com o preço de venda por unidade na tela ("$45 MXN").</p>
+      <p class="small"><b>Recetas Deliciosas</b> tentou vender pelo site em dólar (US$ 17 e depois US$ 5,99): os anúncios morreram em 1 a 4 dias. Trocou para 49 MXN no WhatsApp, entregando antes e cobrando depois, e esse anúncio está no ar há 207 dias.</p>
+    </div>
+    <figure><img src="__IMG_APREND__" alt="Quadro do vídeo da Aprendizaje Virtual: dezenas de copos de gelatina com o selo $45 MXN"><figcaption>Vídeo no ar há 687 dias.</figcaption></figure>
+  </article>
+</section>
+
+<section id="publico">
+  <span class="eyebrow">Público</span>
+  <h2>Lupita, 36 anos, Ecatepec</h2>
+  <p class="prose">Mãe de dois, auxiliar numa papelaria das 9h às 16h. A segunda quincena sempre aperta. Faz sobremesa bem e ouve "deberías vender", mas trava em duas perguntas: <span class="es">"¿cuánto le cobro?"</span> e <span class="es">"¿y si no se vende?"</span>. Compra pelo celular, com cartão de débito ou no OXXO.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>O que pesa na decisão</th><th>Dado</th><th>O que muda na oferta</th></tr></thead>
+      <tbody>
+        <tr><td>Renda</td><td>Salário mínimo de 315,04 MXN por dia em 2026; 99 MXN são 2h31 de trabalho</td><td>99 MXN no produto principal; nada acima de 149 sem prova</td></tr>
+        <tr><td>Necessidade</td><td>56,2% de informalidade; 64% dos empregados dizem precisar de renda extra; 53% das empreendedoras são mães</td><td>Promessa de ingresso extra de casa, sem largar o trabalho</td></tr>
+        <tr><td>Pagamento</td><td>Débito 69%, crédito 54%, OXXO 23%, transferência 20% (AMVO 2026)</td><td>Hotmart com cartão e OXXO; a taxa fixa de 17 MXN do OXXO desaconselha preço de 49</td></tr>
+        <tr><td>Confiança</td><td>"Não me senti seguro" é o 2º motivo de abandono; a Profeco orienta a não transferir para conta pessoal e a conferir o país do vendedor</td><td>Checkout da Hotmart, marca mexicana com WhatsApp +52, rosto real, garantia de 7 dias</td></tr>
+        <tr><td>Canal</td><td>WhatsApp é usado por 91% dos internautas; 69% preferem falar com empresas por mensagem</td><td>x1 pelo WhatsApp com anúncio de clique para conversa</td></tr>
+        <tr><td>Lei</td><td>Preço total em pesos, contato do vendedor antes da venda, 5 dias úteis para desistir (LFPC, reforma de dez/2025)</td><td>Preço com impostos, contato visível, garantia de 7 dias</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Objeção</th><th>Resposta da oferta</th></tr></thead>
+      <tbody>
+        <tr><td class="es">"¿Y si no me salen?"</td><td>Receitas testadas com foto real de cada passo, guia de erros, garantia</td></tr>
+        <tr><td class="es">"No sé cuánto cobrar"</td><td>Ficha de Ganancia em cada receita e Calculadora de Costos</td></tr>
+        <tr><td class="es">"No tengo para invertir"</td><td>10 receitas de baixo custo e venda por encomenda antes de comprar ingrediente</td></tr>
+        <tr><td class="es">"¿Y si nadie me compra?"</td><td>Plano das primeiras 20 vendas com roteiros e receitas em tendência</td></tr>
+        <tr><td class="es">"¿Es estafa? ¿Sí me llega?"</td><td>Hotmart, entrega automática, nada de transferência para conta pessoal</td></tr>
+        <tr><td class="es">"¿Me pueden multar?"</td><td>Bônus Vende tranquila: o que pede a COFEPRIS e o que perguntar no município</td></tr>
+        <tr><td class="es">"No tengo tiempo"</td><td>Tandas de 12 copos, preparo de 30 a 60 minutos, produção no fim de semana</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="stack">
+    <p class="small muted">Como ela fala (usar exatamente assim no anúncio e no chat):</p>
+    <div class="chips es"><span>ingreso extra desde casa</span><span>un dinerito extra</span><span>para la quincena</span><span>postres para vender</span><span>vasitos</span><span>se venden solos</span><span>sin experiencia</span><span>¿cuánto le cobro?</span><span>que sí deje ganancia</span><span>pedidos</span><span>por encargo</span><span>antojo</span><span>se me acabaron en el recreo</span></div>
+  </div>
+</section>
+
+<section id="produto">
+  <span class="eyebrow">Produto</span>
+  <h2>A oferta completa</h2>
+  <div class="ticket" role="table" aria-label="Itens da oferta">
+    <div class="line main" role="row"><span class="k" role="cell">Principal</span><span class="what" role="cell"><b>Vasitos que Venden</b><span>Menú de 30 vasitos com Ficha de Ganancia, Calculadora de Costos, Plan de tus primeras 20 ventas e os bônus Vende tranquila e Comunidad Vasitos</span></span><span class="p" role="cell">99 MXN</span></div>
+    <div class="line" role="row"><span class="k" role="cell">Bump 1</span><span class="what" role="cell"><b>Kit de Marca Dulce</b><span>40 modelos no Canva: etiqueta de tampa, menu de preços, catálogo e estados de WhatsApp</span></span><span class="p" role="cell">49 MXN</span></div>
+    <div class="line" role="row"><span class="k" role="cell">Bump 2</span><span class="what" role="cell"><b>Recetario de Temporada</b><span>12 receitas da próxima data. Agora: Navidad y Posadas</span></span><span class="p" role="cell">59 MXN</span></div>
+    <div class="line" role="row"><span class="k" role="cell">Bump 3</span><span class="what" role="cell"><b>Proveedores y Empaques</b><span>Onde comprar copos, tampas e insumos no atacado em CDMX, Guadalajara, Monterrey e Puebla</span></span><span class="p" role="cell">39 MXN</span></div>
+    <div class="line" role="row"><span class="k" role="cell">Upsell</span><span class="what" role="cell"><b>Vasitos Premium en Video</b><span>10 receitas gourmet para cobrar de 70 a 120 MXN o copo e 12 vídeos curtos de montagem e foto</span></span><span class="p" role="cell">149 MXN</span></div>
+    <div class="line" role="row"><span class="k" role="cell">Downsell</span><span class="what" role="cell"><b>Só as 10 receitas premium</b><span>Para quem recusa o upsell</span></span><span class="p" role="cell">79 MXN</span></div>
+    <div class="line" role="row"><span class="k" role="cell">Recorrência</span><span class="what" role="cell"><b>Club Vasitos</b><span>Todo mês, 6 receitas da próxima data com Ficha de Ganancia, modelos do mês e desafio na comunidade</span></span><span class="p" role="cell">79 MXN/mês</span></div>
+  </div>
+
+  <div class="menu3">
+    <div><h3>Los 10 que más se venden</h3><p>fresas con crema, pay de limón, carlota de limón, cheesecake de fresa, Oreo, chocoflan, tres leches, mango cremoso, gelatina mosaico, arroz con leche</p></div>
+    <div><h3>Los 10 en tendencia</h3><p>Lotus/Biscoff, Ferrero, pistache, red velvet, tiramisú, Kinder, churro con cajeta, mazapán, s'mores, frutos rojos</p></div>
+    <div><h3>Los 10 para empezar con poco</h3><p>gelatinas de leche y de agua, mousse de limón, fresas con crema económica, pay de queso sin horno, carlota de durazno, arroz con leche de canela, flan napolitano, gelatina de yogur, pudín de chocolate</p></div>
+  </div>
+  <p class="small muted">Rascunho do menu, para a repostera validar e testar na cozinha.</p>
+
+  <div class="stack">
+    <h3>O diferencial: a Ficha de Ganancia</h3>
+    <p class="prose small">Toda receita traz a mesma ficha. Os valores saem da cozinha e dos preços de supermercado de outubro de 2026; a ficha abaixo mostra o formato. Como referência, a pesquisa achou fresas con crema vendidas a 45 a 95 MXN o copo.</p>
+    <div class="ficha" aria-label="Formato da Ficha de Ganancia">
+      <div class="h es">Fresas con crema · Ficha de Ganancia</div>
+      <div class="r"><span>Rendimento</span><span>12 vasitos de 9 oz</span></div>
+      <div class="r"><span>Custo dos ingredientes da tanda</span><span>medido na cozinha</span></div>
+      <div class="r"><span>Custo por vasito (com copo e tampa)</span><span>medido na cozinha</span></div>
+      <div class="r"><span>Preço sugerido: colônia popular · média · premium</span><span>3 faixas</span></div>
+      <div class="r"><span>Lucro da tanda</span><span>calculado</span></div>
+      <div class="r"><span>Dura na geladeira</span><span>dias</span></div>
+      <div class="r"><span>Erro mais comum</span><span>1 linha</span></div>
+    </div>
+  </div>
+
+  <div class="points">
+    <div class="point"><h3>Confiança</h3><p class="small">Pagamento só pela Hotmart, entrega automática, rosto real da repostera, marca mexicana com WhatsApp +52, garantia de 7 dias.</p></div>
+    <div class="point"><h3>Produção em 14 dias</h3><p class="small">Repostera mexicana contratada com cessão de direitos testa e fotografa as receitas; eu fecho fichas, textos e materiais; você cadastra na Hotmart com o meu roteiro.</p></div>
+    <div class="point"><h3>Validação</h3><p class="small">Seguir se: conversa no WhatsApp até US$ 0,50, 10% das conversas comprando, custo por venda abaixo de 120 MXN e reembolso abaixo de 5%.</p></div>
+  </div>
+</section>
+
+<section id="conta">
+  <span class="eyebrow">A conta</span>
+  <h2>Quanto entra por cliente</h2>
+  <p class="prose small muted">Hipóteses para o teste, não resultados. O teste troca estes números pelos reais.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Item</th><th class="n">Preço (MXN)</th><th class="n">Quem leva</th><th class="n">Média por cliente (MXN)</th></tr></thead>
+      <tbody>
+        <tr><td>Vasitos que Venden</td><td class="n">99</td><td class="n">100%</td><td class="n">99,00</td></tr>
+        <tr><td>Kit de Marca Dulce</td><td class="n">49</td><td class="n">35%</td><td class="n">17,15</td></tr>
+        <tr><td>Recetario de Temporada</td><td class="n">59</td><td class="n">25%</td><td class="n">14,75</td></tr>
+        <tr><td>Proveedores y Empaques</td><td class="n">39</td><td class="n">20%</td><td class="n">7,80</td></tr>
+        <tr><td>Vasitos Premium en Video</td><td class="n">149</td><td class="n">12%</td><td class="n">17,88</td></tr>
+        <tr><td><b>Ticket médio na compra</b></td><td class="n"></td><td class="n"></td><td class="n"><b>156,58</b></td></tr>
+        <tr><td>Club Vasitos, 3 meses em média</td><td class="n">79/mês</td><td class="n">8%</td><td class="n">18,96</td></tr>
+        <tr><td><b>Valor por cliente em 90 dias</b></td><td class="n"></td><td class="n"></td><td class="n"><b>175,54</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="prose small">Depois das taxas da Hotmart (cerca de 11% mais a taxa fixa), sobram perto de 120 a 125 MXN por cliente na compra. É o custo máximo por venda para empatar no primeiro dia. No cenário do México simulado no plano anterior, o custo por venda ficava em torno de 46 MXN (US$ 2,50).</p>
+</section>
+
+<section id="calendario">
+  <span class="eyebrow">Calendário</span>
+  <h2>As datas que fazem a venda voltar</h2>
+  <p class="prose small muted">Picos de busca no Google Trends do México nos últimos 5 anos. Lançar cada recetario de temporada 8 a 9 semanas antes, como faz a Sweets by Alondra.</p>
+  <div class="cal">
+    <div class="now"><span class="w">Lançar 24 out · vender até 20 dez</span><b>Navidad y Posadas</b><span>Pico em meados de dezembro. Buen Fin de 13 a 17 de novembro no meio</span></div>
+    <div><span class="w">Lançar 1 dez</span><b>Rosca de Reyes e Candelaria</b><span>Pico de 1 a 7 de janeiro; tamales e atole na semana de 2 de fevereiro</span></div>
+    <div><span class="w">Lançar 5 jan</span><b>San Valentín</b><span>Fresas con chocolate; "fresas con crema" quase triplicou de 2022 a 2026</span></div>
+    <div><span class="w">Lançar fev</span><b>Cuaresma e Semana Santa</b><span>Capirotada; Semana Santa de 21 a 28 de março de 2027</span></div>
+    <div><span class="w">Lançar 1 mar</span><b>Día del Niño e 10 de Mayo</b><span>"Gelatinas para vender" no fim de abril; Día de las Madres, a maior data de sobremesa</span></div>
+    <div><span class="w">Lançar jul</span><b>Regreso a clases e Fiestas Patrias</b><span>Lanches para a escola; gelatinas tricolor em meados de setembro</span></div>
+    <div><span class="w">Lançar fim de ago</span><b>Día de Muertos</b><span>Pan de muerto na última semana de outubro</span></div>
+  </div>
+</section>
+
+<section id="observacao">
+  <span class="eyebrow">Observação</span>
+  <h2>A rotina para acompanhar os concorrentes</h2>
+  <div class="points">
+    <div class="point"><h3>Toda segunda-feira</h3><p class="small">Coleta automática do histórico dos 5 concorrentes e das buscas do nicho, com comparação à semana anterior: anúncios novos, desligados e que seguem no ar. Comando: <code>ferramentas/observar.sh</code>.</p></div>
+    <div class="point"><h3>Uma vez por mês</h3><p class="small">Compra-teste pelo seu celular: clicar no anúncio mais antigo de cada concorrente direto, mandar a palavra-chave e registrar a conversa inteira, do primeiro "hola" à entrega.</p></div>
+    <div class="point"><h3>Uma vez por trimestre</h3><p class="small">Comprar o produto de 99 MXN do concorrente mais forte para avaliar o que é entregue.</p></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Sinal</th><th>Leitura</th><th>O que fazemos</th></tr></thead>
+      <tbody>
+        <tr><td>Anúncio desligado em até 7 dias</td><td>Teste que perdeu</td><td>Não usar esse gancho nem esse formato</td></tr>
+        <tr><td>Anúncio passa de 30 dias</td><td>Gancho validado</td><td>Testar a nossa versão do ângulo, nunca o texto dele</td></tr>
+        <tr><td>Mesmo criativo em 5 ou mais cópias</td><td>Escala por duplicação</td><td>Priorizar esse ângulo no nosso teste</td></tr>
+        <tr><td>Anúncios no ar dobram em uma semana</td><td>Começou a escalar</td><td>Ver qual criativo puxou e em que data</td></tr>
+        <tr><td>Tudo desligado de uma vez</td><td>Fim de temporada ou oferta morta</td><td>Anotar a data no nosso calendário</td></tr>
+        <tr><td>Produto novo antes de uma data</td><td>Calendário do concorrente</td><td>Lançar o nosso com a mesma antecedência ou antes</td></tr>
+        <tr><td>Preço muda</td><td>Teste de preço</td><td>Se o anúncio novo durar 2 semanas, o preço novo pagou</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="proximo">
+  <span class="eyebrow">Próximo passo</span>
+  <h2>Estratégia: página de venda, anúncios e roteiro do x1</h2>
+  <p class="prose">Com o produto fechado, a próxima etapa monta a estratégia em cima do que já funciona para os três concorrentes: os criativos (imagem tipo panfleto com palavra-chave e vídeo vertical de mãos com preço por copo), a estrutura de campanha com duplicação do vencedor, o roteiro do x1 no WhatsApp e a página de checkout com os bumps. Para começar a produzir, preciso de cinco coisas suas:</p>
+  <div class="asks">
+    <div class="ask"><div><b>A repostera.</b><span class="small muted">Quem vai testar as receitas e ser o rosto da marca? Se não houver alguém, eu preparo o anúncio de contratação.</span></div></div>
+    <div class="ask"><div><b>Aprovação do nome e do preço.</b><span class="small muted">Vasitos que Venden a 99 MXN, com bumps de 39 a 59 e upsell de 149.</span></div></div>
+    <div class="ask"><div><b>Contas.</b><span class="small muted">Hotmart como produtor, gerenciador de anúncios do Meta e um número de WhatsApp do México (+52).</span></div></div>
+    <div class="ask"><div><b>Orçamento de teste.</b><span class="small muted">Cerca de US$ 150 para os primeiros 7 a 10 dias no México.</span></div></div>
+    <div class="ask"><div><b>Seu navegador logado.</b><span class="small muted">Com o Claude Desktop ou <code>claude remote-control</code>, a Biblioteca deixa paginar e eu leio também Etsy e o mercado da Hotmart.</span></div></div>
+  </div>
+</section>
+
+<footer>
+  <p>Fontes: Biblioteca de Anúncios do Meta (coleta de 6/out/2026); AMVO, Estudio de Venta Online 2026; INEGI (ENOE, ENIGH 2024, ENIF 2024); CONASAMI (salário mínimo 2026); Profeco e CONDUSEF; Google Trends México; LFPC com a reforma de dezembro de 2025. Detalhe e links em <code>low-ticket-mexico/reports/</code> e <code>research_notes/</code>.</p>
+  <p>Arquivos: estrutura em <code>produto/estrutura-do-produto.md</code>, persona em <code>produto/persona.md</code>, rotina em <code>rotina-de-observacao.md</code>, coleta em <code>concorrentes/2026-10-06/</code>. Câmbio de referência: 18,3 MXN por dólar.</p>
+</footer>
+
+</div>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+(function () {
+  var D = __DADOS__;
+  var NS = "http://www.w3.org/2000/svg";
+  var tip = document.getElementById("tip");
+  function el(n, a, p) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+  function txt(p, x, y, s, cls, anchor) { var t = el("text", { x: x, y: y, "class": cls || "", "text-anchor": anchor || "start" }, p); t.textContent = s; return t; }
+  function fmt(n) { return n.toLocaleString("pt-BR"); }
+  function showTip(e, html) { tip.innerHTML = html; tip.hidden = false; var x = e.clientX + 14, y = e.clientY + 14; var w = tip.offsetWidth, h = tip.offsetHeight; if (x + w > window.innerWidth - 8) x = e.clientX - w - 14; if (y + h > window.innerHeight - 8) y = e.clientY - h - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
+  function hideTip() { tip.hidden = true; }
+  function hover(node, html) { node.addEventListener("mousemove", function (e) { showTip(e, html); }); node.addEventListener("mouseleave", hideTip); node.addEventListener("focus", function () { var r = node.getBoundingClientRect(); showTip({ clientX: r.right, clientY: r.top }, html); }); node.addEventListener("blur", hideTip); }
+  var MES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+  function addDays(iso, d) { var t = new Date(iso + "T00:00:00Z"); t.setUTCDate(t.getUTCDate() + d); return t; }
+  function lbl(t) { return t.getUTCDate() + " " + MES[t.getUTCMonth()] + " " + t.getUTCFullYear(); }
+
+  // 1. Nichos: barras horizontais da mediana de dias no ar
+  (function () {
+    var rows = D.nichos.slice().sort(function (a, b) { return b[1] - a[1]; });
+    var W = 760, L = 180, R = 56, rowH = 26, T = 8, H = T + rows.length * rowH + 28;
+    var max = 240;
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Mediana de dias no ar por nicho" });
+    var x = function (v) { return L + (W - L - R) * v / max; };
+    [0, 60, 120, 180, 240].forEach(function (v) {
+      el("line", { x1: x(v), x2: x(v), y1: T, y2: H - 22, "class": "grid" }, svg);
+      txt(svg, x(v), H - 6, v + (v === 240 ? " dias" : ""), "", "middle");
+    });
+    rows.forEach(function (r, i) {
+      var y = T + i * rowH;
+      txt(svg, L - 10, y + 17, r[0], "lab", "end");
+      var w = Math.max(2, x(r[1]) - L);
+      var bar = el("rect", { x: L, y: y + 5, width: w, height: 16, rx: 3, "class": r[6] ? "m-accent" : "m-neutral" }, svg);
+      txt(svg, L + w + 6, y + 17, r[1] + " d", "val");
+      var hit = el("rect", { x: 0, y: y, width: W, height: rowH, "class": "hit", tabindex: 0 }, svg);
+      hover(hit, "<b>" + r[0] + "</b><br>mediana: " + r[1] + " dias no ar<br>60+ dias: " + r[2] + " de " + r[3] + "<br>levam ao WhatsApp: " + r[5] + " de " + r[3] + "<br>histórico: " + fmt(r[4]) + " anúncios");
+    });
+    document.getElementById("ch-nichos").appendChild(svg);
+    var tb = "<table><thead><tr><th>Busca</th><th class=n>Mediana (dias)</th><th class=n>60+ dias</th><th class=n>WhatsApp</th><th class=n>Histórico</th></tr></thead><tbody>";
+    rows.forEach(function (r) { tb += "<tr><td>" + r[0] + (r[6] ? " ●" : "") + "</td><td class=n>" + r[1] + "</td><td class=n>" + r[2] + "/" + r[3] + "</td><td class=n>" + r[5] + "/" + r[3] + "</td><td class=n>" + fmt(r[4]) + "</td></tr>"; });
+    document.getElementById("tb-nichos").innerHTML = tb + "</tbody></table>";
+  })();
+
+  // 2. FestyCake: colunas semanais com as fases
+  (function () {
+    var s = D.series.series["FestyCake"] || [];
+    var ini = D.series.inicio;
+    var first = 0; while (first < s.length && !s[first]) first++;
+    first = Math.max(0, first - 1);
+    var data = s.slice(first);
+    var W = 860, L = 44, R = 12, T = 30, B = 34, H = 300;
+    var max = Math.max(10, Math.max.apply(null, data));
+    var step = max > 400 ? 200 : max > 200 ? 100 : max > 80 ? 50 : 20;
+    var top = Math.ceil(max / step) * step;
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Anúncios da FestyCake no ar por semana" });
+    var bw = (W - L - R) / data.length;
+    var y = function (v) { return T + (H - T - B) * (1 - v / top); };
+    var wk = function (i) { return addDays(ini, (first + i) * 7); };
+    // fases por data
+    var fases = [["Teste", "2025-09-08", "2025-12-22"], ["Escala", "2025-12-29", "2026-03-30"], ["Pausa e retestes", "2026-04-06", "2026-10-05"]];
+    fases.forEach(function (f, k) {
+      var a = Math.round((new Date(f[1]) - new Date(ini)) / 6048e5) - first, b = Math.round((new Date(f[2]) - new Date(ini)) / 6048e5) - first;
+      if (b < 0) return; a = Math.max(0, a);
+      if (k === 1) el("rect", { x: L + a * bw, y: T, width: (b - a + 1) * bw, height: H - T - B, "class": "band" }, svg);
+      txt(svg, L + a * bw + 4, T - 10, f[0], "phase");
+    });
+    for (var v = 0; v <= top; v += step) { el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), "class": "grid" }, svg); txt(svg, L - 6, y(v) + 4, fmt(v), "", "end"); }
+    data.forEach(function (v, i) {
+      var h = Math.max(v ? 2 : 0, y(0) - y(v));
+      if (v) el("rect", { x: L + i * bw + 1, y: y(0) - h, width: Math.max(1, bw - 2), height: h, rx: Math.min(3, bw / 3), "class": "m-accent" }, svg);
+      var hit = el("rect", { x: L + i * bw, y: T, width: bw, height: H - T - B, "class": "hit" }, svg);
+      hover(hit, "semana de " + lbl(wk(i)) + "<br><b>" + fmt(v) + "</b> anúncios no ar");
+    });
+    el("line", { x1: L, x2: W - R, y1: y(0), y2: y(0), "class": "axis" }, svg);
+    for (var i = 0; i < data.length; i++) { var t = wk(i); if (t.getUTCDate() <= 7 && t.getUTCMonth() % 2 === 0) txt(svg, L + i * bw, H - 12, MES[t.getUTCMonth()] + " " + String(t.getUTCFullYear()).slice(2), ""); }
+    var pico = Math.max.apply(null, data), ip = data.indexOf(pico);
+    txt(svg, Math.min(W - R - 4, L + ip * bw + bw + 4), y(pico) + 4, "pico: " + fmt(pico), "val");
+    document.getElementById("ch-festy").appendChild(svg);
+  })();
+
+  // 3. Pequenos múltiplos na mesma escala
+  (function () {
+    var nomes = [["Mente Campeona", "oferta direta"], ["Sweets by Alondra", "escada e calendário"], ["Aprendizaje Virtual", "referência"], ["Recetas Deliciosas", "referência"]];
+    var ini = D.series.inicio;
+    var top = 20;
+    var W = 860, colW = 410, gapX = 40, pH = 120, T = 22, B = 22, rowsN = 2, H = rowsN * (pH + T + B) + 6;
+    var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Anúncios no ar por semana: Mente Campeona, Sweets by Alondra, Aprendizaje Virtual e Recetas Deliciosas" });
+    nomes.forEach(function (n, k) {
+      var s = D.series.series[n[0]] || [];
+      var ox = (k % 2) * (colW + gapX), oy = Math.floor(k / 2) * (pH + T + B);
+      var L = ox + 26, Rr = ox + colW, Y0 = oy + T + pH;
+      var y = function (v) { return oy + T + pH * (1 - Math.min(v, top) / top); };
+      var bw = (Rr - L) / s.length;
+      txt(svg, ox, oy + 14, n[0], "lab");
+      txt(svg, Rr, oy + 14, n[1], "", "end");
+      [0, 10, 20].forEach(function (v) { el("line", { x1: L, x2: Rr, y1: y(v), y2: y(v), "class": "grid" }, svg); txt(svg, L - 5, y(v) + 4, v, "", "end"); });
+      var d = "M" + L + "," + Y0, a = d;
+      s.forEach(function (v, i) { var X = L + i * bw; d += " L" + X + "," + y(v) + " L" + (X + bw) + "," + y(v); });
+      el("path", { d: d + " L" + Rr + "," + Y0 + " Z", "class": "m-area" }, svg);
+      var line = "M" + L + "," + y(s[0] || 0); s.forEach(function (v, i) { var X = L + i * bw; line += " L" + X + "," + y(v) + " L" + (X + bw) + "," + y(v); });
+      el("path", { d: line, "class": "m-line" }, svg);
+      el("line", { x1: L, x2: Rr, y1: Y0, y2: Y0, "class": "axis" }, svg);
+      [["2025-01-06", "jan 25"], ["2025-07-07", "jul 25"], ["2026-01-05", "jan 26"], ["2026-07-06", "jul 26"]].forEach(function (m) { var i = Math.round((new Date(m[0]) - new Date(ini)) / 6048e5); txt(svg, L + i * bw, Y0 + 15, m[1], "", "middle"); });
+      var last = s[s.length - 1] || 0;
+      txt(svg, Rr, y(last) - 6, "hoje: " + last, "val", "end");
+      s.forEach(function (v, i) { var hit = el("rect", { x: L + i * bw, y: oy + T, width: bw, height: pH, "class": "hit" }, svg); hover(hit, n[0] + "<br>semana de " + lbl(addDays(ini, i * 7)) + "<br><b>" + v + "</b> anúncios no ar"); });
+    });
+    document.getElementById("ch-multi").appendChild(svg);
+  })();
+})();
+</script>
