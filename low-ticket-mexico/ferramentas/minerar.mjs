@@ -13,7 +13,9 @@ writeFileSync(outPath, '');
 function urlDe(job) {
   // A ordem dos parâmetros importa: a Biblioteca devolve zero resultados com outra ordem.
   const ini = `https://www.facebook.com/ads/library/?active_status=${job.status || 'all'}&ad_type=all&country=${job.country || 'ALL'}`;
-  if (job.tipo === 'pagina') return `${ini}&is_targeted_country=false&media_type=all&search_type=page&view_all_page_id=${job.page_id}`;
+  // Sem login a Biblioteca não pagina; "de"/"ate" fatiam o histórico pela data de início.
+  const datas = job.de ? `&start_date%5Bmin%5D=${job.de}&start_date%5Bmax%5D=${job.ate || job.de}` : '';
+  if (job.tipo === 'pagina') return `${ini}&is_targeted_country=false&media_type=all&search_type=page${datas}&view_all_page_id=${job.page_id}`;
   return `${ini}&q=${encodeURIComponent(job.q)}&search_type=keyword_unordered&media_type=all`;
 }
 
