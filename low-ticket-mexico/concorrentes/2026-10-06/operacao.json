@@ -1,0 +1,3305 @@
+{
+ "442874278909490": {
+  "pagina": "Aprendizaje Virtual",
+  "curtidas": 7033,
+  "primeiro_anuncio": "2024-11-18",
+  "dias_de_operacao": 687,
+  "total_anuncios": 13,
+  "ativos_hoje": 13,
+  "mediana_dias_no_ar": 524,
+  "morreram_em_7d": 0,
+  "pico_ativos": {
+   "semana": "2026-09-28",
+   "lancados": 1,
+   "ativos": 13,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": "2025-02-03",
+  "semanas_de_teste": [],
+  "formatos": [
+   [
+    "VIDEO",
+    13
+   ]
+  ],
+  "botoes": [
+   [
+    "WHATSAPP_MESSAGE",
+    13
+   ]
+  ],
+  "destinos": [
+   [
+    "WhatsApp",
+    13
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    13
+   ],
+   [
+    "INSTAGRAM",
+    13
+   ],
+   [
+    "AUDIENCE_NETWORK",
+    13
+   ],
+   [
+    "MESSENGER",
+    12
+   ],
+   [
+    "WHATSAPP",
+    1
+   ]
+  ],
+  "precos_citados": [
+   [
+    "$50 pesos",
+    6
+   ],
+   [
+    "$90 MXN",
+    1
+   ],
+   [
+    "$40 pesos",
+    1
+   ]
+  ],
+  "ganchos_mais_usados": [
+   [
+    "✨ ¡Aprende a hacer GELATINAS 3D y deja a todos con la boca abierta! Un arte comestible que puede hacer brillar tu negocio 😍🍮",
+    6
+   ],
+   [
+    "🍰 ¡Empieza tu propio negocio desde casa con el Megapack de Postres! 🍰",
+    5
+   ],
+   [
+    "🌟 ¡Apoya el desarrollo de tu pequeño con actividades increíbles! 🌟",
+    1
+   ],
+   [
+    "🍎 Más de 500 recetas saludables para bebés 🍎",
+    1
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "1597523327800594",
+    "inicio": "2024-11-18",
+    "fim": null,
+    "ativo": true,
+    "dias": 687,
+    "mesmo_criativo": 2,
+    "formato": "VIDEO",
+    "gancho": "🍰 ¡Empieza tu propio negocio desde casa con el Megapack de Postres! 🍰",
+    "titulo": "Hablar con un asesor👉",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/465719848_1071834591161988_8914820888814812540_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pJ61w5iUTGEQ7kNvwELV60w&_nc_oc=Adp3jf8_sl70NkIVqpVf_QB4K6eUiVAkN-AFQFci9GBlqzgrTbZM9JEcYxhBl7ckxwI&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQMttv70m_MKRtxZhn5GBS-TbvCrbpx9rBtzuoqpXg4l8Q&oe=6ACAE2BC"
+   },
+   {
+    "id": "2006039056489580",
+    "inicio": "2024-11-18",
+    "fim": null,
+    "ativo": true,
+    "dias": 687,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "🍰 ¡Empieza tu propio negocio desde casa con el Megapack de Postres! 🍰",
+    "titulo": "Hablar con un asesor👉",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/465719848_1071834591161988_8914820888814812540_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=pJ61w5iUTGEQ7kNvwELV60w&_nc_oc=Adp3jf8_sl70NkIVqpVf_QB4K6eUiVAkN-AFQFci9GBlqzgrTbZM9JEcYxhBl7ckxwI&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQMttv70m_MKRtxZhn5GBS-TbvCrbpx9rBtzuoqpXg4l8Q&oe=6ACAE2BC"
+   },
+   {
+    "id": "608772521503315",
+    "inicio": "2024-12-16",
+    "fim": null,
+    "ativo": true,
+    "dias": 659,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "🌟 ¡Apoya el desarrollo de tu pequeño con actividades increíbles! 🌟",
+    "titulo": "Hablar con alguien 👉",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/470548235_1098239678203866_7516864538023990272_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=rHWRd0VyuAAQ7kNvwF53QO_&_nc_oc=AdqwfRo1oFSpMd_ePhbUWTqD_zbR-z253260U5sciKQDR498rlSXczsM5d_jFv9FLEA&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQPElBmXtPA_PtJ8ngaL_P6koxgWbtS-lDjY6sxSLqBirg&oe=6ACAE178"
+   },
+   {
+    "id": "1340698977274658",
+    "inicio": "2025-02-09",
+    "fim": null,
+    "ativo": true,
+    "dias": 604,
+    "mesmo_criativo": 2,
+    "formato": "VIDEO",
+    "gancho": "🍰 ¡Empieza tu propio negocio desde casa con el Megapack de Postres! 🍰",
+    "titulo": "Hablar con un asesor👉",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/476764557_949963426839935_3125292240028988180_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=fCNQdtDO5PkQ7kNvwFoG3FJ&_nc_oc=Adokc1r0_OkmAErm3LSjaOiCnTKYYnL0vHmGu_6GlP64NXhr3dpVbwxamK5tuXcVZy0&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQMJJS6kPwFxDJhEr7sKTvudFr8c3YtXok1S4Lpi5-9Y_w&oe=6ACAF3A4"
+   },
+   {
+    "id": "581391698214786",
+    "inicio": "2025-02-09",
+    "fim": null,
+    "ativo": true,
+    "dias": 604,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "🍰 ¡Empieza tu propio negocio desde casa con el Megapack de Postres! 🍰",
+    "titulo": "Hablar con un asesor👉",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/476467309_2015168132306896_8187832906103634459_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=k0UH-9ZaRGkQ7kNvwEtZ3Gr&_nc_oc=AdoAYU9EJMtoFC-vbDR3y1-YqN2K_DW_N7YTmLzZ4aDqrW0jy_r7JRD0paXjKgYgx1s&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQMeUNFj0AcrKiiAkKMYkf3rs_fFCNj6DlMajp8hgqyJwQ&oe=6ACB0058"
+   },
+   {
+    "id": "1169906044863405",
+    "inicio": "2025-02-09",
+    "fim": null,
+    "ativo": true,
+    "dias": 604,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "🍰 ¡Empieza tu propio negocio desde casa con el Megapack de Postres! 🍰",
+    "titulo": "Hablar con un asesor👉",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/476466157_2663425383868275_536247244037843320_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Pgem5Plt46oQ7kNvwGXdjtb&_nc_oc=AdrJ3JUDkA_S76udP_DBxsLuaz2otkGZnKIpLVfA8pObUKkb1GAtbDi-6ktxBqV9G8M&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQPLxRkDC4J0HnKZGTIDY9jTpB-HLrfmt-VvufhprF7WBg&oe=6ACAE4E2"
+   },
+   {
+    "id": "613010678424870",
+    "inicio": "2025-04-30",
+    "fim": null,
+    "ativo": true,
+    "dias": 524,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "✨ ¡Aprende a hacer GELATINAS 3D y deja a todos con la boca abierta! Un arte comestible que puede hacer brillar tu negocio 😍🍮",
+    "titulo": "Megapack Gelatinas 3D",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/494395138_1314807842930571_2343542280540988163_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1sOOeGtpJAMQ7kNvwHtcuiu&_nc_oc=Adr6ZabzW2ZguNdpRt4htpzh3IpCY-3B-4uNC0Lhv66rAsokDx33GWEd7S32FeGKCeM&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQNCrG3H8bRpO63xzsKcuU1m5lmwk7YepjYeZtxl5ekfpg&oe=6ACAE810"
+   },
+   {
+    "id": "1363296401610620",
+    "inicio": "2025-04-30",
+    "fim": null,
+    "ativo": true,
+    "dias": 524,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "✨ ¡Aprende a hacer GELATINAS 3D y deja a todos con la boca abierta! Un arte comestible que puede hacer brillar tu negocio 😍🍮",
+    "titulo": "Megapack Gelatinas 3D",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/494419791_2978440182305515_7752713470493536335_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=5zKG1H2rkQcQ7kNvwG9JFBw&_nc_oc=Adr0qeQN0qzW2sup4o5--e1ojA8uC3nVeNX78LaptkFQU92UwxPvCO6a6YS6GNcwlAg&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=SK0YFcFBe2c88H6j7m9iqg&_nc_ss=79289&oh=00_AQPrm71R1HDoQ0xjzYuTgyIYCF22hdnVZULCk5qdC00DvA&oe=6ACAEE38"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2024-11-18",
+    "lancados": 2,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2024-11-25",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2024-12-02",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2024-12-09",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2024-12-16",
+    "lancados": 1,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2024-12-23",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2024-12-30",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-01-06",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-01-13",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-01-20",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-01-27",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-02-03",
+    "lancados": 3,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-02-10",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-02-17",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-02-24",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-03-03",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-03-10",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-03-17",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-03-24",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-03-31",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-04-07",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-04-14",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-04-21",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-04-28",
+    "lancados": 3,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-05-05",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-05-12",
+    "lancados": 3,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-05-19",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-05-26",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-06-02",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-06-09",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-06-16",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-06-23",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-06-30",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-07-07",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-07-14",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-07-21",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-07-28",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-08-04",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-08-11",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-08-18",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-08-25",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-01",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-08",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-15",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-22",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-29",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-06",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-13",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-20",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-27",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-03",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-10",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-17",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-24",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-01",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-08",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-15",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-22",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-29",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-05",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-12",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-19",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-26",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-02",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-09",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-16",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-23",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-02",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-09",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-16",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-23",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-30",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-06",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-13",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-20",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-27",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-04",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-11",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-18",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-25",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-01",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-08",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-15",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-22",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-29",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-06",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-13",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 0,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 1,
+    "ativos": 13,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 0,
+    "ativos": 13,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ },
+ "902612686266459": {
+  "pagina": "Mente Campeona",
+  "curtidas": 1377,
+  "primeiro_anuncio": "2025-12-06",
+  "dias_de_operacao": 304,
+  "total_anuncios": 12,
+  "ativos_hoje": 11,
+  "mediana_dias_no_ar": 75,
+  "morreram_em_7d": 1,
+  "pico_ativos": {
+   "semana": "2026-09-21",
+   "lancados": 2,
+   "ativos": 11,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": "2026-07-20",
+  "semanas_de_teste": [],
+  "formatos": [
+   [
+    "IMAGE",
+    11
+   ],
+   [
+    "VIDEO",
+    1
+   ]
+  ],
+  "botoes": [
+   [
+    "WHATSAPP_MESSAGE",
+    11
+   ],
+   [
+    "LIKE_PAGE",
+    1
+   ]
+  ],
+  "destinos": [
+   [
+    "WhatsApp",
+    11
+   ],
+   [
+    "facebook.com",
+    1
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    12
+   ],
+   [
+    "INSTAGRAM",
+    11
+   ],
+   [
+    "AUDIENCE_NETWORK",
+    11
+   ],
+   [
+    "MESSENGER",
+    8
+   ]
+  ],
+  "precos_citados": [
+   [
+    "$99 MXN",
+    32
+   ],
+   [
+    "$399",
+    19
+   ]
+  ],
+  "ganchos_mais_usados": [
+   [
+    "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    8
+   ],
+   [
+    "🍓💰 **¿Y SI UN POSTRE PUDIERA CONVERTIRSE EN TU PRÓXIMO INGRESO EXTRA?** 👀✨",
+    2
+   ],
+   [
+    "🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏🙏",
+    1
+   ],
+   [
+    "🚨 ¿TE IMAGINAS TENER MÁS DE 400 RECETAS DE POSTRES PARA ELEGIR? 🤩",
+    1
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "909134582258810",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 8,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   },
+   {
+    "id": "28622782793989343",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   },
+   {
+    "id": "1777659210229484",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   },
+   {
+    "id": "2214536149303612",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   },
+   {
+    "id": "2131756604420363",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   },
+   {
+    "id": "1593885242081944",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   },
+   {
+    "id": "1513813949980075",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/748845136_1471095514829230_2865067110001356393_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=UZjZMK6ClpMQ7kNvwEAhGJx&_nc_oc=AdoUKlKKWg7UtlQ9fmQm2QxqCwaoZFgoOc2T3qVGjFxwr1KLkk826nhHpUPwDjMQx0I&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQOVypjqrBGN8hqPryJHYvHH1lkajhU-kIHrxajzFOIaEg&oe=6ACB0228"
+   },
+   {
+    "id": "1784136226330958",
+    "inicio": "2026-07-23",
+    "fim": null,
+    "ativo": true,
+    "dias": 75,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🍰 ¡Recetario de Postres en Vaso por sólo $99 MXN! 🤩💰",
+    "titulo": "👇DESCARGALO AHORA",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753694858_1077479421473612_3597298455092395259_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=esIvuO-psjgQ7kNvwGfbHQU&_nc_oc=AdrEDjkrpUjm222wWGE7CuNkR1nwDadSqQCXEw8zGhCbJqI9USXuSS1-Y7uKdqwp1DQ&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=rfvlkR6rTGEaU0rGouizVw&_nc_ss=79289&oh=00_AQNHlnvyUQnisgNGWDNxSXb8bpDF59RVqrkTcFsxkLDiYQ&oe=6ACAE530"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2025-12-01",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 1
+   },
+   {
+    "semana": "2025-12-08",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-15",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-22",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-29",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-05",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-12",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-19",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-26",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-02",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-09",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-16",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-23",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-02",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-09",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-16",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-23",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-30",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-06",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-13",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-20",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-27",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-04",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-11",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-18",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-25",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-01",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-08",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-15",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-22",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-29",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-06",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-13",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 8,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 1,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 2,
+    "ativos": 11,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 0,
+    "ativos": 11,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 0,
+    "ativos": 11,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ },
+ "490292847494512": {
+  "pagina": "FestyCake",
+  "curtidas": 10610,
+  "primeiro_anuncio": "2025-09-13",
+  "dias_de_operacao": 388,
+  "total_anuncios": 30,
+  "ativos_hoje": 0,
+  "mediana_dias_no_ar": 20,
+  "morreram_em_7d": 5,
+  "pico_ativos": {
+   "semana": "2026-02-09",
+   "lancados": 2,
+   "ativos": 14,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": "2025-12-29",
+  "semanas_de_teste": [],
+  "formatos": [
+   [
+    "VIDEO",
+    30
+   ]
+  ],
+  "botoes": [
+   [
+    "WATCH_MORE",
+    29
+   ],
+   [
+    "SHOP_NOW",
+    1
+   ]
+  ],
+  "destinos": [
+   [
+    "gastro.exitolifeacademy.com",
+    30
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    30
+   ],
+   [
+    "INSTAGRAM",
+    30
+   ],
+   [
+    "THREADS",
+    29
+   ],
+   [
+    "MESSENGER",
+    27
+   ],
+   [
+    "AUDIENCE_NETWORK",
+    26
+   ],
+   [
+    "WHATSAPP",
+    1
+   ]
+  ],
+  "precos_citados": [],
+  "ganchos_mais_usados": [
+   [
+    "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    26
+   ],
+   [
+    "Mientras muchos venden los mismos bocaditos de siempre 🥟, hay una oportunidad mucho más atractiva: bocaditos gourmet con presentación premiu",
+    2
+   ],
+   [
+    "Mientras todos compiten por lo mismo🥟, hay un mercado de bocaditos gourmet ✨ que casi nadie está atendiendo en tu zona.",
+    1
+   ],
+   [
+    "Mientras otros siguen compitiendo por precio vendiendo lo mismo de siempre, tú puedes ofrecer bocaditos premium que se pagan el doble porque",
+    1
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "1392797229091356",
+    "inicio": "2025-12-19",
+    "fim": "2026-03-28",
+    "ativo": false,
+    "dias": 99,
+    "mesmo_criativo": 114,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo aqui👉🏼",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/600302529_867916159504575_1834722403000896600_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=kj4x-9Au-2EQ7kNvwGWxrjj&_nc_oc=AdpQwuwlF_Lnn_J-WKazFUhctl6jM_e8gKZ6ZgQrA0XGr7emkwQ23AxlgNqc51pbOjg&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQNg7ryGLZgyUUpjtYfn3ZDR-VgJKtJFwVUS_CrhpEizdg&oe=6ACAF769"
+   },
+   {
+    "id": "1983325265747789",
+    "inicio": "2025-09-13",
+    "fim": "2025-12-11",
+    "ativo": false,
+    "dias": 89,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo hoy",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/547095750_1115125220755508_7765156173782507155_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=uMCk-HQJ5n8Q7kNvwFsNgRZ&_nc_oc=Adq66f5AimWo7UwnoVR2IWN_TsxxAYwGWdp0Iegsc4VYZY5qZBWnnANlW08qovnulnc&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQOBhDqoooVWDjPVsTUPaG_Ws5fXYyQl_a14T1toHNdkjQ&oe=6ACAF33C"
+   },
+   {
+    "id": "4506490352914761",
+    "inicio": "2025-11-22",
+    "fim": "2026-02-14",
+    "ativo": false,
+    "dias": 84,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo aqui👉🏼",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/586224377_2260510594426986_4873776115139216643_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=PZnqpVO7z-QQ7kNvwF3mS-8&_nc_oc=Adr5WeJBMumaACHqKQUW6CraM-xKdb8MsejgQZLMCqQ4VgODgTN27pHDIyUA9KXJ0xc&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQN5D8IXuhFWrGejpSGSPEeizg6N7r5nlrlG50a9yD86LQ&oe=6ACAF9D6"
+   },
+   {
+    "id": "33161734473471839",
+    "inicio": "2026-01-04",
+    "fim": "2026-03-28",
+    "ativo": false,
+    "dias": 83,
+    "mesmo_criativo": 50,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo hoy",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/608530057_1385941736210516_6270777899070104262_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=DnPQiebZMjEQ7kNvwH8Pu-R&_nc_oc=AdqpG--zjVvL9Se8bUTfmoTcbzz4CXV4VYHPFElvyuBSTPjQcLlN1TawpSph01WkovE&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQMy2k-iZM4HfEgV0lvmMxQ4kR8EZbwJsKgCzjNcsuobPg&oe=6ACAEEBF"
+   },
+   {
+    "id": "837116535996443",
+    "inicio": "2026-01-04",
+    "fim": "2026-03-28",
+    "ativo": false,
+    "dias": 83,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo aqui👉🏼",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/611632836_2929624960575003_6847022216756805579_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9yIvazb8-8gQ7kNvwGjt7gf&_nc_oc=Adp-YwRn_hzAS15VmjEQ73DUBwudDgHfD2t-0mpESFUyMXqTfLLu6dRjMUPw0UOQuQM&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQObhxrPH4najQTk0oABA2hI-kphvhrTvLBFy-LR9DAAVw&oe=6ACB16D4"
+   },
+   {
+    "id": "1580226309682734",
+    "inicio": "2026-01-16",
+    "fim": "2026-03-15",
+    "ativo": false,
+    "dias": 58,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo aqui👉🏼",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/615420618_1891051644866124_8690224692384384816_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Yly_eAdaofYQ7kNvwESXzO7&_nc_oc=AdrJhBeoqbEH64FIRLxu_12c-u0PMO8RyaPzkmWOePS_P0-yXi4YOkyox9AGXRg_DvY&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQOwYkFkAuQnK_Uw_RRagUsd2xcuN2nAVP9lUXXHBd_U2A&oe=6ACB0AA7"
+   },
+   {
+    "id": "696214312910946",
+    "inicio": "2025-10-13",
+    "fim": "2025-12-09",
+    "ativo": false,
+    "dias": 57,
+    "mesmo_criativo": 63,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo hoy",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/561004996_1445622433400717_8474167420916097681_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=edpyC_cafQIQ7kNvwHxOg8u&_nc_oc=AdrjW0qODl-VY9fT19aEOybwQOQG8Q6CgttOzR1SAXMyMBVAICrbiYs6DieIHcGnrOo&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQPxOmw_sw0j9fKyNuhFmNGmIXiIFouSFtBXH_Bbk6Xe0g&oe=6ACAE36E"
+   },
+   {
+    "id": "879216697881176",
+    "inicio": "2025-12-22",
+    "fim": "2026-02-12",
+    "ativo": false,
+    "dias": 52,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "Mientras todos siguen vendiendo lo mismo, tú puedes ser la primera en tu zona en ofrecer bocaditos premium gourmet 🤩.",
+    "titulo": "Descargalo hoy",
+    "destino": "gastro.exitolifeacademy.com",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/601836098_1598213154935240_5557205384973612282_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=-pLPUWUBuBkQ7kNvwF0QQ3b&_nc_oc=AdrniWIKVrhajCKEr70TZ0bgaWxX5CjDnv6zn5vBBosrLh8wyckRodo8Hqz7W8HfIeo&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=624FGeW07L8zbrGoh7wMPw&_nc_ss=79289&oh=00_AQM4JK_lZRDerWCUOMFJ7vwvKdrliPpOjIBtXTDj3UGmdw&oe=6ACAE33F"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2025-09-08",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-15",
+    "lancados": 1,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-22",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-09-29",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-06",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-13",
+    "lancados": 1,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-20",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-10-27",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-03",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-10",
+    "lancados": 1,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-17",
+    "lancados": 1,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-24",
+    "lancados": 0,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-01",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-08",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-15",
+    "lancados": 1,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-22",
+    "lancados": 1,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-29",
+    "lancados": 4,
+    "ativos": 7,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-05",
+    "lancados": 1,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-12",
+    "lancados": 1,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-19",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-26",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-02",
+    "lancados": 4,
+    "ativos": 12,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-09",
+    "lancados": 2,
+    "ativos": 14,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-16",
+    "lancados": 0,
+    "ativos": 11,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-23",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-02",
+    "lancados": 3,
+    "ativos": 10,
+    "morreram_em_7d": 2
+   },
+   {
+    "semana": "2026-03-09",
+    "lancados": 1,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-16",
+    "lancados": 1,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-23",
+    "lancados": 1,
+    "ativos": 7,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-30",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-06",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-13",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-20",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-27",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-04",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-11",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-18",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-25",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-01",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-08",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-15",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-22",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-29",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-06",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-13",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 1
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 2,
+    "ativos": 2,
+    "morreram_em_7d": 2
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ },
+ "611888315337555": {
+  "pagina": "Sweets by Alondra",
+  "curtidas": 26375,
+  "primeiro_anuncio": "2026-06-01",
+  "dias_de_operacao": 127,
+  "total_anuncios": 17,
+  "ativos_hoje": 17,
+  "mediana_dias_no_ar": 21,
+  "morreram_em_7d": 0,
+  "pico_ativos": {
+   "semana": "2026-10-05",
+   "lancados": 1,
+   "ativos": 17,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": null,
+  "semanas_de_teste": [
+   {
+    "semana": "2026-06-01",
+    "lancados": 3,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   }
+  ],
+  "formatos": [
+   [
+    "IMAGE",
+    12
+   ],
+   [
+    "VIDEO",
+    3
+   ],
+   [
+    "MULTI_IMAGES",
+    2
+   ]
+  ],
+  "botoes": [
+   [
+    "WHATSAPP_MESSAGE",
+    17
+   ]
+  ],
+  "destinos": [
+   [
+    "WhatsApp",
+    15
+   ],
+   [
+    "sem link",
+    2
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    17
+   ],
+   [
+    "INSTAGRAM",
+    17
+   ],
+   [
+    "AUDIENCE_NETWORK",
+    17
+   ],
+   [
+    "WHATSAPP",
+    17
+   ],
+   [
+    "MESSENGER",
+    5
+   ]
+  ],
+  "precos_citados": [
+   [
+    "$139 MXN",
+    5
+   ],
+   [
+    "$129 MXN",
+    1
+   ]
+  ],
+  "ganchos_mais_usados": [
+   [
+    "📣✨ ¡PAN DE MUERTO GOURMET YA ESTÁ AQUÍ! ✨📣",
+    4
+   ],
+   [
+    "📣✨ ¡OCTUBRE YA COMENZÓ Y LA TEMPORADA DE PAN DE MUERTO ESTÁ EN TODOS LADOS! ✨📣",
+    3
+   ],
+   [
+    "🍪✨ Cookies New York Style Pro ✨🍪",
+    2
+   ],
+   [
+    "📣✨ ¡LANZAMIENTO EXCLUSIVO! ✨📣",
+    2
+   ],
+   [
+    "📣✨ ¡NUEVO LANZAMIENTO! ✨📣",
+    2
+   ],
+   [
+    "📣 ¡Lanzamiento oficial del eBook “Cookies New York Style Pro”! 🍪🔥",
+    1
+   ],
+   [
+    "📣✨ ¡YA DISPONIBLE! ✨📣",
+    1
+   ],
+   [
+    "📣✨ ¡NUEVO LANZAMIENTO EXCLUSIVO! ✨📣",
+    1
+   ],
+   [
+    "📣💀🍞 ¡LA TEMPORADA DE PAN DE MUERTO YA ESTÁ CERQUÍSIMA! 🍞💀📣",
+    1
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "2111524259396174",
+    "inicio": "2026-06-01",
+    "fim": null,
+    "ativo": true,
+    "dias": 127,
+    "mesmo_criativo": 2,
+    "formato": "VIDEO",
+    "gancho": "🍪✨ Cookies New York Style Pro ✨🍪",
+    "titulo": null,
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/710755554_981495587817966_3386883981687342564_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=sNsX96U2TXgQ7kNvwFq_fQJ&_nc_oc=AdqSr6nbag9ENfFiBc0gPUnEU2BQs9fL4L_cNRCVpGcwa2nGmGE4PMG3xtjKUrOZvds&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQND08tkhat4R4EqqCDP1ALD2zHl0GYYR7cpbTff8BV5Pg&oe=6ACB111A"
+   },
+   {
+    "id": "1027094723076902",
+    "inicio": "2026-06-01",
+    "fim": null,
+    "ativo": true,
+    "dias": 127,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "🍪✨ Cookies New York Style Pro ✨🍪",
+    "titulo": null,
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/712624249_1337395901624270_1708559483936758974_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=WQB-asJluaUQ7kNvwFx7cTd&_nc_oc=AdpSqKAl8H3VISK-uhZNHzCHy8nJZEnxxwvvBgTzG7WO4nKth2bhXj2f6mU8PZQrn2w&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQNCyP6d6W1_AJGuAeMwDFYPe_-CBxWj5xYpt5v4eGvE8g&oe=6ACAE281"
+   },
+   {
+    "id": "1616044992820035",
+    "inicio": "2026-06-03",
+    "fim": null,
+    "ativo": true,
+    "dias": 125,
+    "mesmo_criativo": 1,
+    "formato": "MULTI_IMAGES",
+    "gancho": "📣 ¡Lanzamiento oficial del eBook “Cookies New York Style Pro”! 🍪🔥",
+    "titulo": null,
+    "destino": "sem link",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/711466821_1331411188871321_3806662053599684331_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=T88dsdp006UQ7kNvwFPzeW2&_nc_oc=AdpMyjoav9bOMQZn27GZYgmUcNLVBtkZ3vjVnwbkCjifKCc0wNA8X3M3ZuH73ohKavI&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQPCZ7rPLaxtJyb0eWX1Exf_o5BW66vW6JMCtcaKl0btgw&oe=6ACB0B95"
+   },
+   {
+    "id": "1512136437057576",
+    "inicio": "2026-06-26",
+    "fim": null,
+    "ativo": true,
+    "dias": 102,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📣✨ ¡LANZAMIENTO EXCLUSIVO! ✨📣",
+    "titulo": "Galletas New York PRO",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/731059213_2240208683463282_7445243088998752532_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AFwEnqPXu-wQ7kNvwEu-wQj&_nc_oc=AdoXiK2PRXMNjPeIECMSTRVl4_XCeh9sbLpSYyqXj-rGU5L9ppWTEHji9KKTT3lZxQQ&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQPBIeRxpeH7S8AQtvEZPoZp1quEzkrkWTWa5mkIG3LLTA&oe=6ACAF2CF"
+   },
+   {
+    "id": "1369786045027182",
+    "inicio": "2026-06-26",
+    "fim": null,
+    "ativo": true,
+    "dias": 102,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📣✨ ¡LANZAMIENTO EXCLUSIVO! ✨📣",
+    "titulo": "Galletas New York PRO",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/731462268_2319203731944390_7319640268328820208_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=dMfLJ8DkLmwQ7kNvwGyFKs1&_nc_oc=Ado-Ph8k2fY6hFabl_J2u9q7OlwEiQyDSAg4yBd_1YtP4Lcgdvgkpgojlx2R25z5j6E&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQOC0skj9DSg2WRm0m9KkPR6nDBwldhW9_Xfqdm8RA5dNw&oe=6ACAE2EE"
+   },
+   {
+    "id": "1094902639583484",
+    "inicio": "2026-08-27",
+    "fim": null,
+    "ativo": true,
+    "dias": 40,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📣✨ ¡YA DISPONIBLE! ✨📣",
+    "titulo": null,
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/787342375_1049755797772170_8647744631359112315_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ZRIdSYj5x_UQ7kNvwFHc3so&_nc_oc=AdojAP8i_NtcgB6e0Wl4THfn1JOgUvA2Ip_uhaIhdFbz2_Qapa0zu00dOW2MmV8e0rk&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQN2Unp-AvPl7U9DeCjc2fXGFpDzY0oinYrsu_wfeooNmw&oe=6ACAEDF8"
+   },
+   {
+    "id": "1065217309446892",
+    "inicio": "2026-09-04",
+    "fim": null,
+    "ativo": true,
+    "dias": 32,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📣✨ ¡NUEVO LANZAMIENTO EXCLUSIVO! ✨📣",
+    "titulo": null,
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/794317788_1067197002571156_3618789327210445742_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=ObTz0Huv7IEQ7kNvwEw-BAF&_nc_oc=Adq4CimckvOVbalreUX2xuNClGJS4woICt5UMThzGJCDlSQqUIcXEK5Nn0DK0cfCOhM&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQPjpL6uSUbz4jWH06CqgGZ08zcLLHBwfOvsfDpT3uvOmw&oe=6ACAFFD9"
+   },
+   {
+    "id": "2035673007091009",
+    "inicio": "2026-09-15",
+    "fim": null,
+    "ativo": true,
+    "dias": 21,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📣✨ ¡PAN DE MUERTO GOURMET YA ESTÁ AQUÍ! ✨📣",
+    "titulo": "Pan de Muerto Gourmet",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/813137317_1796475611392261_7323435690647520713_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=xXQRLs7ouQAQ7kNvwE7e0De&_nc_oc=Adqpi-raja9QhNTIqgyE1WQyzplfysEavrj-VIX8_KKZ0JNoCm30IeoKY6YdsXENpyI&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=P9DiY37_DEQ5rQFZ0yY64g&_nc_ss=79289&oh=00_AQPplmfPyM9u5sIOkvOMOzyX-CcmY0rFE0nTtao8vg1FFQ&oe=6ACB0278"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2026-06-01",
+    "lancados": 3,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-08",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-15",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-22",
+    "lancados": 2,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-29",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-06",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-13",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 1,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 1,
+    "ativos": 7,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 0,
+    "ativos": 7,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 3,
+    "ativos": 10,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 1,
+    "ativos": 11,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 5,
+    "ativos": 16,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 1,
+    "ativos": 17,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ },
+ "277730365427153": {
+  "pagina": "Barismo al Instante",
+  "curtidas": 29122,
+  "primeiro_anuncio": "2026-07-15",
+  "dias_de_operacao": 83,
+  "total_anuncios": 9,
+  "ativos_hoje": 9,
+  "mediana_dias_no_ar": 71,
+  "morreram_em_7d": 0,
+  "pico_ativos": {
+   "semana": "2026-09-14",
+   "lancados": 1,
+   "ativos": 9,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": null,
+  "semanas_de_teste": [
+   {
+    "semana": "2026-07-13",
+    "lancados": 3,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 5,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   }
+  ],
+  "formatos": [
+   [
+    "IMAGE",
+    9
+   ]
+  ],
+  "botoes": [
+   [
+    "WHATSAPP_MESSAGE",
+    9
+   ]
+  ],
+  "destinos": [
+   [
+    "WhatsApp",
+    9
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    9
+   ],
+   [
+    "INSTAGRAM",
+    9
+   ],
+   [
+    "WHATSAPP",
+    9
+   ],
+   [
+    "MESSENGER",
+    4
+   ]
+  ],
+  "precos_citados": [
+   [
+    "$𝟰𝟵",
+    5
+   ],
+   [
+    "$49 MXN",
+    5
+   ],
+   [
+    "$49 PESOS",
+    4
+   ],
+   [
+    "$49",
+    4
+   ],
+   [
+    "$99",
+    4
+   ],
+   [
+    "$150",
+    3
+   ]
+  ],
+  "ganchos_mais_usados": [
+   [
+    "☕ MEGA CURSO BARISMO 2026",
+    4
+   ],
+   [
+    "✅RECETARIO EN PDF: Matcha, Lattes, Frappés, Sodas; BEBIDAS VIRALES🔥🧋",
+    3
+   ],
+   [
+    "✅APRENDE a preparar BEBIDAS Virales Frías 2026 - Recetario PDF ☕",
+    2
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "894292706570476",
+    "inicio": "2026-07-15",
+    "fim": null,
+    "ativo": true,
+    "dias": 83,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "✅RECETARIO EN PDF: Matcha, Lattes, Frappés, Sodas; BEBIDAS VIRALES🔥🧋",
+    "titulo": "🔥Recetario desde $49 PESOS📲",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/749214303_1073250068995223_5230803710953730699_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QYSE9ZLZhYIQ7kNvwFqX-AF&_nc_oc=AdqZjDVzZM1JrnL29kpF6A7IS6GtQ-E-WqCIRdQHGNmPSsM_0yGYt7mTd1_PLGekOhY&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQNM8Y2MEQ-bpA8dGqT9PqQsYkxWT4hAYVLuwzGTOY80BQ&oe=6ACB1298"
+   },
+   {
+    "id": "1408638031326599",
+    "inicio": "2026-07-15",
+    "fim": null,
+    "ativo": true,
+    "dias": 83,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "✅RECETARIO EN PDF: Matcha, Lattes, Frappés, Sodas; BEBIDAS VIRALES🔥🧋",
+    "titulo": "🔥Recetario desde $49 PESOS📲",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/748005038_1097172395968917_329148944777239914_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=9OAfaCPQbgMQ7kNvwE6oc9P&_nc_oc=AdrAHCFEOVpx8fhuNn-UY6bWciAy-dBeIEe7t7s7LHaBkaidYPGP18NCjhu3pxqIchQ&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQMBYU38hvqlJvGWmy8lEhg1OiU_sHlI5jFGl2fYCoNpbQ&oe=6ACB0D1D"
+   },
+   {
+    "id": "1055828450210045",
+    "inicio": "2026-07-16",
+    "fim": null,
+    "ativo": true,
+    "dias": 82,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "✅RECETARIO EN PDF: Matcha, Lattes, Frappés, Sodas; BEBIDAS VIRALES🔥🧋",
+    "titulo": "🔥Recetario desde $49 PESOS📲",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/746351063_1383444283896609_2771293531161919673_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=1zs-UY9UvhAQ7kNvwGXkEtI&_nc_oc=AdozkV1ApxpL3vPI33HajXchZbsp_drvZGLgPvkhBycE7BW4Opawwp8tyDXAdYspByA&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQORvkUeT82OYufqpA8GR5bOegWh2zLMzWtzeiZTcIxq6A&oe=6ACAF593"
+   },
+   {
+    "id": "1313285217252312",
+    "inicio": "2026-07-27",
+    "fim": null,
+    "ativo": true,
+    "dias": 71,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "☕ MEGA CURSO BARISMO 2026",
+    "titulo": "☕Curso Certificado (5/5)⭐⭐⭐⭐⭐",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/752539084_1384028473641681_6076790296061805690_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wL59QGa4UjUQ7kNvwGERwyA&_nc_oc=Adr33Gpa5FQqmaWvpXDQ_0UMGKdE_joMVLp0fv4msRUUL3O3e4brj1aTZrpU58nvJlU&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQPZ4WvTeckPVKhMQkK2KNl3wBqst4MbGtJ3NBjXW8k8mQ&oe=6ACB0A42"
+   },
+   {
+    "id": "2100463504231638",
+    "inicio": "2026-07-27",
+    "fim": null,
+    "ativo": true,
+    "dias": 71,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "☕ MEGA CURSO BARISMO 2026",
+    "titulo": "☕Curso Certificado (5/5)⭐⭐⭐⭐⭐",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/753886826_1375464917981850_6013040177729332200_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=01ISupdxQN0Q7kNvwHPGwjF&_nc_oc=AdrrMnLJiYA5w4-7-br8Dx_S3cSQwN4AolNxNOGYHintjqxZu4pO8jy-TqqJna2wQ_U&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQM0FjYx9kLIxPKjnOJQRGJ3oSHFWMx4xc00Hbg_r_MHmA&oe=6ACB12FE"
+   },
+   {
+    "id": "902284992427782",
+    "inicio": "2026-07-31",
+    "fim": null,
+    "ativo": true,
+    "dias": 67,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "☕ MEGA CURSO BARISMO 2026",
+    "titulo": "☕Curso Certificado (5/5)⭐⭐⭐⭐⭐",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/753282333_2541014253062417_3317540099258986305_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=oNUUReRYvVsQ7kNvwGm01ux&_nc_oc=AdrtmIsllfyGMvtU-Y5i_JIFS3QVfOSPTjxU_46z-So77GVACskvdcXnGBYt_A7_Hfs&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQNA-WZudRzh4AtB7nxso6oFvby3Bl4dSt2_mTRRewXzww&oe=6ACB05C8"
+   },
+   {
+    "id": "2288918638530705",
+    "inicio": "2026-07-31",
+    "fim": null,
+    "ativo": true,
+    "dias": 67,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "✅APRENDE a preparar BEBIDAS Virales Frías 2026 - Recetario PDF ☕",
+    "titulo": "🔥Recetario desde $49 PESOS📲",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/763018702_972374649153717_8799996429613011072_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Q9Oo4zN0aNsQ7kNvwF1jE7B&_nc_oc=AdoGqsdi6Q7-5lEWxC07Zauxhq_I_Lh2otKdfR_ZmcVYyHu1Rd3hW1tfODbdP55p-34&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQPAra7vk2mfja3i_KS4oyGXKEcIktgNDh3F_I3D45YWUw&oe=6ACB128E"
+   },
+   {
+    "id": "1581277673541841",
+    "inicio": "2026-07-31",
+    "fim": null,
+    "ativo": true,
+    "dias": 67,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "☕ MEGA CURSO BARISMO 2026",
+    "titulo": "☕Curso Certificado (5/5)⭐⭐⭐⭐⭐",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/752833211_1412851910680684_1713866674198692824_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=CbD99egbtHEQ7kNvwEp-vsz&_nc_oc=AdqLpLh8zl1oOv2g3D1mZdqHWMuWh1VNf8VgBrD22hJX_gfZgSCkTt3tSSq6XdVxlWQ&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=TQV0cZqwbxh8PownIHgYIA&_nc_ss=79289&oh=00_AQMOLclcto4j6IpSbtKmlvRZ6rwXbIwN_uvvMowYJ__N-g&oe=6ACB0C9B"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2026-07-13",
+    "lancados": 3,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 0,
+    "ativos": 3,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 5,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 0,
+    "ativos": 8,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 1,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 0,
+    "ativos": 9,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ },
+ "161512677049218": {
+  "pagina": "Recetas Deliciosas",
+  "curtidas": 24107,
+  "primeiro_anuncio": "2025-11-08",
+  "dias_de_operacao": 332,
+  "total_anuncios": 13,
+  "ativos_hoje": 6,
+  "mediana_dias_no_ar": 4,
+  "morreram_em_7d": 7,
+  "pico_ativos": {
+   "semana": "2026-07-27",
+   "lancados": 1,
+   "ativos": 6,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": "2025-12-08",
+  "semanas_de_teste": [
+   {
+    "semana": "2025-12-08",
+    "lancados": 5,
+    "ativos": 5,
+    "morreram_em_7d": 5
+   }
+  ],
+  "formatos": [
+   [
+    "IMAGE",
+    8
+   ],
+   [
+    "VIDEO",
+    4
+   ],
+   [
+    "MULTI_IMAGES",
+    1
+   ]
+  ],
+  "botoes": [
+   [
+    "WHATSAPP_MESSAGE",
+    6
+   ],
+   [
+    "LEARN_MORE",
+    5
+   ],
+   [
+    "GET_OFFER_VIEW",
+    2
+   ]
+  ],
+  "destinos": [
+   [
+    "fb.com",
+    5
+   ],
+   [
+    "sem link",
+    4
+   ],
+   [
+    "recetasdeliciosas.com.mx",
+    2
+   ],
+   [
+    "WhatsApp",
+    2
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    13
+   ],
+   [
+    "INSTAGRAM",
+    13
+   ],
+   [
+    "AUDIENCE_NETWORK",
+    13
+   ],
+   [
+    "MESSENGER",
+    13
+   ],
+   [
+    "THREADS",
+    7
+   ]
+  ],
+  "precos_citados": [
+   [
+    "$49 MXN",
+    6
+   ],
+   [
+    "49 MXN",
+    2
+   ],
+   [
+    "$17",
+    1
+   ]
+  ],
+  "ganchos_mais_usados": [
+   [
+    "Hacer hojaldres como estos no es para cualquiera.",
+    5
+   ],
+   [
+    "📢 ¡Recetario de Frappés para todos los gustos en formato PDF! 🍓🍫☕",
+    4
+   ],
+   [
+    "📢 ¡Consigue el Recetario de Hojaldres Gourmet en PDF y endulza tu vida! 🥐🔥",
+    2
+   ],
+   [
+    "✅✅𝗔𝗗𝗤𝗨𝗜𝗘𝗥𝗘 𝗘𝗟 𝗥𝗘𝗖𝗘𝗧𝗔𝗥𝗜𝗢 𝗗𝗘 \"𝐂𝐑𝐄𝐏𝐀𝐒 𝐏𝐀𝐑𝐀 𝐓𝐎𝐃𝐎𝐒 𝐋𝐎𝐒 𝐆𝐔𝐒𝐓𝐎𝐒\" 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗔𝗠𝗘𝗡𝗧𝗘 𝗘𝗡 𝗣𝗗𝗙",
+    2
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "4341260966086862",
+    "inicio": "2026-03-13",
+    "fim": null,
+    "ativo": true,
+    "dias": 207,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📢 ¡Recetario de Frappés para todos los gustos en formato PDF! 🍓🍫☕",
+    "titulo": null,
+    "destino": "sem link",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/592917467_1576313747219773_990102733558425524_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=QauWeJRQiYkQ7kNvwGTuk_5&_nc_oc=AdoVKVpCOK-yjOckgxVzZgkHBIWuDWR3OUBm-fnNcqEq4ticP51vhTHh3QUjh7fspa8&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQOTS29YMRbOfUH8twkzWrNxy2VUHSws1ziiwtS51QjTbw&oe=6ACB17F9"
+   },
+   {
+    "id": "1985601492029711",
+    "inicio": "2026-03-13",
+    "fim": null,
+    "ativo": true,
+    "dias": 207,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "✅✅𝗔𝗗𝗤𝗨𝗜𝗘𝗥𝗘 𝗘𝗟 𝗥𝗘𝗖𝗘𝗧𝗔𝗥𝗜𝗢 𝗗𝗘 \"𝐂𝐑𝐄𝐏𝐀𝐒 𝐏𝐀𝐑𝐀 𝐓𝐎𝐃𝐎𝐒 𝐋𝐎𝐒 𝐆𝐔𝐒𝐓𝐎𝐒\" 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗔𝗠𝗘𝗡𝗧𝗘 𝗘𝗡 𝗣𝗗𝗙",
+    "titulo": null,
+    "destino": "sem link",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/594978662_1779716099352273_9019853721103192979_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=DffIe6dRMKwQ7kNvwE6ke-k&_nc_oc=AdrY-z_8diuC9Pir39l-4B3TJEpEfHdEpgPf4XqLSLa-SfMqGGHD3jsyFEC9hPruf1w&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQOXRbQ6XwPOO0nHm6n6YL9qHG6w1azOjMa4pQSwy1jbGg&oe=6ACAF486"
+   },
+   {
+    "id": "1861854527867111",
+    "inicio": "2026-03-13",
+    "fim": null,
+    "ativo": true,
+    "dias": 207,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "📢 ¡Recetario de Frappés para todos los gustos en formato PDF! 🍓🍫☕",
+    "titulo": null,
+    "destino": "sem link",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/593555225_828739870026730_2469847759410031627_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=iy55ZyT7qsEQ7kNvwFplfr8&_nc_oc=AdprA1qz_I7OVsFk1PI6gneeb2SuHbFXXwloQueF78uB1uezX39XMdgl8Dx44kvd2Xc&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQOpeGkABXA5T4ah4-i2EYEX0dUnlkJmED6SRlc8YbDRWg&oe=6ACAEB00"
+   },
+   {
+    "id": "953218017300968",
+    "inicio": "2026-03-14",
+    "fim": null,
+    "ativo": true,
+    "dias": 206,
+    "mesmo_criativo": 1,
+    "formato": "MULTI_IMAGES",
+    "gancho": "📢 ¡Recetario de Frappés para todos los gustos en formato PDF! 🍓🍫☕",
+    "titulo": null,
+    "destino": "sem link",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/593868811_846380254683403_7932683834341823077_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=Am6DiKqBrhUQ7kNvwEj9hnA&_nc_oc=AdoXimtoslSHQ2C6JNk16mU6hoLfdydcKRh-IjIx0wxce4lRLY3CTsOHVAWZrwGic4k&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQNeZc4jONiAVadXDv8y-GNAwJTBquUV3uABJJWmuDY_Hg&oe=6ACAFF85"
+   },
+   {
+    "id": "1277059541229743",
+    "inicio": "2026-04-13",
+    "fim": null,
+    "ativo": true,
+    "dias": 176,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "📢 ¡Recetario de Frappés para todos los gustos en formato PDF! 🍓🍫☕",
+    "titulo": null,
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/650376712_1466797624901952_450852791321720992_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=brdixBx2qZoQ7kNvwEKd29C&_nc_oc=AdqKUYKkw7nfz36_P2jlyKvnLlM5aTbBLR0zFc1k2e4brqB4e37PMsZncKSnihIW-Pw&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQOx9pPU9U06HSZvXXXkAfovp2ZKOIfw7cfLYThcpCrVzA&oe=6ACAE42F"
+   },
+   {
+    "id": "1572711804489860",
+    "inicio": "2026-08-01",
+    "fim": null,
+    "ativo": true,
+    "dias": 66,
+    "mesmo_criativo": 1,
+    "formato": "VIDEO",
+    "gancho": "✅✅𝗔𝗗𝗤𝗨𝗜𝗘𝗥𝗘 𝗘𝗟 𝗥𝗘𝗖𝗘𝗧𝗔𝗥𝗜𝗢 𝗗𝗘 \"𝐂𝐑𝐄𝐏𝐀𝐒 𝐏𝐀𝐑𝐀 𝐓𝐎𝐃𝐎𝐒 𝐋𝐎𝐒 𝐆𝐔𝐒𝐓𝐎𝐒\" 𝗖𝗢𝗠𝗣𝗟𝗘𝗧𝗔𝗠𝗘𝗡𝗧𝗘 𝗘𝗡 𝗣𝗗𝗙",
+    "titulo": null,
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/651029696_26870068162619033_4892419981334608407_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=NymyF_-zHJkQ7kNvwHsf0ef&_nc_oc=Adq8GtycAOBxBSJ8NpOH_dXJgpAT9f0vOBDkNF5ZlHOERydGKkExZyHrnayT-pGj7BE&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQPskzPC4HA4SVGYJNqpCVtubG-FZ65AmaOsO8NLv3fv2w&oe=6ACB05C8"
+   },
+   {
+    "id": "1343365230758178",
+    "inicio": "2025-11-08",
+    "fim": "2025-11-12",
+    "ativo": false,
+    "dias": 4,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📢 ¡Consigue el Recetario de Hojaldres Gourmet en PDF y endulza tu vida! 🥐🔥",
+    "titulo": "ANTES $45 USD AHORA SOLO $17 USD",
+    "destino": "recetasdeliciosas.com.mx",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/578161996_735862185438813_1397705162538521300_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=wUVAvuM1RboQ7kNvwFPzh-f&_nc_oc=AdrXuLHt5bMG1ZSN9dXuLumxHE2IKsKilFsKFZv6n0YDPXWux_8xGkoJc1XXPdB6aA0&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQMmCaxqFyqPK8EXMtJLx0N9rqi0nSrGWoHZXZGRBLASjA&oe=6ACAF9F9"
+   },
+   {
+    "id": "1139122924619956",
+    "inicio": "2025-11-12",
+    "fim": "2025-11-15",
+    "ativo": false,
+    "dias": 3,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "📢 ¡Consigue el Recetario de Hojaldres Gourmet en PDF y endulza tu vida! 🥐🔥",
+    "titulo": "POR SOLO $2.99 USD",
+    "destino": "recetasdeliciosas.com.mx",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/580542436_1754186155604716_1980691415998640068_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=AePDLjFMCIAQ7kNvwE7BpdP&_nc_oc=AdopJDOP900waXxc4VZ11cJUdSJuoy41c9yC-dubRWUH0vIQBC_F_I_VdBVhmxbnLBE&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=-zhN5r0b40RBP5pOZ120yg&_nc_ss=79289&oh=00_AQOPh3JJGj37RKjSiLwaKVT4Nvn1kT296NgHYQWWSPjK0Q&oe=6ACAEA2C"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2025-11-03",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 1
+   },
+   {
+    "semana": "2025-11-10",
+    "lancados": 1,
+    "ativos": 2,
+    "morreram_em_7d": 1
+   },
+   {
+    "semana": "2025-11-17",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-11-24",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-01",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-08",
+    "lancados": 5,
+    "ativos": 5,
+    "morreram_em_7d": 5
+   },
+   {
+    "semana": "2025-12-15",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-22",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2025-12-29",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-05",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-12",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-19",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-01-26",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-02",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-09",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-16",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-23",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-02",
+    "lancados": 0,
+    "ativos": 0,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-09",
+    "lancados": 4,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-16",
+    "lancados": 0,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-23",
+    "lancados": 0,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-30",
+    "lancados": 0,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-06",
+    "lancados": 0,
+    "ativos": 4,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-13",
+    "lancados": 1,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-20",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-27",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-04",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-11",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-18",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-25",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-01",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-08",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-15",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-22",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-29",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-06",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-13",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 0,
+    "ativos": 5,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 1,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 0,
+    "ativos": 6,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ },
+ "470913392767750": {
+  "pagina": "Shopy Ebooks",
+  "curtidas": 1772,
+  "primeiro_anuncio": "2026-01-28",
+  "dias_de_operacao": 251,
+  "total_anuncios": 2,
+  "ativos_hoje": 2,
+  "mediana_dias_no_ar": 251,
+  "morreram_em_7d": 0,
+  "pico_ativos": {
+   "semana": "2026-09-21",
+   "lancados": 1,
+   "ativos": 2,
+   "morreram_em_7d": 0
+  },
+  "inicio_escala": null,
+  "semanas_de_teste": [],
+  "formatos": [
+   [
+    "IMAGE",
+    2
+   ]
+  ],
+  "botoes": [
+   [
+    "WHATSAPP_MESSAGE",
+    2
+   ]
+  ],
+  "destinos": [
+   [
+    "WhatsApp",
+    2
+   ]
+  ],
+  "plataformas": [
+   [
+    "FACEBOOK",
+    2
+   ],
+   [
+    "INSTAGRAM",
+    2
+   ],
+   [
+    "AUDIENCE_NETWORK",
+    2
+   ],
+   [
+    "WHATSAPP",
+    2
+   ],
+   [
+    "MESSENGER",
+    1
+   ]
+  ],
+  "precos_citados": [
+   [
+    "$49",
+    2
+   ],
+   [
+    "$49 PESOS",
+    1
+   ]
+  ],
+  "ganchos_mais_usados": [
+   [
+    "✨🍓Recetario de Postres en Vaso - įsolo $49!💵🧁",
+    1
+   ],
+   [
+    "🔥POR SOLO $49 ADQUIERE EL MEGA PACK DE BEBIDAS MÁS VIRAL DE MÉXICO 🔥🍹",
+    1
+   ]
+  ],
+  "vencedores": [
+   {
+    "id": "735430519387033",
+    "inicio": "2026-01-28",
+    "fim": null,
+    "ativo": true,
+    "dias": 251,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "✨🍓Recetario de Postres en Vaso - įsolo $49!💵🧁",
+    "titulo": "shopy recetas",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-2.xx.fbcdn.net/v/t39.35426-6/545959616_1326805909648856_7644716424914064673_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=FwfrDqC_vxAQ7kNvwGRL7iI&_nc_oc=Adqj-3OqlX7UalcfbdQZzRwbaNuPXSCM_-HtlzVjrdRR0ImdlK-cScIv42f9IWjr4oo&_nc_zt=14&_nc_ht=scontent-ord5-2.xx&_nc_gid=7SVLA-KiHRPOoKSj8-YgpQ&_nc_ss=79289&oh=00_AQOuUp6ItlBntijBUDQQVh5VuK8_pq4TgglbVKjeVQPKoA&oe=6ACB016F"
+   },
+   {
+    "id": "1872854407212071",
+    "inicio": "2026-09-24",
+    "fim": null,
+    "ativo": true,
+    "dias": 12,
+    "mesmo_criativo": 1,
+    "formato": "IMAGE",
+    "gancho": "🔥POR SOLO $49 ADQUIERE EL MEGA PACK DE BEBIDAS MÁS VIRAL DE MÉXICO 🔥🍹",
+    "titulo": "MICHELADAS, AZULITOS, MOJITOS Y +",
+    "destino": "WhatsApp",
+    "imagem": "https://scontent-ord5-1.xx.fbcdn.net/v/t39.35426-6/813520330_1960436074591931_3251856237278552390_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=c53f8f&_nc_ohc=mpR74bbwQFwQ7kNvwGefq-t&_nc_oc=AdpACzOhIouBfXZsmGOaVLf463SZTpCBbxbf2HjYzleT4vFEQSSBzmI3ImIqDhdYtIE&_nc_zt=14&_nc_ht=scontent-ord5-1.xx&_nc_gid=7SVLA-KiHRPOoKSj8-YgpQ&_nc_ss=79289&oh=00_AQPT_XZaojgZHw79pGu2yPb0FmkGHNHQgS3La1rXMJbWcQ&oe=6ACB15F9"
+   }
+  ],
+  "semanas": [
+   {
+    "semana": "2026-01-26",
+    "lancados": 1,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-02",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-09",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-16",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-02-23",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-02",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-09",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-16",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-23",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-03-30",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-06",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-13",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-20",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-04-27",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-04",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-11",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-18",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-05-25",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-01",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-08",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-15",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-22",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-06-29",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-06",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-13",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-20",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-07-27",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-03",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-10",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-17",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-24",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-08-31",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-07",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-14",
+    "lancados": 0,
+    "ativos": 1,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-21",
+    "lancados": 1,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-09-28",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   },
+   {
+    "semana": "2026-10-05",
+    "lancados": 0,
+    "ativos": 2,
+    "morreram_em_7d": 0
+   }
+  ],
+  "diff": null
+ }
+}

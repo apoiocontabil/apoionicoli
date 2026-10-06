@@ -1,0 +1,13 @@
+{
+  "name": "low-ticket-mexico-ferramentas",
+  "private": true,
+  "type": "module",
+  "description": "Mineração da Biblioteca de Anúncios do Meta e reconstrução da operação de concorrentes.",
+  "scripts": {
+    "minerar": "node minerar.mjs",
+    "operacao": "python3 -I operacao.py"
+  },
+  "dependencies": {
+    "playwright": "1.56.0"
+  }
+}
