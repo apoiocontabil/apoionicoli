@@ -9,7 +9,7 @@ escalaram, para moldar a nossa estratégia no que já se paga.
 | --- | --- | --- | --- |
 | Oferta direta | Mente Campeona | 902612686266459 | Mesmo produto (postres en vaso), mesmo preço (99 MXN), mesmo canal (WhatsApp). Escalou em julho de 2026 duplicando o criativo 8 vezes |
 | Escada e calendário | Sweets by Alondra | 611888315337555 | Lança um ebook novo a cada 3 a 4 semanas e a temporada com 9 semanas de antecedência (pan de muerto em 27/08), a 129-139 MXN |
-| Escala pesada | FestyCake (Éxito Life Academy) | 490292847494512 | Testou de setembro a dezembro de 2025, escalou de dezembro a março duplicando o vencedor 114 vezes, desligou em abril. Hotmart com 4 bumps |
+| Escala pesada | FestyCake (Éxito Life Academy) | 490292847494512 | Subiu de 6 para 51 anúncios por semana de setembro a novembro de 2025, fez ondas em dezembro (139) e de março a maio de 2026 (até 140), com o vencedor duplicado 114 vezes, e nunca parou. Hotmart com 4 bumps |
 | Referência de longevidade | Aprendizaje Virtual | 442874278909490 | 13 vídeos para WhatsApp, nenhum desligado em 687 dias |
 | Referência de pivô | Recetas Deliciosas | 161512677049218 | Site em dólar morreu em dias; WhatsApp em pesos dura 207 dias |
 

@@ -217,7 +217,7 @@ code { font-family: var(--font-data); font-size: .9em; word-break: break-word; }
   <p class="prose small muted">A Biblioteca mostra a data de início e de fim de cada anúncio e quantas cópias do mesmo criativo rodam. Contando os anúncios no ar semana a semana, aparece quando cada um testou, quando escalou e quando parou.</p>
 
   <div class="panel">
-    <h3>FestyCake: teste, escala e pausa</h3>
+    <h3>FestyCake: teste, duas ondas de escala e retestes</h3>
     <p class="small muted">Anúncios no ar por semana, contando as cópias, pela contagem da própria Biblioteca.</p>
     <div class="chart" id="ch-festy"></div>
   </div>
@@ -283,20 +283,21 @@ code { font-family: var(--font-data); font-size: .9em; word-break: break-word; }
         <dt>Produto</dt><dd><span class="es">Kit Bocaditos Premium</span>: 30+ receitas, guia de custos, scripts de WhatsApp, 6 bônus</dd>
         <dt>Preço</dt><dd class="num">US$ 14 "antes 34,99"; 4 bumps de US$ 6,99 e um Kit PRO</dd>
         <dt>Canal</dt><dd>Vídeo vertical de mãos com legenda → página → checkout Hotmart; rastreio com Utmify, ferramenta brasileira</dd>
-        <dt>Hoje</dt><dd>Fora do ar desde abril, com retestes curtos</dd>
+        <dt>Hoje</dt><dd>Nunca parou: 13 a 48 anúncios por semana em setembro e outubro</dd>
       </dl>
       <ol class="timeline">
-        <li><span class="d">set a dez 2025</span>Teste com 1 a 4 criativos de vídeo, sempre o mesmo gancho: "mientras todos siguen vendiendo lo mismo".</li>
-        <li><span class="d">29 dez 2025 a mar 2026</span>Escala: o criativo vencedor chega a 114 cópias; outros dois a 63 e 50.</li>
-        <li><span class="d">abr 2026</span>Desliga tudo depois da temporada de festas.</li>
-        <li><span class="d">jul a out 2026</span>Retestes: 41 cópias por 19 dias em julho; 36 e 38 cópias cortadas em 1 dia em 1º de outubro.</li>
+        <li><span class="d">set a nov 2025</span>Teste e subida gradual, de 6 para 51 anúncios por semana, sempre com o gancho "mientras todos siguen vendiendo lo mismo".</li>
+        <li><span class="d">dez 2025</span>1ª onda, nas festas de fim de ano: 95 e 139 anúncios por semana.</li>
+        <li><span class="d">jan e fev 2026</span>Sustenta entre 30 e 59 por semana. O criativo vencedor, no ar de 19/12 a 28/03, chega a 114 cópias.</li>
+        <li><span class="d">mar a mai 2026</span>2ª onda, a maior: de 51 a 140 por semana durante 10 semanas, até o 10 de Mayo.</li>
+        <li><span class="d">jun a out 2026</span>Cai para 5 a 58 por semana, com retestes de criativos novos em 36 a 41 cópias, alguns cortados em 1 dia.</li>
       </ol>
       <div class="copy">
         <div class="yes"><b>Copiar</b>Checkout com produto, bumps e kit completo; ângulo "deixe de competir por preço"; vídeo vertical de mãos com legenda; escalar duplicando o vencedor.</div>
         <div class="no"><b>Não copiar</b>Preço em dólar e depoimentos de Bogotá para público mexicano.</div>
       </div>
     </div>
-    <figure><img src="__IMG_FESTY__" alt="Quadro do vídeo da FestyCake: mãos montando um canapé com legenda na tela"><figcaption>Vídeo vencedor, duplicado 114 vezes na escala.</figcaption></figure>
+    <figure><img src="__IMG_FESTY__" alt="Quadro do vídeo da FestyCake: mãos montando um canapé com legenda na tela"><figcaption>Vídeo vencedor, duplicado 114 vezes entre dezembro e março.</figcaption></figure>
   </article>
 
   <article class="panel comp">
@@ -529,11 +530,11 @@ code { font-family: var(--font-data); font-size: .9em; word-break: break-word; }
     var y = function (v) { return T + (H - T - B) * (1 - v / top); };
     var wk = function (i) { return addDays(ini, (first + i) * 7); };
     // fases por data
-    var fases = [["Teste", "2025-09-08", "2025-12-22"], ["Escala", "2025-12-29", "2026-03-30"], ["Pausa e retestes", "2026-04-06", "2026-10-05"]];
-    fases.forEach(function (f, k) {
+    var fases = [["Teste", "2025-09-08", "2025-11-24", 0], ["1ª onda", "2025-12-01", "2025-12-22", 1], ["Sustentação", "2025-12-29", "2026-03-02", 0], ["2ª onda", "2026-03-09", "2026-05-11", 1], ["Queda e retestes", "2026-05-18", "2026-10-05", 0]];
+    fases.forEach(function (f) {
       var a = Math.round((new Date(f[1]) - new Date(ini)) / 6048e5) - first, b = Math.round((new Date(f[2]) - new Date(ini)) / 6048e5) - first;
       if (b < 0) return; a = Math.max(0, a);
-      if (k === 1) el("rect", { x: L + a * bw, y: T, width: (b - a + 1) * bw, height: H - T - B, "class": "band" }, svg);
+      if (f[3]) el("rect", { x: L + a * bw, y: T, width: (b - a + 1) * bw, height: H - T - B, "class": "band" }, svg);
       txt(svg, L + a * bw + 4, T - 10, f[0], "phase");
     });
     for (var v = 0; v <= top; v += step) { el("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), "class": "grid" }, svg); txt(svg, L - 6, y(v) + 4, fmt(v), "", "end"); }
@@ -554,8 +555,8 @@ code { font-family: var(--font-data); font-size: .9em; word-break: break-word; }
   (function () {
     var nomes = [["Mente Campeona", "oferta direta"], ["Sweets by Alondra", "escada e calendário"], ["Aprendizaje Virtual", "referência"], ["Recetas Deliciosas", "referência"]];
     var ini = D.series.inicio;
-    var top = 20;
-    var W = 860, colW = 410, gapX = 40, pH = 120, T = 22, B = 22, rowsN = 2, H = rowsN * (pH + T + B) + 6;
+    var top = 25;
+    var W = 884, colW = 410, gapX = 40, pH = 120, T = 22, B = 22, rowsN = 2, H = rowsN * (pH + T + B) + 6;
     var svg = el("svg", { viewBox: "0 0 " + W + " " + H, role: "img", "aria-label": "Anúncios no ar por semana: Mente Campeona, Sweets by Alondra, Aprendizaje Virtual e Recetas Deliciosas" });
     nomes.forEach(function (n, k) {
       var s = D.series.series[n[0]] || [];
@@ -574,7 +575,7 @@ code { font-family: var(--font-data); font-size: .9em; word-break: break-word; }
       el("line", { x1: L, x2: Rr, y1: Y0, y2: Y0, "class": "axis" }, svg);
       [["2025-01-06", "jan 25"], ["2025-07-07", "jul 25"], ["2026-01-05", "jan 26"], ["2026-07-06", "jul 26"]].forEach(function (m) { var i = Math.round((new Date(m[0]) - new Date(ini)) / 6048e5); txt(svg, L + i * bw, Y0 + 15, m[1], "", "middle"); });
       var last = s[s.length - 1] || 0;
-      txt(svg, Rr, y(last) - 6, "hoje: " + last, "val", "end");
+      txt(svg, Rr - 4, y(last) - 6, "hoje: " + last, "val", "end");
       s.forEach(function (v, i) { var hit = el("rect", { x: L + i * bw, y: oy + T, width: bw, height: pH, "class": "hit" }, svg); hover(hit, n[0] + "<br>semana de " + lbl(addDays(ini, i * 7)) + "<br><b>" + v + "</b> anúncios no ar"); });
     });
     document.getElementById("ch-multi").appendChild(svg);
